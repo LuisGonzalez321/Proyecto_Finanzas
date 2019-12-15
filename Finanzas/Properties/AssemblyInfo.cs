@@ -5,8 +5,13 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Finanzas")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("FERRISIS")]
+[assembly: AssemblyDescription("Es un sistema que realiza el análisis financiero de la empresa FERRISIS (Ferretería) \n" +
+                                "1 - Realiza análsis vertical y horizontal \n" +
+                                "2 - Elabora las razones financieras \n" +
+                                "3 - Elabora estado de origen y aplicación de fondo y fljo neto de efectivo \n" +
+                                "4 - Realiza apalancamiento \n")]
+
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Finanzas")]

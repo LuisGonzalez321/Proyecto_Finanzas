@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Finanzas
+namespace Finanzas.Vista
 {
-    public partial class Form1: Form
+    public partial class Análisis_Financiero: Form
     {
-        public Form1 ()
+        public Análisis_Financiero ()
         {
             InitializeComponent();
         }
