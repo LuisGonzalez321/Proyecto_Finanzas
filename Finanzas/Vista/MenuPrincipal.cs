@@ -14,7 +14,6 @@ namespace Finazas.Vista
 {
     public partial class MenuPrincipal: Form
     {
-        int contador = 1;
 
         public MenuPrincipal ()
         {

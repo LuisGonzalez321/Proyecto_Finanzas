@@ -28,7 +28,7 @@ namespace Finanzas.Modelo
 
         public DateTime Fecha { get; set; }
 
-        public int Razon_cuenta (string nombre, DateTime fecha)
+        public double Razon_cuenta (string nombre, DateTime fecha)
         {
             DataTable datatable = new DataTable();
             SqlConnection sqlcon = new SqlConnection();
@@ -44,7 +44,7 @@ namespace Finanzas.Modelo
 
                 SqlParameter ParDato = new SqlParameter();
                 ParDato.ParameterName = "@año";
-                ParDato.SqlDbType = SqlDbType.VarChar;
+                ParDato.SqlDbType = SqlDbType.Int;
                 ParDato.Value = fecha.Year;
                 sqlcmd.Parameters.Add(ParDato);
 
@@ -53,7 +53,7 @@ namespace Finanzas.Modelo
                 if (datatable.Rows.Count > 0)
                 {
                     datarow = datatable.Rows [0];
-                    return Convert.ToInt32 (datarow [nombre].ToString());
+                    return Convert.ToDouble (datarow [nombre].ToString());
                 }
                 return 0;
             }

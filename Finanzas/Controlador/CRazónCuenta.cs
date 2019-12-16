@@ -9,7 +9,7 @@ namespace Finanzas.Controlador
 {
     public class CRazónCuenta
     {
-        public static int Razon_cuenta (string nombre, DateTime fecha)
+        public static double Razon_cuenta (string nombre, DateTime fecha)
         {
             return new MRazónCuenta().Razon_cuenta(nombre, fecha);
         }
