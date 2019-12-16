@@ -39,7 +39,7 @@
             // 
             // bunifuCards1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.DodgerBlue;
@@ -70,7 +70,7 @@
             // 
             this.btn_aceptar.Active = false;
             this.btn_aceptar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.btn_aceptar.BackColor = System.Drawing.Color.White;
+            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btn_aceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_aceptar.BorderRadius = 0;
             this.btn_aceptar.ButtonText = "Aceptar";
@@ -91,7 +91,7 @@
             this.btn_aceptar.Location = new System.Drawing.Point(263, 138);
             this.btn_aceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Normalcolor = System.Drawing.Color.White;
+            this.btn_aceptar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btn_aceptar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.btn_aceptar.OnHoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btn_aceptar.selected = false;

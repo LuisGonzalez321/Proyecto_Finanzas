@@ -16,5 +16,10 @@ namespace Finanzas.Controlador
             return new MCuenta().Consulta(año, tipo);
         }
 
+        public static DataTable Catalogo_Cuentas (string tipo)
+        {
+            return new MCuenta().Catalogo_Cuentas(tipo);
+        }
+
     }
 }

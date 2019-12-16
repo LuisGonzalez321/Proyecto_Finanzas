@@ -540,8 +540,8 @@
             this.radial_gauge.Suffix = "%";
             this.radial_gauge.TabIndex = 5;
             this.radial_gauge.Thickness = 30;
-            this.radial_gauge.Value = 30;
-            this.radial_gauge.ValueByTransition = 30;
+           // this.radial_gauge.Value = 30;
+           // this.radial_gauge.ValueByTransition = 30;
             this.radial_gauge.ValueLabelColor = System.Drawing.Color.Black;
             // 
             // bunifuCustomLabel2
