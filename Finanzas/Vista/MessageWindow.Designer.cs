@@ -88,14 +88,14 @@
             this.btn_aceptar.IconVisible = true;
             this.btn_aceptar.IconZoom = 90D;
             this.btn_aceptar.IsTab = false;
-            this.btn_aceptar.Location = new System.Drawing.Point(276, 136);
+            this.btn_aceptar.Location = new System.Drawing.Point(263, 138);
             this.btn_aceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Normalcolor = System.Drawing.Color.White;
             this.btn_aceptar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.btn_aceptar.OnHoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btn_aceptar.selected = false;
-            this.btn_aceptar.Size = new System.Drawing.Size(104, 28);
+            this.btn_aceptar.Size = new System.Drawing.Size(104, 31);
             this.btn_aceptar.TabIndex = 8;
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

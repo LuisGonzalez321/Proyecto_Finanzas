@@ -16,32 +16,17 @@ namespace Finanzas.Vista
         public EstadosFinancieros ()
         {
             InitializeComponent();
-            //this.tabla_BG.ScrollBars = ScrollBars.None;
-            //this.tabla_BG.ScrollBars = Scrollbar_A;//System.Windows.Forms.ScrollBars.None;
         }
 
         public void Cargar_datos ()
         {
             int año = datepicker_BG.Value.Year;
-            tabla_activo.DataSource = Controlador.Consultas.Consulta(año, "ACTIVO");
-
-            tabla_pasivo.DataSource = Controlador.Consultas.Consulta(año, "PASIVO");
-            tabla_capital.DataSource = Controlador.Consultas.Consulta(año, "CAPITAL");
+            tabla_activo.DataSource = Controlador.CConsulta.Consulta(año, "ACTIVO");
+            tabla_pasivo.DataSource = Controlador.CConsulta.Consulta(año, "PASIVO");
+            tabla_capital.DataSource = Controlador.CConsulta.Consulta(año, "CAPITAL");
             label_activo.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo", datepicker_BG.Value));
-            //  label_activo.Text += "" + suma(tabla_activo);
-
         }
-
-        public float suma (DataGridView tabla)
-        {
-            float sumatoria = 0;
-            foreach (DataRow i in tabla.Rows)
-            {
-                sumatoria += float.Parse( i.ItemArray[1].ToString() );
-            }
-            return sumatoria;
-        }
-
+        
 
         private void EstadosFinancieros_Load (object sender, EventArgs e)
         {

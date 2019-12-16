@@ -1,4 +1,5 @@
-﻿using Finazas.Vista;
+﻿using Finanzas.Controlador;
+using Finazas.Vista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

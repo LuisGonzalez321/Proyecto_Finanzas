@@ -90,7 +90,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controlador\Consultas.cs" />
+    <Compile Include="Controlador\CCuenta.cs" />
+    <Compile Include="Controlador\CConsulta.cs" />
     <Compile Include="Controlador\CRazónCuenta.cs" />
     <Compile Include="Controlador\CUsuario.cs" />
     <Compile Include="FinanzasDataSet.Designer.cs">
@@ -104,6 +105,7 @@
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Herramientas\Toolkit.cs" />
     <Compile Include="Modelo\MCategoría.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\MCuenta.cs" />
@@ -208,9 +210,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modelo\Herramientas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

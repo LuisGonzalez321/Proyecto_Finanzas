@@ -20,12 +20,20 @@ namespace Finazas.Vista
         {
             InitializeComponent();
             lbl_BG.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo",datepicker.Value) );
-            radial_gauge.Value = Convert.ToInt32(CRazónCuenta.Razon_cuenta("Razón_deuda", datepicker.Value));
+            int valor = Convert.ToInt32(CRazónCuenta.Razon_cuenta("Razón_deuda", datepicker.Value));
+            radial_gauge.Value = valor;
+            lbl_estado.Text = Finanzas.Modelo.Herramientas.Toolkit.Estado_Empresa(valor);
         }
+
+        
 
         private const int cGrip = 16;
         private const int cCaption = 32;
 
+
+        /*
+         * Metodo para poder mover la ventana
+         */
         protected override void WndProc (ref Message m)
         {
             if (m.Msg == 0x84)
@@ -58,17 +66,13 @@ namespace Finazas.Vista
             if (gradiente_panel1.Visible == true)
             {
                 gradiente_panel1.Visible = false;
-            }else
+            }
+            else
             {
                 gradiente_panel1.Visible = true;
             }
-           
         }
-
-        private void gradiente_panel1_Paint (object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void btn_ef_Click (object sender, EventArgs e)
         {
@@ -92,5 +96,6 @@ namespace Finazas.Vista
             RazonesFinancieras rf = new RazonesFinancieras();
             rf.Show();
         }
+
     }
 }

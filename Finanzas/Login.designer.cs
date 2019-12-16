@@ -48,7 +48,7 @@
             // btn_ingresar
             // 
             this.btn_ingresar.Active = false;
-            this.btn_ingresar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(80)))), ((int)(((byte)(183)))));
+            this.btn_ingresar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btn_ingresar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_ingresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ingresar.BorderRadius = 7;
@@ -70,7 +70,7 @@
             this.btn_ingresar.Location = new System.Drawing.Point(113, 390);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btn_ingresar.OnHovercolor = System.Drawing.Color.Teal;
+            this.btn_ingresar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btn_ingresar.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_ingresar.selected = false;
             this.btn_ingresar.Size = new System.Drawing.Size(118, 45);
@@ -118,7 +118,7 @@
             this.combox_rol.Location = new System.Drawing.Point(61, 330);
             this.combox_rol.Name = "combox_rol";
             this.combox_rol.NomalColor = System.Drawing.Color.DodgerBlue;
-            this.combox_rol.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(80)))), ((int)(((byte)(183)))));
+            this.combox_rol.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.combox_rol.selectedIndex = 0;
             this.combox_rol.Size = new System.Drawing.Size(232, 35);
             this.combox_rol.TabIndex = 5;

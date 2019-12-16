@@ -8,12 +8,12 @@ using Finazas.Modelo;
 
 namespace Finanzas.Controlador
 {
-    class Consultas
+    class CConsulta
     {
 
         public static DataTable Consulta(int año,string tipo)
         {
-            return new Conexion().Consulta(año, tipo);
+            return new MCuenta().Consulta(año, tipo);
         }
 
     }

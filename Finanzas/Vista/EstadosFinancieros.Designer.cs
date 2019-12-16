@@ -86,7 +86,7 @@
             this.tabla_activo.Name = "tabla_activo";
             this.tabla_activo.ReadOnly = true;
             this.tabla_activo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.tabla_activo.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tabla_activo.Size = new System.Drawing.Size(390, 469);
             this.tabla_activo.TabIndex = 0;
@@ -115,7 +115,7 @@
             this.tabla_pasivo.Name = "tabla_pasivo";
             this.tabla_pasivo.ReadOnly = true;
             this.tabla_pasivo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.tabla_pasivo.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.tabla_pasivo.Size = new System.Drawing.Size(382, 205);
             this.tabla_pasivo.TabIndex = 1;
@@ -144,7 +144,7 @@
             this.tabla_capital.Name = "tabla_capital";
             this.tabla_capital.ReadOnly = true;
             this.tabla_capital.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.tabla_capital.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.tabla_capital.Size = new System.Drawing.Size(382, 152);
             this.tabla_capital.TabIndex = 2;
@@ -272,7 +272,7 @@
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Active = false;
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
@@ -294,7 +294,7 @@
             this.bunifuFlatButton1.Location = new System.Drawing.Point(686, 501);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Teal;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(210, 48);
@@ -307,7 +307,7 @@
             // btn_nuevo
             // 
             this.btn_nuevo.Active = false;
-            this.btn_nuevo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_nuevo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btn_nuevo.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_nuevo.BorderRadius = 0;
@@ -329,7 +329,7 @@
             this.btn_nuevo.Location = new System.Drawing.Point(496, 502);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btn_nuevo.OnHovercolor = System.Drawing.Color.Teal;
+            this.btn_nuevo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btn_nuevo.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_nuevo.selected = false;
             this.btn_nuevo.Size = new System.Drawing.Size(166, 48);

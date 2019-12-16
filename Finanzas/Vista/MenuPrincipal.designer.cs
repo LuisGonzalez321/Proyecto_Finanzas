@@ -65,6 +65,7 @@
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_BG = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbl_estado = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.gradiente_panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -94,7 +95,6 @@
             this.gradiente_panel1.Quality = 10;
             this.gradiente_panel1.Size = new System.Drawing.Size(229, 610);
             this.gradiente_panel1.TabIndex = 0;
-            this.gradiente_panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradiente_panel1_Paint);
             // 
             // bunifuCustomLabel1
             // 
@@ -544,8 +544,8 @@
             this.radial_gauge.Suffix = "%";
             this.radial_gauge.TabIndex = 5;
             this.radial_gauge.Thickness = 30;
-            this.radial_gauge.Value = 50;
-            this.radial_gauge.ValueByTransition = 50;
+            this.radial_gauge.Value = 30;
+            this.radial_gauge.ValueByTransition = 30;
             this.radial_gauge.ValueLabelColor = System.Drawing.Color.Black;
             // 
             // bunifuCustomLabel2
@@ -553,7 +553,7 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(328, 135);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(297, 133);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(121, 21);
             this.bunifuCustomLabel2.TabIndex = 6;
@@ -580,6 +580,7 @@
             this.datepicker.Name = "datepicker";
             this.datepicker.Size = new System.Drawing.Size(217, 32);
             this.datepicker.TabIndex = 7;
+            this.datepicker.Visible = false;
             // 
             // bunifuCards1
             // 
@@ -591,11 +592,11 @@
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel4);
             this.bunifuCards1.Controls.Add(this.lbl_BG);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(604, 135);
+            this.bunifuCards1.Location = new System.Drawing.Point(301, 407);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(354, 165);
+            this.bunifuCards1.Size = new System.Drawing.Size(334, 165);
             this.bunifuCards1.TabIndex = 8;
             // 
             // bunifuCustomLabel5
@@ -631,12 +632,24 @@
             this.lbl_BG.TabIndex = 9;
             this.lbl_BG.Text = "BALANCE GENERAL";
             // 
+            // lbl_estado
+            // 
+            this.lbl_estado.AutoSize = true;
+            this.lbl_estado.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estado.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbl_estado.Location = new System.Drawing.Point(296, 326);
+            this.lbl_estado.Name = "lbl_estado";
+            this.lbl_estado.Size = new System.Drawing.Size(186, 25);
+            this.lbl_estado.TabIndex = 9;
+            this.lbl_estado.Text = "bunifuCustomLabel3";
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(980, 610);
+            this.Controls.Add(this.lbl_estado);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.datepicker);
             this.Controls.Add(this.bunifuCustomLabel2);
@@ -673,11 +686,8 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_rf;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_configuración;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_af;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuPages bunifuPages1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.Framework.UI.BunifuImageButton btn_info;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.UI.WinForms.BunifuRadialGauge radial_gauge;
@@ -687,5 +697,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_BG;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbl_estado;
     }
 }
