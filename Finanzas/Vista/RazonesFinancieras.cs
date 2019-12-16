@@ -12,9 +12,24 @@ namespace Finanzas.Vista
 {
     public partial class RazonesFinancieras: Form
     {
+
         public RazonesFinancieras ()
         {
             InitializeComponent();
+        }
+
+
+
+        private void btn_salir_Click (object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btn_is_Click (object sender, EventArgs e)
+        {
+            MessageWindow ms = new MessageWindow("Indice de solvencia","Por cada unidad de dinero");
+            ms.Show();
+            
         }
     }
 }

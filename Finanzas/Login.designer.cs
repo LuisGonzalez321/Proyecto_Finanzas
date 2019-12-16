@@ -92,7 +92,7 @@
             this.txt_contraseña.HintForeColor = System.Drawing.Color.Empty;
             this.txt_contraseña.HintText = "Contraseña";
             this.txt_contraseña.isPassword = true;
-            this.txt_contraseña.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(80)))), ((int)(((byte)(183)))));
+            this.txt_contraseña.LineFocusedColor = System.Drawing.Color.DodgerBlue;
             this.txt_contraseña.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_contraseña.LineMouseHoverColor = System.Drawing.Color.Gray;
             this.txt_contraseña.LineThickness = 3;
@@ -162,7 +162,7 @@
             this.txt_usuario.HintForeColor = System.Drawing.Color.Empty;
             this.txt_usuario.HintText = "Usuario";
             this.txt_usuario.isPassword = false;
-            this.txt_usuario.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(80)))), ((int)(((byte)(183)))));
+            this.txt_usuario.LineFocusedColor = System.Drawing.Color.DodgerBlue;
             this.txt_usuario.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_usuario.LineMouseHoverColor = System.Drawing.Color.Gray;
             this.txt_usuario.LineThickness = 3;

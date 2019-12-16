@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Finanzas.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,10 +25,10 @@ namespace Finanzas.Vista
             int año = datepicker_BG.Value.Year;
             tabla_activo.DataSource = Controlador.Consultas.Consulta(año, "ACTIVO");
 
-            tabla_pasivo.DataSource  = Controlador.Consultas.Consulta(año, "PASIVO");
+            tabla_pasivo.DataSource = Controlador.Consultas.Consulta(año, "PASIVO");
             tabla_capital.DataSource = Controlador.Consultas.Consulta(año, "CAPITAL");
-
-          //  label_activo.Text += "" + suma(tabla_activo);
+            label_activo.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo", datepicker_BG.Value));
+            //  label_activo.Text += "" + suma(tabla_activo);
 
         }
 

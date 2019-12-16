@@ -1,4 +1,5 @@
-﻿using Finanzas.Vista;
+﻿using Finanzas.Controlador;
+using Finanzas.Vista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +19,8 @@ namespace Finazas.Vista
         public MenuPrincipal ()
         {
             InitializeComponent();
-            Panel [] panel = null;//{ panel_Inicio, panel_EF, panel_RF, panel_AF,panel_configuración};
-            Insertar_MouseEnter(panel);
+            lbl_BG.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo",datepicker.Value) );
+            radial_gauge.Value = Convert.ToInt32(CRazónCuenta.Razon_cuenta("Razón_deuda", datepicker.Value));
         }
 
         private const int cGrip = 16;
@@ -45,20 +46,7 @@ namespace Finazas.Vista
             base.WndProc(ref m);
         }
 
-        public void Insertar_MouseEnter (Panel [] numero)
-        {
-            /*foreach (Panel i in numero)
-            {
-                //i.MouseEnter += new EventHandler(panel_MouseEnter);
-                i.MouseEnter += new EventHandler((sender, e)=>{
-                    i.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (49)))), ((int) (((byte) (86)))), ((int) (((byte) (196)))));
-                });
 
-                i.MouseLeave += new EventHandler((sender, e) => {
-                    i.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (60)))), ((int) (((byte) (98)))), ((int) (((byte) (207)))));
-                });
-            }*/
-        }
 
         private void bunifuImageButton1_Click (object sender, EventArgs e)
         {
@@ -92,6 +80,17 @@ namespace Finazas.Vista
         {
             Informacion informacion = new Informacion();
             informacion.ShowDialog();
+        }
+
+        private void btn_af_Click (object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_rf_Click (object sender, EventArgs e)
+        {
+            RazonesFinancieras rf = new RazonesFinancieras();
+            rf.Show();
         }
     }
 }

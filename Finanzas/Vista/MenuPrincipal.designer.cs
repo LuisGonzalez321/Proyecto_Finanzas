@@ -45,6 +45,8 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.gradiente_panel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btn_info = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_ef = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_rf = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_configuración = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -56,20 +58,26 @@
             this.btn_spiner = new Bunifu.Framework.UI.BunifuImageButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btn_info = new Bunifu.Framework.UI.BunifuImageButton();
+            this.radial_gauge = new Bunifu.UI.WinForms.BunifuRadialGauge();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.datepicker = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbl_BG = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.gradiente_panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_spiner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_info)).BeginInit();
+            this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gradiente_panel1
             // 
             this.gradiente_panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gradiente_panel1.BackgroundImage")));
             this.gradiente_panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gradiente_panel1.Controls.Add(this.bunifuCustomLabel1);
             this.gradiente_panel1.Controls.Add(this.btn_info);
-            this.gradiente_panel1.Controls.Add(this.bunifuLabel2);
             this.gradiente_panel1.Controls.Add(this.btn_ef);
             this.gradiente_panel1.Controls.Add(this.btn_rf);
             this.gradiente_panel1.Controls.Add(this.btn_configuración);
@@ -87,6 +95,32 @@
             this.gradiente_panel1.Size = new System.Drawing.Size(229, 610);
             this.gradiente_panel1.TabIndex = 0;
             this.gradiente_panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradiente_panel1_Paint);
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(42, 22);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(142, 45);
+            this.bunifuCustomLabel1.TabIndex = 5;
+            this.bunifuCustomLabel1.Text = "FERRISIS";
+            // 
+            // btn_info
+            // 
+            this.btn_info.BackColor = System.Drawing.Color.Transparent;
+            this.btn_info.Image = ((System.Drawing.Image)(resources.GetObject("btn_info.Image")));
+            this.btn_info.ImageActive = null;
+            this.btn_info.Location = new System.Drawing.Point(200, 0);
+            this.btn_info.Name = "btn_info";
+            this.btn_info.Size = new System.Drawing.Size(30, 33);
+            this.btn_info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_info.TabIndex = 5;
+            this.btn_info.TabStop = false;
+            this.btn_info.Zoom = 10;
+            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
             // 
             // btn_ef
             // 
@@ -216,6 +250,7 @@
             this.btn_rf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_rf.TextMarginLeft = 5;
             this.btn_rf.UseDefaultRadiusAndThickness = true;
+            this.btn_rf.Click += new System.EventHandler(this.btn_rf_Click);
             // 
             // btn_configuración
             // 
@@ -344,6 +379,7 @@
             this.btn_af.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_af.TextMarginLeft = 0;
             this.btn_af.UseDefaultRadiusAndThickness = true;
+            this.btn_af.Click += new System.EventHandler(this.btn_af_Click);
             // 
             // btn_inicio
             // 
@@ -439,9 +475,9 @@
             // 
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(938, 0);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(944, 0);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(43, 46);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(37, 37);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuImageButton1.TabIndex = 3;
             this.bunifuImageButton1.TabStop = false;
@@ -481,34 +517,119 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // bunifuLabel2
+            // radial_gauge
             // 
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(38, 21);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(139, 47);
-            this.bunifuLabel2.TabIndex = 10;
-            this.bunifuLabel2.Text = "Ferretería";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.radial_gauge.AutoGenerateProgressColorWhenHigh = true;
+            this.radial_gauge.AutoGenerateProgressColorWhenLow = false;
+            this.radial_gauge.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.radial_gauge.LighteningFactor = 70;
+            this.radial_gauge.Location = new System.Drawing.Point(282, 183);
+            this.radial_gauge.Margin = new System.Windows.Forms.Padding(6);
+            this.radial_gauge.Name = "radial_gauge";
+            this.radial_gauge.Prefix = "";
+            this.radial_gauge.ProgressBackColor = System.Drawing.Color.LightBlue;
+            this.radial_gauge.ProgressBgColor = System.Drawing.Color.LightBlue;
+            this.radial_gauge.ProgressColor = System.Drawing.Color.DodgerBlue;
+            this.radial_gauge.ProgressColor1 = System.Drawing.Color.DodgerBlue;
+            this.radial_gauge.ProgressColor2 = System.Drawing.Color.Red;
+            this.radial_gauge.ProgressColorHigh = System.Drawing.Color.Red;
+            this.radial_gauge.ProgressColorLow = System.Drawing.Color.DodgerBlue;
+            this.radial_gauge.ProgressHighValueMark = 50;
+            this.radial_gauge.RangeEnd = 100;
+            this.radial_gauge.RangeLabelsColor = System.Drawing.Color.Black;
+            this.radial_gauge.RangeStart = 0;
+            this.radial_gauge.ShowRangeLabels = true;
+            this.radial_gauge.ShowValueLabel = true;
+            this.radial_gauge.Size = new System.Drawing.Size(200, 137);
+            this.radial_gauge.Suffix = "%";
+            this.radial_gauge.TabIndex = 5;
+            this.radial_gauge.Thickness = 30;
+            this.radial_gauge.Value = 50;
+            this.radial_gauge.ValueByTransition = 50;
+            this.radial_gauge.ValueLabelColor = System.Drawing.Color.Black;
             // 
-            // btn_info
+            // bunifuCustomLabel2
             // 
-            this.btn_info.BackColor = System.Drawing.Color.Transparent;
-            this.btn_info.Image = ((System.Drawing.Image)(resources.GetObject("btn_info.Image")));
-            this.btn_info.ImageActive = null;
-            this.btn_info.Location = new System.Drawing.Point(200, 0);
-            this.btn_info.Name = "btn_info";
-            this.btn_info.Size = new System.Drawing.Size(30, 33);
-            this.btn_info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_info.TabIndex = 5;
-            this.btn_info.TabStop = false;
-            this.btn_info.Zoom = 10;
-            this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(328, 135);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(121, 21);
+            this.bunifuCustomLabel2.TabIndex = 6;
+            this.bunifuCustomLabel2.Text = "Razón de deuda";
+            // 
+            // datepicker
+            // 
+            this.datepicker.BorderRadius = 1;
+            this.datepicker.Color = System.Drawing.Color.DodgerBlue;
+            this.datepicker.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.datepicker.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.datepicker.DisabledColor = System.Drawing.Color.DodgerBlue;
+            this.datepicker.DisplayWeekNumbers = false;
+            this.datepicker.DPHeight = 0;
+            this.datepicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.datepicker.Enabled = false;
+            this.datepicker.FillDatePicker = false;
+            this.datepicker.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.datepicker.Icon = ((System.Drawing.Image)(resources.GetObject("datepicker.Icon")));
+            this.datepicker.IconColor = System.Drawing.Color.DodgerBlue;
+            this.datepicker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.datepicker.Location = new System.Drawing.Point(535, 12);
+            this.datepicker.MinimumSize = new System.Drawing.Size(217, 32);
+            this.datepicker.Name = "datepicker";
+            this.datepicker.Size = new System.Drawing.Size(217, 32);
+            this.datepicker.TabIndex = 7;
+            // 
+            // bunifuCards1
+            // 
+            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.LightBlue;
+            this.bunifuCards1.Controls.Add(this.bunifuCustomLabel5);
+            this.bunifuCards1.Controls.Add(this.bunifuCustomLabel4);
+            this.bunifuCards1.Controls.Add(this.lbl_BG);
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(604, 135);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(354, 165);
+            this.bunifuCards1.TabIndex = 8;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(25, 124);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(226, 25);
+            this.bunifuCustomLabel5.TabIndex = 11;
+            this.bunifuCustomLabel5.Text = "ESTADO DE RESULTADOS";
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(10, 14);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(315, 40);
+            this.bunifuCustomLabel4.TabIndex = 10;
+            this.bunifuCustomLabel4.Text = "ESTADOS FINANCIEROS";
+            // 
+            // lbl_BG
+            // 
+            this.lbl_BG.AutoSize = true;
+            this.lbl_BG.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BG.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbl_BG.Location = new System.Drawing.Point(25, 77);
+            this.lbl_BG.Name = "lbl_BG";
+            this.lbl_BG.Size = new System.Drawing.Size(176, 25);
+            this.lbl_BG.TabIndex = 9;
+            this.lbl_BG.Text = "BALANCE GENERAL";
             // 
             // MenuPrincipal
             // 
@@ -516,6 +637,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(980, 610);
+            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.datepicker);
+            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.radial_gauge);
             this.Controls.Add(this.btn_spiner);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.gradiente_panel2);
@@ -526,10 +651,13 @@
             this.Text = "MenuPrincipal";
             this.gradiente_panel1.ResumeLayout(false);
             this.gradiente_panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_info)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_spiner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_info)).EndInit();
+            this.bunifuCards1.ResumeLayout(false);
+            this.bunifuCards1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -551,5 +679,13 @@
         private System.Windows.Forms.TabPage tabPage2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.Framework.UI.BunifuImageButton btn_info;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.UI.WinForms.BunifuRadialGauge radial_gauge;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.UI.WinForms.BunifuDatePicker datepicker;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbl_BG;
     }
 }
