@@ -129,15 +129,15 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Scrollbar_A.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAHLCAYAAAD873lfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF/SURBVHhe7dwxTsMwGEDhjIyMjByDkaOwMHILRiYGLoHU
-        I3StmHoDWGAC1U1aQIIh/A6OBCaFN6Nn6VMT+39RT+CmXuv1ehH6YlG2p1dK6TSGnsJ7DtpYq9Xqohx/
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAHUCAYAAAAOb8kRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGCSURBVHhe7dwxTsMwGEDhjIyMjByDkaOwMHILRiYGLoHU
+        I3StmHoDWGAC1U1aQIIh/A6OBCaFJ+Zn6VMT+39RT+CmXuv1ehH6YlG2p1dK6TSGnsJ7DtpYq9Xqohx/
         XzEwD3mNXx/ERzbR3fR9v1dGh+Gz2Ozq4VFEr13XXQ7D8XIYm6keqsUHUzjKwXkY/jNwPf73qcMptzl4
         qTZ/lYPJg10MCAPCgDAgDAgDwoAwIAwIA8KAMCAMCAPCgDAgDAgDwoAwIAwIA8KAMCAMCAPCgDAgDAgD
         woAwIAwIA8KAMCAMCAPCgDAgDAgDwoAwIAwIA8KAMCAMCAPCgDAgDAgDwoAwIAwIA8KAMCAMCAPCgDAg
-        DAgDwoAwIAwIA8KAMCAMiP8S0JtVBzlY1pu7pJQem7Ztr6YOd5jnC1+P4+HPG2LDJmZPhmtl42UWL2/V
-        QG05DOeVb7CNjYdfovvtdntQxj9XDO/HwSxfTjsOxvNz/C5/DH9deWAMwl3ZLqtpPgA7o2KHKT0M1AAA
-        AABJRU5ErkJggg==
+        DAgDwoAwIAwIA8KAMCAMCAPCgPhXQK/EHeRgWW/uklJ6bNq2vZo63GGeb+o9joc/r/YNm5g9Ge4DjpdZ
+        vLxVA7XlMJxXvno4Nh5+ie632+1BGf9cMbwfB7N8q/A4GM/P8bv8Mfx15YExCHdlu6ym+QBa8/3qQKhA
+        kQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="datepicker_BG.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

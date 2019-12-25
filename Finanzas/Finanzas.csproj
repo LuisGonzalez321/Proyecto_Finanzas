@@ -173,6 +173,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\Análisis_Financiero.resx">
+      <DependentUpon>Análisis_Financiero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\EstadosFinancieros.resx">
       <DependentUpon>EstadosFinancieros.cs</DependentUpon>
     </EmbeddedResource>
