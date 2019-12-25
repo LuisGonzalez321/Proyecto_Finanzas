@@ -28,19 +28,16 @@
         /// </summary>
         private void InitializeComponent ()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstadosFinancieros));
-            this.tabla_activo = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.tabla_pasivo = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.tabla_capital = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -49,105 +46,21 @@
             this.btn_salir = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_nuevo = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.bunifuVScrollBar2 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.label_activo = new Bunifu.UI.WinForms.BunifuLabel();
             this.label_pc = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tabla_activo = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.tabla_pasivo = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.tabla_capital = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
+            this.bunifuVScrollBar2 = new Bunifu.UI.WinForms.BunifuVScrollBar();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
+            this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_activo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_pasivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_capital)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
-            this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabla_activo
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabla_activo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tabla_activo.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.tabla_activo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tabla_activo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_activo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tabla_activo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_activo.DoubleBuffered = true;
-            this.tabla_activo.EnableHeadersVisualStyles = false;
-            this.tabla_activo.HeaderBgColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_activo.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            this.tabla_activo.Location = new System.Drawing.Point(52, 81);
-            this.tabla_activo.Name = "tabla_activo";
-            this.tabla_activo.ReadOnly = true;
-            this.tabla_activo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tabla_activo.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.tabla_activo.Size = new System.Drawing.Size(390, 469);
-            this.tabla_activo.TabIndex = 0;
-            // 
-            // tabla_pasivo
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabla_pasivo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.tabla_pasivo.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.tabla_pasivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tabla_pasivo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_pasivo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.tabla_pasivo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_pasivo.DoubleBuffered = true;
-            this.tabla_pasivo.EnableHeadersVisualStyles = false;
-            this.tabla_pasivo.HeaderBgColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_pasivo.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            this.tabla_pasivo.Location = new System.Drawing.Point(496, 81);
-            this.tabla_pasivo.Name = "tabla_pasivo";
-            this.tabla_pasivo.ReadOnly = true;
-            this.tabla_pasivo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tabla_pasivo.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.tabla_pasivo.Size = new System.Drawing.Size(382, 205);
-            this.tabla_pasivo.TabIndex = 1;
-            // 
-            // tabla_capital
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabla_capital.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.tabla_capital.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.tabla_capital.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tabla_capital.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_capital.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.tabla_capital.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_capital.DoubleBuffered = true;
-            this.tabla_capital.EnableHeadersVisualStyles = false;
-            this.tabla_capital.HeaderBgColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_capital.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            this.tabla_capital.Location = new System.Drawing.Point(496, 344);
-            this.tabla_capital.Name = "tabla_capital";
-            this.tabla_capital.ReadOnly = true;
-            this.tabla_capital.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tabla_capital.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.tabla_capital.Size = new System.Drawing.Size(382, 152);
-            this.tabla_capital.TabIndex = 2;
             // 
             // bunifuLabel1
             // 
@@ -155,7 +68,7 @@
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuLabel1.Location = new System.Drawing.Point(52, 41);
+            this.bunifuLabel1.Location = new System.Drawing.Point(22, 41);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(79, 34);
@@ -205,15 +118,15 @@
             this.Scrollbar_A.AllowScrollKeysDetection = true;
             this.Scrollbar_A.AllowScrollOptionsMenu = true;
             this.Scrollbar_A.AllowShrinkingOnFocusLost = false;
-            this.Scrollbar_A.BackgroundColor = System.Drawing.Color.Silver;
+            this.Scrollbar_A.BackgroundColor = System.Drawing.SystemColors.Control;
             this.Scrollbar_A.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Scrollbar_A.BackgroundImage")));
-            this.Scrollbar_A.BindingContainer = null;
-            this.Scrollbar_A.BorderColor = System.Drawing.Color.Silver;
+            this.Scrollbar_A.BindingContainer = this.tabla_activo;
+            this.Scrollbar_A.BorderColor = System.Drawing.SystemColors.Control;
             this.Scrollbar_A.BorderRadius = 14;
             this.Scrollbar_A.BorderThickness = 1;
             this.Scrollbar_A.DurationBeforeShrink = 2000;
             this.Scrollbar_A.LargeChange = 10;
-            this.Scrollbar_A.Location = new System.Drawing.Point(448, 81);
+            this.Scrollbar_A.Location = new System.Drawing.Point(430, 81);
             this.Scrollbar_A.Maximum = 100;
             this.Scrollbar_A.Minimum = 0;
             this.Scrollbar_A.MinimumThumbLength = 18;
@@ -221,16 +134,16 @@
             this.Scrollbar_A.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
             this.Scrollbar_A.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
             this.Scrollbar_A.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.Scrollbar_A.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.Scrollbar_A.ScrollBarColor = System.Drawing.Color.Silver;
+            this.Scrollbar_A.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
+            this.Scrollbar_A.ScrollBarColor = System.Drawing.SystemColors.Control;
             this.Scrollbar_A.ShrinkSizeLimit = 3;
-            this.Scrollbar_A.Size = new System.Drawing.Size(12, 469);
+            this.Scrollbar_A.Size = new System.Drawing.Size(12, 459);
             this.Scrollbar_A.SmallChange = 1;
             this.Scrollbar_A.TabIndex = 6;
-            this.Scrollbar_A.ThumbColor = System.Drawing.Color.Gray;
-            this.Scrollbar_A.ThumbLength = 46;
+            this.Scrollbar_A.ThumbColor = System.Drawing.Color.DodgerBlue;
+            this.Scrollbar_A.ThumbLength = 45;
             this.Scrollbar_A.ThumbMargin = 1;
-            this.Scrollbar_A.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
+            this.Scrollbar_A.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
             this.Scrollbar_A.Value = 0;
             // 
             // datepicker_BG
@@ -340,84 +253,6 @@
             this.btn_nuevo.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
-            // bunifuVScrollBar1
-            // 
-            this.bunifuVScrollBar1.AllowCursorChanges = true;
-            this.bunifuVScrollBar1.AllowHomeEndKeysDetection = false;
-            this.bunifuVScrollBar1.AllowIncrementalClickMoves = true;
-            this.bunifuVScrollBar1.AllowMouseDownEffects = true;
-            this.bunifuVScrollBar1.AllowMouseHoverEffects = true;
-            this.bunifuVScrollBar1.AllowScrollingAnimations = true;
-            this.bunifuVScrollBar1.AllowScrollKeysDetection = true;
-            this.bunifuVScrollBar1.AllowScrollOptionsMenu = true;
-            this.bunifuVScrollBar1.AllowShrinkingOnFocusLost = false;
-            this.bunifuVScrollBar1.BackgroundColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar1.BackgroundImage")));
-            this.bunifuVScrollBar1.BindingContainer = null;
-            this.bunifuVScrollBar1.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.BorderRadius = 14;
-            this.bunifuVScrollBar1.BorderThickness = 1;
-            this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
-            this.bunifuVScrollBar1.LargeChange = 10;
-            this.bunifuVScrollBar1.Location = new System.Drawing.Point(884, 344);
-            this.bunifuVScrollBar1.Maximum = 100;
-            this.bunifuVScrollBar1.Minimum = 0;
-            this.bunifuVScrollBar1.MinimumThumbLength = 18;
-            this.bunifuVScrollBar1.Name = "bunifuVScrollBar1";
-            this.bunifuVScrollBar1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar1.Size = new System.Drawing.Size(12, 152);
-            this.bunifuVScrollBar1.SmallChange = 1;
-            this.bunifuVScrollBar1.TabIndex = 11;
-            this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.Gray;
-            this.bunifuVScrollBar1.ThumbLength = 18;
-            this.bunifuVScrollBar1.ThumbMargin = 1;
-            this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
-            this.bunifuVScrollBar1.Value = 0;
-            // 
-            // bunifuVScrollBar2
-            // 
-            this.bunifuVScrollBar2.AllowCursorChanges = true;
-            this.bunifuVScrollBar2.AllowHomeEndKeysDetection = false;
-            this.bunifuVScrollBar2.AllowIncrementalClickMoves = true;
-            this.bunifuVScrollBar2.AllowMouseDownEffects = true;
-            this.bunifuVScrollBar2.AllowMouseHoverEffects = true;
-            this.bunifuVScrollBar2.AllowScrollingAnimations = true;
-            this.bunifuVScrollBar2.AllowScrollKeysDetection = true;
-            this.bunifuVScrollBar2.AllowScrollOptionsMenu = true;
-            this.bunifuVScrollBar2.AllowShrinkingOnFocusLost = false;
-            this.bunifuVScrollBar2.BackgroundColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar2.BackgroundImage")));
-            this.bunifuVScrollBar2.BindingContainer = null;
-            this.bunifuVScrollBar2.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.BorderRadius = 14;
-            this.bunifuVScrollBar2.BorderThickness = 1;
-            this.bunifuVScrollBar2.DurationBeforeShrink = 2000;
-            this.bunifuVScrollBar2.LargeChange = 10;
-            this.bunifuVScrollBar2.Location = new System.Drawing.Point(884, 81);
-            this.bunifuVScrollBar2.Maximum = 100;
-            this.bunifuVScrollBar2.Minimum = 0;
-            this.bunifuVScrollBar2.MinimumThumbLength = 18;
-            this.bunifuVScrollBar2.Name = "bunifuVScrollBar2";
-            this.bunifuVScrollBar2.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar2.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.ScrollBarColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar2.Size = new System.Drawing.Size(12, 205);
-            this.bunifuVScrollBar2.SmallChange = 1;
-            this.bunifuVScrollBar2.TabIndex = 12;
-            this.bunifuVScrollBar2.ThumbColor = System.Drawing.Color.Gray;
-            this.bunifuVScrollBar2.ThumbLength = 20;
-            this.bunifuVScrollBar2.ThumbMargin = 1;
-            this.bunifuVScrollBar2.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
-            this.bunifuVScrollBar2.Value = 0;
-            // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
@@ -480,16 +315,275 @@
             this.label_pc.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_pc.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // tabla_activo
+            // 
+            this.tabla_activo.AllowCustomTheming = false;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.tabla_activo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this.tabla_activo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_activo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_activo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tabla_activo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_activo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.tabla_activo.ColumnHeadersHeight = 40;
+            this.tabla_activo.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.tabla_activo.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_activo.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_activo.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_activo.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tabla_activo.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.tabla_activo.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_activo.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_activo.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_activo.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tabla_activo.CurrentTheme.Name = null;
+            this.tabla_activo.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tabla_activo.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_activo.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_activo.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_activo.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_activo.DefaultCellStyle = dataGridViewCellStyle21;
+            this.tabla_activo.EnableHeadersVisualStyles = false;
+            this.tabla_activo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_activo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_activo.HeaderBgColor = System.Drawing.Color.Empty;
+            this.tabla_activo.HeaderForeColor = System.Drawing.Color.White;
+            this.tabla_activo.Location = new System.Drawing.Point(22, 79);
+            this.tabla_activo.Name = "tabla_activo";
+            this.tabla_activo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabla_activo.RowHeadersVisible = false;
+            this.tabla_activo.RowTemplate.Height = 40;
+            this.tabla_activo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tabla_activo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_activo.Size = new System.Drawing.Size(402, 461);
+            this.tabla_activo.TabIndex = 48;
+            this.tabla_activo.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // tabla_pasivo
+            // 
+            this.tabla_pasivo.AllowCustomTheming = false;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            this.tabla_pasivo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            this.tabla_pasivo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_pasivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_pasivo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tabla_pasivo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_pasivo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.tabla_pasivo.ColumnHeadersHeight = 40;
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tabla_pasivo.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.tabla_pasivo.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_pasivo.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_pasivo.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tabla_pasivo.CurrentTheme.Name = null;
+            this.tabla_pasivo.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tabla_pasivo.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_pasivo.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_pasivo.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_pasivo.DefaultCellStyle = dataGridViewCellStyle24;
+            this.tabla_pasivo.EnableHeadersVisualStyles = false;
+            this.tabla_pasivo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_pasivo.HeaderBgColor = System.Drawing.Color.Empty;
+            this.tabla_pasivo.HeaderForeColor = System.Drawing.Color.White;
+            this.tabla_pasivo.Location = new System.Drawing.Point(496, 79);
+            this.tabla_pasivo.Name = "tabla_pasivo";
+            this.tabla_pasivo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabla_pasivo.RowHeadersVisible = false;
+            this.tabla_pasivo.RowTemplate.Height = 40;
+            this.tabla_pasivo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tabla_pasivo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_pasivo.Size = new System.Drawing.Size(382, 207);
+            this.tabla_pasivo.TabIndex = 49;
+            this.tabla_pasivo.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // tabla_capital
+            // 
+            this.tabla_capital.AllowCustomTheming = false;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
+            this.tabla_capital.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            this.tabla_capital.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_capital.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_capital.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tabla_capital.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_capital.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            this.tabla_capital.ColumnHeadersHeight = 40;
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tabla_capital.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.tabla_capital.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_capital.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_capital.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_capital.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tabla_capital.CurrentTheme.Name = null;
+            this.tabla_capital.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tabla_capital.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_capital.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_capital.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_capital.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_capital.DefaultCellStyle = dataGridViewCellStyle27;
+            this.tabla_capital.EnableHeadersVisualStyles = false;
+            this.tabla_capital.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_capital.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_capital.HeaderBgColor = System.Drawing.Color.Empty;
+            this.tabla_capital.HeaderForeColor = System.Drawing.Color.White;
+            this.tabla_capital.Location = new System.Drawing.Point(496, 344);
+            this.tabla_capital.Name = "tabla_capital";
+            this.tabla_capital.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabla_capital.RowHeadersVisible = false;
+            this.tabla_capital.RowTemplate.Height = 40;
+            this.tabla_capital.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tabla_capital.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_capital.Size = new System.Drawing.Size(382, 151);
+            this.tabla_capital.TabIndex = 50;
+            this.tabla_capital.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // bunifuVScrollBar1
+            // 
+            this.bunifuVScrollBar1.AllowCursorChanges = true;
+            this.bunifuVScrollBar1.AllowHomeEndKeysDetection = false;
+            this.bunifuVScrollBar1.AllowIncrementalClickMoves = true;
+            this.bunifuVScrollBar1.AllowMouseDownEffects = true;
+            this.bunifuVScrollBar1.AllowMouseHoverEffects = true;
+            this.bunifuVScrollBar1.AllowScrollingAnimations = true;
+            this.bunifuVScrollBar1.AllowScrollKeysDetection = true;
+            this.bunifuVScrollBar1.AllowScrollOptionsMenu = true;
+            this.bunifuVScrollBar1.AllowShrinkingOnFocusLost = false;
+            this.bunifuVScrollBar1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.bunifuVScrollBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar1.BackgroundImage")));
+            this.bunifuVScrollBar1.BindingContainer = this.tabla_pasivo;
+            this.bunifuVScrollBar1.BorderColor = System.Drawing.SystemColors.Control;
+            this.bunifuVScrollBar1.BorderRadius = 14;
+            this.bunifuVScrollBar1.BorderThickness = 1;
+            this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
+            this.bunifuVScrollBar1.LargeChange = 10;
+            this.bunifuVScrollBar1.Location = new System.Drawing.Point(884, 79);
+            this.bunifuVScrollBar1.Maximum = 100;
+            this.bunifuVScrollBar1.Minimum = 0;
+            this.bunifuVScrollBar1.MinimumThumbLength = 18;
+            this.bunifuVScrollBar1.Name = "bunifuVScrollBar1";
+            this.bunifuVScrollBar1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
+            this.bunifuVScrollBar1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
+            this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.SystemColors.Control;
+            this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
+            this.bunifuVScrollBar1.Size = new System.Drawing.Size(12, 207);
+            this.bunifuVScrollBar1.SmallChange = 1;
+            this.bunifuVScrollBar1.TabIndex = 51;
+            this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuVScrollBar1.ThumbLength = 20;
+            this.bunifuVScrollBar1.ThumbMargin = 1;
+            this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
+            this.bunifuVScrollBar1.Value = 0;
+            // 
+            // bunifuVScrollBar2
+            // 
+            this.bunifuVScrollBar2.AllowCursorChanges = true;
+            this.bunifuVScrollBar2.AllowHomeEndKeysDetection = false;
+            this.bunifuVScrollBar2.AllowIncrementalClickMoves = true;
+            this.bunifuVScrollBar2.AllowMouseDownEffects = true;
+            this.bunifuVScrollBar2.AllowMouseHoverEffects = true;
+            this.bunifuVScrollBar2.AllowScrollingAnimations = true;
+            this.bunifuVScrollBar2.AllowScrollKeysDetection = true;
+            this.bunifuVScrollBar2.AllowScrollOptionsMenu = true;
+            this.bunifuVScrollBar2.AllowShrinkingOnFocusLost = false;
+            this.bunifuVScrollBar2.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.bunifuVScrollBar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar2.BackgroundImage")));
+            this.bunifuVScrollBar2.BindingContainer = this.tabla_capital;
+            this.bunifuVScrollBar2.BorderColor = System.Drawing.SystemColors.Control;
+            this.bunifuVScrollBar2.BorderRadius = 14;
+            this.bunifuVScrollBar2.BorderThickness = 1;
+            this.bunifuVScrollBar2.DurationBeforeShrink = 2000;
+            this.bunifuVScrollBar2.LargeChange = 10;
+            this.bunifuVScrollBar2.Location = new System.Drawing.Point(884, 344);
+            this.bunifuVScrollBar2.Maximum = 100;
+            this.bunifuVScrollBar2.Minimum = 0;
+            this.bunifuVScrollBar2.MinimumThumbLength = 18;
+            this.bunifuVScrollBar2.Name = "bunifuVScrollBar2";
+            this.bunifuVScrollBar2.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar2.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
+            this.bunifuVScrollBar2.OnDisable.ThumbColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar2.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
+            this.bunifuVScrollBar2.ScrollBarColor = System.Drawing.SystemColors.Control;
+            this.bunifuVScrollBar2.ShrinkSizeLimit = 3;
+            this.bunifuVScrollBar2.Size = new System.Drawing.Size(12, 151);
+            this.bunifuVScrollBar2.SmallChange = 1;
+            this.bunifuVScrollBar2.TabIndex = 52;
+            this.bunifuVScrollBar2.ThumbColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuVScrollBar2.ThumbLength = 18;
+            this.bunifuVScrollBar2.ThumbMargin = 1;
+            this.bunifuVScrollBar2.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
+            this.bunifuVScrollBar2.Value = 0;
+            // 
             // EstadosFinancieros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(980, 610);
+            this.Controls.Add(this.bunifuVScrollBar2);
+            this.Controls.Add(this.bunifuVScrollBar1);
+            this.Controls.Add(this.tabla_capital);
+            this.Controls.Add(this.tabla_pasivo);
+            this.Controls.Add(this.tabla_activo);
             this.Controls.Add(this.label_pc);
             this.Controls.Add(this.label_activo);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Controls.Add(this.bunifuVScrollBar2);
-            this.Controls.Add(this.bunifuVScrollBar1);
             this.Controls.Add(this.btn_nuevo);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.datepicker_BG);
@@ -497,30 +591,23 @@
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.bunifuLabel1);
-            this.Controls.Add(this.tabla_capital);
-            this.Controls.Add(this.tabla_pasivo);
-            this.Controls.Add(this.tabla_activo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EstadosFinancieros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EstadosFinancieros";
             this.Load += new System.EventHandler(this.EstadosFinancieros_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_activo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_pasivo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_capital)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_activo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_pasivo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_capital)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuCustomDataGrid tabla_activo;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid tabla_pasivo;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid tabla_capital;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
@@ -529,11 +616,14 @@
         private Bunifu.Framework.UI.BunifuImageButton btn_salir;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_nuevo;
-        private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
-        private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar2;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel label_activo;
         private Bunifu.UI.WinForms.BunifuLabel label_pc;
+        private Bunifu.UI.WinForms.BunifuDataGridView tabla_activo;
+        private Bunifu.UI.WinForms.BunifuDataGridView tabla_pasivo;
+        private Bunifu.UI.WinForms.BunifuDataGridView tabla_capital;
+        private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
+        private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar2;
     }
 }

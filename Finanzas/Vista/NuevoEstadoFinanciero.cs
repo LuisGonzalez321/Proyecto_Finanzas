@@ -19,18 +19,41 @@ namespace Finanzas.Vista
         {
             InitializeComponent();
             tabla_activo.DataSource = CConsulta.Catalogo_Cuentas("ACTIVO");
+
         }
-        
-        public bool ValidarCampos (BunifuDataGridView datagrid)
+
+
+        private const int cGrip = 16;
+        private const int cCaption = 32;
+
+
+        /*
+         * Metodo para poder mover la ventana
+         */
+        protected override void WndProc (ref Message m)
         {
-            foreach (DataGridTextBox i in datagrid.Rows)
+            if (m.Msg == 0x84)
             {
-                if (i.Text == null)
+                Point pos = new Point(m.LParam.ToInt32());
+                pos = this.bunifuGradientPanel1.PointToClient(pos);
+                if (pos.Y < cCaption)
                 {
-                    return false;
+                    m.Result = (IntPtr) 2;
+                    return;
+                }
+                if (pos.X >= this.bunifuGradientPanel1.ClientSize.Width - cGrip && pos.Y >= this.bunifuGradientPanel1.ClientSize.Height - cGrip)
+                {
+                    m.Result = (IntPtr) 17;
+                    return;
                 }
             }
-            return true;
+            base.WndProc(ref m);
+        }
+
+
+        public bool ValidarCampos (BunifuDataGridView datagrid)
+        {
+            return false;
         }
 
         private void btn_guardar_Click (object sender, EventArgs e)
