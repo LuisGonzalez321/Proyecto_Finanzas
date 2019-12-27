@@ -23,8 +23,7 @@ namespace Finazas.Vista
             radial_gauge.Value = valor;
             lbl_estado.Text = Finanzas.Modelo.Herramientas.Toolkit.Estado_Empresa(valor);
         }
-
-        
+  
 
         private const int cGrip = 16;
         private const int cCaption = 32;

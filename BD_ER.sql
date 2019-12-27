@@ -567,7 +567,7 @@ as
 	select (@pasivos_totales / @Capital_social) as Razon_PasivoCapital
 go 
 
-Create procedure Rotación_Inventario
+Create procedure Razon_ácida
 	@año int
 as
 	declare @Activo_Circulante money = (select ''+dbo.Suma_Cuenta(@año, 'Activo Circulante'))
@@ -584,6 +584,20 @@ as
 go
 
 
+/*         Capital de neto de trabajo           */
+
+create procedure Capital_Trabajo
+@año int
+	as
+declare @Activo_Circulante money = (select ''+dbo.Suma_Cuenta(@año, 'Activo Circulante'))
+declare @Pasivo_Circulante money = (select ''+dbo.Suma_Cuenta(@año, 'Pasivo CP'))
+
+select (@Activo_Circulante - @Pasivo_Circulante) as Capital_Trabajo
+go
+
+
+
+
 create procedure MostrarUtilidades
 @fecha int
 	as
@@ -595,3 +609,6 @@ create procedure MostrarUtilidades
 	inner join Cuenta c on c.IdCuenta = t.IdCuenta 
 	where t.fecha = @fecha
 go
+
+
+

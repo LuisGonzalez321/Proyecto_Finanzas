@@ -72,7 +72,7 @@
             this.btn_aceptar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btn_aceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_aceptar.BorderRadius = 0;
+            this.btn_aceptar.BorderRadius = 7;
             this.btn_aceptar.ButtonText = "Aceptar";
             this.btn_aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_aceptar.DisabledColor = System.Drawing.Color.Gray;
@@ -123,7 +123,7 @@
             this.bunifuShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Silver;
+            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Black;
             this.bunifuShadowPanel1.ShadowDept = 2;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(395, 183);

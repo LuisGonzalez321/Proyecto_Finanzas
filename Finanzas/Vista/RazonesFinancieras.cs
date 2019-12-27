@@ -44,8 +44,15 @@ namespace Finanzas.Vista
         {
             string texto = "El " + CRazónCuenta.Razon_cuenta("Razón_deuda", bunifuDatePicker1.Value) + "% de los bienes que tiene la empresa las debe a los acreedores.\n"+
                            "Es decir del total de los activos de la empresa se debe el " + CRazónCuenta.Razon_cuenta("Razón_deuda", bunifuDatePicker1.Value) +"%";
-            MessageWindow ms = new MessageWindow("Indice de solvencia", texto);
-            ms.Show();
+            new MessageWindow("Razón de deuda", texto).Show();
+        }
+
+        private void btn_cnt_Click (object sender, EventArgs e)
+        {
+            double valor = CRazónCuenta.Razon_cuenta("Capital_Trabajo", bunifuDatePicker1.Value);
+            string texto = "El Capital neto de trabajo es de "+valor+ ", esto quiere decir cuenta con ese \n dinero una vez habiendo cancelado"+
+                           "con todas las obligaciones \n a corto plazo.";
+            new MessageWindow("Capital Neto Trabajo", texto).Show();
         }
     }
 }

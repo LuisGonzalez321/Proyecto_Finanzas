@@ -58,14 +58,17 @@ namespace Finanzas.Vista
 
         private void btn_guardar_Click (object sender, EventArgs e)
         {
-            MessageBox.Show("Exito al guardar!!","Exito!!",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-            if (ValidarCampos(tabla_activo))
+            // MessageBox.Show("Exito al guardar!!", "Exito!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            string texto = "";//tabla_activo.Rows [2].Cells ["Monto"].Value.ToString();
+            
+            /*if (ValidarCampos(tabla_activo))
             {
                 MessageBox.Show("Texto Completo");
             }else
             {
                 MessageBox.Show("Verifique los ");
-            }
+            }*/
         }
 
         private void btn_cancelar_Click (object sender, EventArgs e)
@@ -92,6 +95,11 @@ namespace Finanzas.Vista
         private void btn_ER_Click (object sender, EventArgs e)
         {
             page_EF.PageIndex = 1;
+        }
+
+        private void tabla_activo_CellValueChanged (object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
