@@ -11,7 +11,7 @@ namespace Finazas.Modelo
 {
     public class MCuenta
     {
-  
+
         string nombre;
         float monto;
         DateTime fecha;
@@ -39,6 +39,7 @@ namespace Finazas.Modelo
         public string Concepto { get; set; }
 
 
+        /* Muestra el catálogo de cuentas sobre el tipo de cuenta del BG */
         public DataTable Catalogo_Cuentas (string tipo)
         {
             DataTable DtResultado = new DataTable();
@@ -71,6 +72,7 @@ namespace Finazas.Modelo
 
         }
 
+        /* Realiza un consulta sobre el tipo de cuenta del BG en determinado año*/
         public DataTable Consulta (int año, string tipo)
         {
             DataTable DtResultado = new DataTable();
@@ -108,6 +110,63 @@ namespace Finazas.Modelo
             return DtResultado;
 
         }
+
+        public bool Insertar_monto (int idCuenta,double monto, DateTime fecha,string concepto)
+        {
+            SqlConnection sqlcon = new SqlConnection();
+            bool flag = false;
+            try
+            {
+                sqlcon.ConnectionString = Conexion.cadena;
+                sqlcon.Open();
+
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = sqlcon;
+                SqlCmd.CommandText = "Insertar_monto";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdCuenta = new SqlParameter();
+                ParIdCuenta.ParameterName = "@IdCuenta";
+                ParIdCuenta.SqlDbType = SqlDbType.Int;
+                ParIdCuenta.Value = idCuenta;
+                SqlCmd.Parameters.Add(ParIdCuenta);
+
+                SqlParameter ParMonto = new SqlParameter();
+                ParMonto.ParameterName = "@Monto";
+                ParMonto.SqlDbType = SqlDbType.Money;
+                ParMonto.Value = monto;
+                SqlCmd.Parameters.Add(ParMonto);
+
+                SqlParameter Parfecha = new SqlParameter();
+                Parfecha.ParameterName = "@Fecha";
+                Parfecha.SqlDbType = SqlDbType.Date;
+                Parfecha.Value = fecha;
+                SqlCmd.Parameters.Add(Parfecha);
+
+                SqlParameter ParConcepto = new SqlParameter();
+                ParConcepto.ParameterName = "@Concepto";
+                ParConcepto.SqlDbType = SqlDbType.VarChar;
+                ParConcepto.Size = 5;
+                ParConcepto.Value = concepto;
+                SqlCmd.Parameters.Add(ParConcepto);
+
+                SqlCmd.ExecuteNonQuery();
+
+                flag = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                flag = false;
+            }
+            finally
+            {
+                if (sqlcon.State == ConnectionState.Open)
+                    sqlcon.Close();
+            }
+            return flag;
+        }
+
 
     }
 }

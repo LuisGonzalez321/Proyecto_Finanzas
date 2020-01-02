@@ -366,7 +366,7 @@ insert into Cuenta values(3,'Bodega')
 /* otros activos */
 insert into Cuenta values(5,'Pago Anticipado')
 
-/**/
+/* pasivos a corto plazo */
 insert into Cuenta values(6,'Proveedores')
 insert into Cuenta values(6,'Acreedores')
 insert into Cuenta values(6,'Cuentas por pagar')
@@ -374,14 +374,19 @@ insert into Cuenta values(6,'Intereses por pagar')
 insert into Cuenta values(6,'Dividendos por pagar')
 insert into Cuenta values(6,'IR por pagar')
 
+/* pasivos a largo plazo */
 insert into Cuenta values(7,'Cuenta por pagar banco')
 insert into Cuenta values(7,'Prestamos por pagar largo plazo')
 
+/* Capital  */
 insert into Cuenta values(9,'Reserva legal')
 insert into Cuenta values(9,'Utilidad neta del ejercicio')
 insert into Cuenta values(9,'Utilidades retenidas')
 insert into Cuenta values(9,'Capital social')
 
+select * from Cuenta
+
+/* Ingresos */
 insert into Cuenta values(10,'Ventas')
 insert into Cuenta values(10,'Devoluciones sobre venta')
 insert into Cuenta values(10,'Descuento sobre venta')
@@ -389,31 +394,38 @@ insert into Cuenta values(10,'Venta de activo fijo')
 insert into Cuenta values(10,'Ventas al credito')
 insert into Cuenta values(10,'Ventas Netas')
 
+/* Costos */
 insert into Cuenta values(12,'Costo de ventas')
 insert into Cuenta values(12,'Compras')
 insert into Cuenta values(12,'Devoluciones sobre Compras')
 insert into Cuenta values(12,'Rebaja sobre compras')
 
+/*  Gastos de admon */
 insert into Cuenta values(13,'Sueldo Gerente')
 insert into Cuenta values(13,'Publicidad')
 insert into Cuenta values(13,'Consumo de luz')
 
+/* Gastos financieros */
 insert into Cuenta values(14,'Intereses pagados')
 insert into Cuenta values(14,'Producto Financiero')
 
+/* Gastos de venta*/
 insert into Cuenta values(15,'Sueldo empleado')
 insert into Cuenta values(15,'Papelería y utiles')
 insert into Cuenta values(15,'Impuesto sobre ventas')
 
+/* Gastos operativos */
 insert into Cuenta values(16,'Operación de la empresa')
 
+/* Otros gastos */
 insert into Cuenta values(17,'Perdida en venta de activo fijo')
 insert into Cuenta values(17,'Rentas pagadas')
 insert into Cuenta values(17,'Dividendos Pagados')
 
+
 --Activos corrientes
 
-insert into Transacción values (1,44171,getdate(),'D ')
+insert into Transacción values (1,44171,getdate(),'D')
 insert into Transacción values (2,44171,GETDATE(),'D')
 insert into Transacción values (3,21383,GETDATE(),'D')
 insert into Transacción values (4,87400,GETDATE(),'D')
@@ -485,7 +497,7 @@ go
 
 /*  Procedimientos para manejo de los estados financieros */
 
-Create procedure MostrarBalanceGeneral
+Create procedure MostrarBalanceGeneral 2019,
 	@fecha int,
 	@tipo varchar(10)
 as
@@ -522,6 +534,20 @@ as
 go
 
 
+/*  Muestra las utilidades  */
+create procedure MostrarUtilidades
+@fecha int
+	as
+	declare @monto money = (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where t.fecha = @fecha and c.IdCuenta = 36)
+	select 
+		((select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2019 and c.IdCuenta = 36) -
+		 (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2019 and c.IdCuenta = 37)) as Utilidad_Bruta
+	from transacción t 
+	inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+	where t.fecha = @fecha
+go
+
+
 /* =============================== Razones financieras  ================================*/
 
 Create procedure Indice_solvencia
@@ -553,7 +579,7 @@ as
 	select Convert(int,(@pasivo / @activo) * 100)   as Razón_deuda
 go
 
-/*  Razón pasivo vcapital  */
+/*  Razón pasivo capital  */
 
 Create procedure Razon_PasivoCapital
 	@año int
@@ -598,17 +624,13 @@ go
 
 
 
-create procedure MostrarUtilidades
-@fecha int
+/*  Catalogo de cuentas del estado de reultados */
+Create procedure Insertar_monto
+@IdCuenta int,
+@Monto money,
+@Fecha date,
+@Concepto varchar(5)
 	as
-	declare @monto money = (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where t.fecha = @fecha and c.IdCuenta = 36)
-	select 
-		((select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2019 and c.IdCuenta = 36) -
-		 (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2019 and c.IdCuenta = 37)) as Utilidad_Bruta
-	from transacción t 
-	inner join Cuenta c on c.IdCuenta = t.IdCuenta 
-	where t.fecha = @fecha
+Insert into transacción values(@IdCuenta,@Monto,@Fecha,@Concepto)
 go
-
-
 

@@ -141,6 +141,12 @@
         KgAAAAAAAAAAAAAg3eHwA7ZOz/IA7HWBAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="MontoC.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MontoP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuVScrollBar2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAwAAACMCAYAAABIxUg/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

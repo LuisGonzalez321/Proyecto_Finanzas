@@ -16,5 +16,9 @@ namespace Finanzas.Controlador
             return new MCuenta().Catalogo_Cuentas(tipo);
         }
 
+        public static bool Insertart_monto (int idCuenta, double monto, DateTime fecha, string concepto)
+        {
+            return new MCuenta().Insertar_monto(idCuenta, monto, fecha, concepto);
+        }
     }
 }

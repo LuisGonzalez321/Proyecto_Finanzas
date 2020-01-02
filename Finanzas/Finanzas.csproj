@@ -191,7 +191,6 @@
     <EmbeddedResource Include="Vista\NuevoEstadoFinanciero.resx">
       <DependentUpon>NuevoEstadoFinanciero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\RazonesFinancieras.rdlc" />
     <EmbeddedResource Include="Vista\RazonesFinancieras.resx">
       <DependentUpon>RazonesFinancieras.cs</DependentUpon>
     </EmbeddedResource>

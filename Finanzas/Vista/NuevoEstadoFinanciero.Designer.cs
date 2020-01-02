@@ -34,30 +34,35 @@ namespace Finanzas.Vista
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_salir = new Bunifu.Framework.UI.BunifuImageButton();
             this.page_EF = new Bunifu.UI.WinForms.BunifuPages();
             this.tabpage_BG = new System.Windows.Forms.TabPage();
+            this.tabla_capital = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.MontoC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabla_pasivo = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.MontoP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuVScrollBar2 = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.tabla_capital = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.tabla_pasivo = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Scrollbar_A = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.tabla_activo = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_cancelar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -71,7 +76,6 @@ namespace Finanzas.Vista
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.page_EF.SuspendLayout();
@@ -166,6 +170,8 @@ namespace Finanzas.Vista
             // 
             // tabpage_BG
             // 
+            this.tabpage_BG.Controls.Add(this.tabla_capital);
+            this.tabpage_BG.Controls.Add(this.tabla_pasivo);
             this.tabpage_BG.Controls.Add(this.bunifuVScrollBar2);
             this.tabpage_BG.Controls.Add(this.bunifuVScrollBar1);
             this.tabpage_BG.Controls.Add(this.Scrollbar_A);
@@ -179,8 +185,6 @@ namespace Finanzas.Vista
             this.tabpage_BG.Controls.Add(this.btn_ER);
             this.tabpage_BG.Controls.Add(this.datepicker_BG);
             this.tabpage_BG.Controls.Add(this.bunifuLabel1);
-            this.tabpage_BG.Controls.Add(this.tabla_capital);
-            this.tabpage_BG.Controls.Add(this.tabla_pasivo);
             this.tabpage_BG.Location = new System.Drawing.Point(4, 4);
             this.tabpage_BG.Name = "tabpage_BG";
             this.tabpage_BG.Padding = new System.Windows.Forms.Padding(3);
@@ -188,6 +192,144 @@ namespace Finanzas.Vista
             this.tabpage_BG.TabIndex = 0;
             this.tabpage_BG.Text = "tabpage_BG";
             this.tabpage_BG.UseVisualStyleBackColor = true;
+            // 
+            // tabla_capital
+            // 
+            this.tabla_capital.AllowCustomTheming = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.tabla_capital.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tabla_capital.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_capital.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_capital.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tabla_capital.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_capital.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tabla_capital.ColumnHeadersHeight = 40;
+            this.tabla_capital.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MontoC});
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_capital.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tabla_capital.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.tabla_capital.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_capital.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_capital.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_capital.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tabla_capital.CurrentTheme.Name = null;
+            this.tabla_capital.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tabla_capital.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_capital.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_capital.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_capital.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_capital.DefaultCellStyle = dataGridViewCellStyle4;
+            this.tabla_capital.EnableHeadersVisualStyles = false;
+            this.tabla_capital.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_capital.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_capital.HeaderBgColor = System.Drawing.Color.Empty;
+            this.tabla_capital.HeaderForeColor = System.Drawing.Color.White;
+            this.tabla_capital.Location = new System.Drawing.Point(512, 306);
+            this.tabla_capital.Name = "tabla_capital";
+            this.tabla_capital.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tabla_capital.RowHeadersVisible = false;
+            this.tabla_capital.RowTemplate.Height = 40;
+            this.tabla_capital.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_capital.Size = new System.Drawing.Size(378, 144);
+            this.tabla_capital.TabIndex = 57;
+            this.tabla_capital.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.tabla_capital.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_capital_CellValueChanged);
+            // 
+            // MontoC
+            // 
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = "0.00";
+            this.MontoC.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MontoC.HeaderText = "Monto";
+            this.MontoC.Name = "MontoC";
+            // 
+            // tabla_pasivo
+            // 
+            this.tabla_pasivo.AllowCustomTheming = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.tabla_pasivo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.tabla_pasivo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_pasivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_pasivo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tabla_pasivo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_pasivo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.tabla_pasivo.ColumnHeadersHeight = 40;
+            this.tabla_pasivo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MontoP});
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tabla_pasivo.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.tabla_pasivo.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_pasivo.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_pasivo.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tabla_pasivo.CurrentTheme.Name = null;
+            this.tabla_pasivo.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tabla_pasivo.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tabla_pasivo.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tabla_pasivo.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_pasivo.DefaultCellStyle = dataGridViewCellStyle7;
+            this.tabla_pasivo.EnableHeadersVisualStyles = false;
+            this.tabla_pasivo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.tabla_pasivo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_pasivo.HeaderBgColor = System.Drawing.Color.Empty;
+            this.tabla_pasivo.HeaderForeColor = System.Drawing.Color.White;
+            this.tabla_pasivo.Location = new System.Drawing.Point(512, 43);
+            this.tabla_pasivo.Name = "tabla_pasivo";
+            this.tabla_pasivo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tabla_pasivo.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = "0.00";
+            this.tabla_pasivo.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.tabla_pasivo.RowTemplate.Height = 40;
+            this.tabla_pasivo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_pasivo.Size = new System.Drawing.Size(378, 207);
+            this.tabla_pasivo.TabIndex = 56;
+            this.tabla_pasivo.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.tabla_pasivo.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_pasivo_CellValueChanged);
+            // 
+            // MontoP
+            // 
+            this.MontoP.HeaderText = "Monto";
+            this.MontoP.Name = "MontoP";
             // 
             // bunifuVScrollBar2
             // 
@@ -228,35 +370,6 @@ namespace Finanzas.Vista
             this.bunifuVScrollBar2.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
             this.bunifuVScrollBar2.Value = 0;
             // 
-            // tabla_capital
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabla_capital.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tabla_capital.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.tabla_capital.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tabla_capital.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_capital.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tabla_capital.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_capital.DoubleBuffered = true;
-            this.tabla_capital.EnableHeadersVisualStyles = false;
-            this.tabla_capital.HeaderBgColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_capital.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            this.tabla_capital.Location = new System.Drawing.Point(508, 306);
-            this.tabla_capital.Name = "tabla_capital";
-            this.tabla_capital.ReadOnly = true;
-            this.tabla_capital.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tabla_capital.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.tabla_capital.Size = new System.Drawing.Size(382, 140);
-            this.tabla_capital.TabIndex = 34;
-            // 
             // bunifuVScrollBar1
             // 
             this.bunifuVScrollBar1.AllowCursorChanges = true;
@@ -295,35 +408,6 @@ namespace Finanzas.Vista
             this.bunifuVScrollBar1.ThumbMargin = 1;
             this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
             this.bunifuVScrollBar1.Value = 0;
-            // 
-            // tabla_pasivo
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabla_pasivo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.tabla_pasivo.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.tabla_pasivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tabla_pasivo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_pasivo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.tabla_pasivo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_pasivo.DoubleBuffered = true;
-            this.tabla_pasivo.EnableHeadersVisualStyles = false;
-            this.tabla_pasivo.HeaderBgColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_pasivo.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            this.tabla_pasivo.Location = new System.Drawing.Point(508, 43);
-            this.tabla_pasivo.Name = "tabla_pasivo";
-            this.tabla_pasivo.ReadOnly = true;
-            this.tabla_pasivo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tabla_pasivo.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.tabla_pasivo.Size = new System.Drawing.Size(382, 205);
-            this.tabla_pasivo.TabIndex = 33;
             // 
             // Scrollbar_A
             // 
@@ -367,21 +451,21 @@ namespace Finanzas.Vista
             // tabla_activo
             // 
             this.tabla_activo.AllowCustomTheming = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.tabla_activo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.tabla_activo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.tabla_activo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_activo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tabla_activo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tabla_activo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_activo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_activo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.tabla_activo.ColumnHeadersHeight = 40;
             this.tabla_activo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Monto});
@@ -401,16 +485,15 @@ namespace Finanzas.Vista
             this.tabla_activo.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.tabla_activo.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.tabla_activo.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Format = "N2";
-            dataGridViewCellStyle10.NullValue = "0";
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_activo.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Format = "N2";
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_activo.DefaultCellStyle = dataGridViewCellStyle12;
             this.tabla_activo.EnableHeadersVisualStyles = false;
             this.tabla_activo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_activo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -420,11 +503,9 @@ namespace Finanzas.Vista
             this.tabla_activo.Name = "tabla_activo";
             this.tabla_activo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabla_activo.RowHeadersVisible = false;
-            dataGridViewCellStyle11.Format = "N2";
-            dataGridViewCellStyle11.NullValue = "0.00";
-            this.tabla_activo.RowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.tabla_activo.RowTemplate.DefaultCellStyle.Format = "N2";
-            this.tabla_activo.RowTemplate.DefaultCellStyle.NullValue = "0.00";
+            dataGridViewCellStyle13.Format = "N2";
+            dataGridViewCellStyle13.NullValue = "0.00";
+            this.tabla_activo.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.tabla_activo.RowTemplate.Height = 40;
             this.tabla_activo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tabla_activo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -432,6 +513,18 @@ namespace Finanzas.Vista
             this.tabla_activo.TabIndex = 47;
             this.tabla_activo.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.tabla_activo.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_activo_CellValueChanged);
+            // 
+            // Monto
+            // 
+            this.Monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle11.Format = "N2";
+            dataGridViewCellStyle11.NullValue = "0.00";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Monto.Frozen = true;
+            this.Monto.HeaderText = "Monto";
+            this.Monto.MaxInputLength = 100;
+            this.Monto.Name = "Monto";
+            this.Monto.Width = 200;
             // 
             // bunifuLabel3
             // 
@@ -665,32 +758,32 @@ namespace Finanzas.Vista
             // bunifuCustomDataGrid1
             // 
             this.bunifuCustomDataGrid1.AllowUserToAddRows = false;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.Format = "N2";
-            dataGridViewCellStyle14.NullValue = null;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.Format = "N2";
+            dataGridViewCellStyle16.NullValue = null;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle16;
             this.bunifuCustomDataGrid1.DoubleBuffered = true;
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.DodgerBlue;
@@ -699,10 +792,10 @@ namespace Finanzas.Vista
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Format = "N2";
-            dataGridViewCellStyle15.NullValue = null;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCustomDataGrid1.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle17.Format = "N2";
+            dataGridViewCellStyle17.NullValue = null;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCustomDataGrid1.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(390, 461);
             this.bunifuCustomDataGrid1.TabIndex = 43;
             // 
@@ -711,16 +804,6 @@ namespace Finanzas.Vista
             this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "Monto";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // Monto
-            // 
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = "0.00";
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Monto.HeaderText = "Monto";
-            this.Monto.MaxInputLength = 10;
-            this.Monto.Name = "Monto";
-            this.Monto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // NuevoEstadoFinanciero
             // 
@@ -764,8 +847,6 @@ namespace Finanzas.Vista
         private Bunifu.Framework.UI.BunifuFlatButton btn_ER;
         private Bunifu.UI.WinForms.BunifuDatePicker datepicker_BG;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid tabla_capital;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid tabla_pasivo;
         private System.Windows.Forms.TabPage tabpage_ER;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
@@ -777,5 +858,9 @@ namespace Finanzas.Vista
         private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
         private Bunifu.UI.WinForms.BunifuVScrollBar Scrollbar_A;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private Bunifu.UI.WinForms.BunifuDataGridView tabla_capital;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MontoC;
+        private Bunifu.UI.WinForms.BunifuDataGridView tabla_pasivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MontoP;
     }
 }
