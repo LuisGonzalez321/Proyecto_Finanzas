@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Finanzas.Controlador.Herramientas;
 
 namespace Finanzas.Vista
 {
@@ -18,18 +19,10 @@ namespace Finanzas.Vista
         public NuevoEstadoFinanciero ()
         {
             InitializeComponent();
-            tabla_activo.DataSource = CConsulta.Catalogo_Cuentas("ACTIVO");
-            tabla_pasivo.DataSource = CConsulta.Catalogo_Cuentas("PASIVO");
-            tabla_capital.DataSource = CConsulta.Catalogo_Cuentas("CAPITAL");
         }
-
-
-
 
         private const int cGrip = 16;
         private const int cCaption = 32;
-
-
         /*
          * Metodo para poder mover la ventana
          */
@@ -53,6 +46,15 @@ namespace Finanzas.Vista
             base.WndProc(ref m);
         }
 
+        public void Formato_tabla (BunifuDataGridView[] datagrid)
+        {
+            foreach (BunifuDataGridView tabla in datagrid)
+            {
+                tabla.Columns [1].ReadOnly = true;
+                tabla.Columns [0].DefaultCellStyle.Format = "#,##";
+            }
+        }
+
         public void Guardar_activos (BunifuDataGridView datagrid)
         {
             double monto;
@@ -63,79 +65,22 @@ namespace Finanzas.Vista
             }
         }
 
-        public bool ValidarCampos (BunifuDataGridView datagrid)
-        {
-            for (int i = 0 ;i < datagrid.RowCount - 1 ;i++)
-            {
-                if (datagrid.Rows [i].Cells [0].Value == null)
-                {
-                    //return false;
-                    MessageBox.Show("Her null");
-                }
-                else if(datagrid.Rows [i].Cells [0].Value.ToString() == "0.00")
-                {
-                    MessageBox.Show("Her");
-                }
-            }
-            return true;
-        }
-
-        private void btn_guardar_Click (object sender, EventArgs e)
-        {
-            if (ValidarCampos(tabla_activo))
-            {
-                //Guardar_activos(tabla_activo);
-                MessageBox.Show("Texto Completo");
-            } else
-            {
-                MessageBox.Show("Verifique los campos");
-            }
-        }
-
-        private void btn_cancelar_Click (object sender, EventArgs e)
-        {
-            MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
-
         private void btn_salir_Click (object sender, EventArgs e)
         {
-            MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();
-        }
-
-        private void tabla_activo_KeyPress (object sender, KeyPressEventArgs e)
-        {
-            MessageBox.Show("Hola");
-        }
-
-        private void btn_ER_Click (object sender, EventArgs e)
-        {
-            page_EF.PageIndex = 1;
+            if (MessageBox.Show("Desea Salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                this.Hide();
+                Environment.Exit(0);
+            }
         }
 
         private void tabla_activo_CellValueChanged (object sender, DataGridViewCellEventArgs e)
-        {
+        {           
             double monto = suma_monto_datagrid(tabla_activo);
-            label_activo.Text = "TOTAL ACTIVO :" + monto;
+            label_activo.Text = "TOTAL ACTIVO :" + monto;   
         }
 
-        public double suma_monto_datagrid (BunifuDataGridView datagrid)
-        {
-            double monto = 0;
-            for (int i = 0 ;i < datagrid.RowCount - 1 ;i++)
-            {
-                if (datagrid.Rows [i].Cells [0].Value != null)
-                {
-                    monto += double.Parse(datagrid.Rows [i].Cells [0].Value.ToString());
-                }
-            }
-            return monto;
-        }
+      
 
         private void tabla_capital_CellValueChanged (object sender, DataGridViewCellEventArgs e)
         {
@@ -147,6 +92,99 @@ namespace Finanzas.Vista
         {
             double monto = suma_monto_datagrid(tabla_capital) + suma_monto_datagrid(tabla_pasivo);
             label_pc.Text = "TOTAL PASIVO Y CAPITAL: " + monto;
+        }
+
+        private void btn_guardar_Click (object sender, EventArgs e)
+        {
+            if (Toolkit.ValidarCampos(tabla_activo))
+            {
+                //Guardar_activos(tabla_activo);
+                MessageBox.Show("");
+            }
+            else
+            {
+                MessageBox.Show("Verifique los campos");
+            }
+        }
+
+        private void btn_cancelar_Click_1 (object sender, EventArgs e)
+        {
+            MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            this.Hide();
+        }
+
+        private void btn_bg_Click (object sender, EventArgs e)
+        {
+            page_EF.PageIndex = 0;
+        }
+
+        private void btn_guardar2_Click (object sender, EventArgs e)
+        {
+            if (Toolkit.ValidarCampos(tabla_er))
+            {
+                double monto = 0;
+                for (int i = 0; i < tabla_er.RowCount; i++)
+                {
+                    monto = double.Parse(tabla_er.Rows [i].Cells [0].Value.ToString());
+                    //CCuenta.Insertart_monto(i + 29, monto, datepicker_BG.Value, "D");
+                    MessageBox.Show("");
+                }
+                MessageBox.Show("Se ha guardado exitosamente");
+            }
+            else
+            {
+                MessageBox.Show("Verifique los campos");
+            }
+
+        }
+
+        private void btn_cancelar2_Click (object sender, EventArgs e)
+        {
+            MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            this.Hide();
+        }
+
+        private void btn_cancelar_Click (object sender, EventArgs e)
+        {
+            MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            this.Hide();
+        }
+
+        private void btn_er_Click (object sender, EventArgs e)
+        {
+            page_EF.PageIndex = 1;
+        }
+
+        private void tabla_activo_EditingControlShowing (object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridViewTextBoxEditingControl dText = (DataGridViewTextBoxEditingControl) e.Control;
+
+            dText.KeyPress -= new KeyPressEventHandler(Finanzas.Controlador.Herramientas.Toolkit.ValidarNumeros_KeyPress);
+            dText.KeyPress += new KeyPressEventHandler(Finanzas.Controlador.Herramientas.Toolkit.ValidarNumeros_KeyPress);
+        }
+
+        private void NuevoEstadoFinanciero_Load (object sender, EventArgs e)
+        {
+            tabla_activo.DataSource = CConsulta.Catalogo_Cuentas("ACTIVO");
+            tabla_pasivo.DataSource = CConsulta.Catalogo_Cuentas("PASIVO");
+            tabla_capital.DataSource = CConsulta.Catalogo_Cuentas("CAPITAL");
+            tabla_er.DataSource = CCuenta.Mostrar_EstadoResultado();
+            /*    Agrega algunas validaciones   */
+            BunifuDataGridView [] da = { tabla_activo, tabla_pasivo, tabla_capital, tabla_er };
+            Formato_tabla(da);
+        }
+
+        public double suma_monto_datagrid (BunifuDataGridView datagrid)
+        {
+            double monto = 0;
+            for (int i = 0 ;i < datagrid.RowCount ;i++)
+            {
+                if (datagrid.Rows [i].Cells [0].Value != null)
+                {
+                    monto += double.Parse(datagrid.Rows [i].Cells [0].Value.ToString());
+                }
+            }
+            return monto;
         }
     }
 }

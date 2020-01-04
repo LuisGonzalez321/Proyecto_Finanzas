@@ -21,7 +21,7 @@ namespace Finazas.Vista
             lbl_BG.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo",datepicker.Value) );
             int valor = Convert.ToInt32(CRazónCuenta.Razon_cuenta("Razón_deuda", datepicker.Value));
             radial_gauge.Value = valor;
-            lbl_estado.Text = Finanzas.Modelo.Herramientas.Toolkit.Estado_Empresa(valor);
+            lbl_estado.Text = Finanzas.Controlador.Herramientas.Toolkit.Estado_Empresa(valor);
         }
   
 

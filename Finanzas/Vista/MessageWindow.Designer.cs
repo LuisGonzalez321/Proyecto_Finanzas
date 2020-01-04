@@ -88,7 +88,7 @@
             this.btn_aceptar.IconVisible = true;
             this.btn_aceptar.IconZoom = 90D;
             this.btn_aceptar.IsTab = false;
-            this.btn_aceptar.Location = new System.Drawing.Point(263, 138);
+            this.btn_aceptar.Location = new System.Drawing.Point(278, 147);
             this.btn_aceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));

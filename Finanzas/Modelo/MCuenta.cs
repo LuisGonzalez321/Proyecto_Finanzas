@@ -111,6 +111,30 @@ namespace Finazas.Modelo
 
         }
 
+        public DataTable Mostrar_EstadoResultado()
+        {
+            DataTable DtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.cadena;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Mostrar_EstadoResultado";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
         public bool Insertar_monto (int idCuenta,double monto, DateTime fecha,string concepto)
         {
             SqlConnection sqlcon = new SqlConnection();

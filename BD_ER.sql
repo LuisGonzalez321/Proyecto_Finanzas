@@ -383,8 +383,7 @@ insert into Cuenta values(9,'Reserva legal')
 insert into Cuenta values(9,'Utilidad neta del ejercicio')
 insert into Cuenta values(9,'Utilidades retenidas')
 insert into Cuenta values(9,'Capital social')
-
-select * from Cuenta
+go
 
 /* Ingresos */
 insert into Cuenta values(10,'Ventas')
@@ -421,6 +420,8 @@ insert into Cuenta values(16,'Operación de la empresa')
 insert into Cuenta values(17,'Perdida en venta de activo fijo')
 insert into Cuenta values(17,'Rentas pagadas')
 insert into Cuenta values(17,'Dividendos Pagados')
+
+select * from Cuenta
 
 
 --Activos corrientes
@@ -497,7 +498,7 @@ go
 
 /*  Procedimientos para manejo de los estados financieros */
 
-Create procedure MostrarBalanceGeneral 2019,
+Create procedure MostrarBalanceGeneral
 	@fecha int,
 	@tipo varchar(10)
 as
@@ -510,6 +511,16 @@ as
 	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
 	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
 	where Year(t.fecha) = @fecha and cc.Nombre = @tipo
+go
+
+create procedure Mostrar_EstadoResultado
+as
+	select
+		c.IdCuenta,
+		c.NombreCuenta from Cuenta c 
+	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
+	inner join CategoríaCuenta cc on sc.IdCategoríaCuenta = cc.IdCategoríaCuenta
+	where cc.Nombre in('INGRESOS','COSTOS','GASTOS')
 go
 
 Create procedure Total_Activo
@@ -593,6 +604,8 @@ as
 	select (@pasivos_totales / @Capital_social) as Razon_PasivoCapital
 go 
 
+
+/*         Razón de prueba ácida          **/
 Create procedure Razon_ácida
 	@año int
 as

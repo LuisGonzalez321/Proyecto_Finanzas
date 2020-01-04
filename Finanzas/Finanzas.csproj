@@ -111,7 +111,7 @@
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modelo\Herramientas\Toolkit.cs" />
+    <Compile Include="Controlador\Herramientas\Toolkit.cs" />
     <Compile Include="Modelo\MCategoría.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\MCuenta.cs" />

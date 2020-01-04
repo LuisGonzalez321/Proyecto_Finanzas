@@ -20,5 +20,10 @@ namespace Finanzas.Controlador
         {
             return new MCuenta().Insertar_monto(idCuenta, monto, fecha, concepto);
         }
+
+        public static DataTable Mostrar_EstadoResultado ()
+        {
+            return new MCuenta().Mostrar_EstadoResultado();
+        }
     }
 }
