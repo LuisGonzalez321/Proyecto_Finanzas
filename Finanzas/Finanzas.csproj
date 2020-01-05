@@ -100,11 +100,6 @@
     <Compile Include="Controlador\CConsulta.cs" />
     <Compile Include="Controlador\CRazónCuenta.cs" />
     <Compile Include="Controlador\CUsuario.cs" />
-    <Compile Include="FinanzasDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FinanzasDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,35 +126,11 @@
     <Compile Include="Vista\EstadosFinancieros.Designer.cs">
       <DependentUpon>EstadosFinancieros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Informacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Informacion.Designer.cs">
-      <DependentUpon>Informacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\MenuPrincipal.designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\MessageWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\MessageWindow.Designer.cs">
-      <DependentUpon>MessageWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\NuevoEstadoFinanciero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\NuevoEstadoFinanciero.Designer.cs">
-      <DependentUpon>NuevoEstadoFinanciero.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\RazonesFinancieras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\RazonesFinancieras.Designer.cs">
-      <DependentUpon>RazonesFinancieras.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -179,33 +150,9 @@
     <EmbeddedResource Include="Vista\EstadosFinancieros.resx">
       <DependentUpon>EstadosFinancieros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Informacion.resx">
-      <DependentUpon>Informacion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\MessageWindow.resx">
-      <DependentUpon>MessageWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\NuevoEstadoFinanciero.resx">
-      <DependentUpon>NuevoEstadoFinanciero.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\RazonesFinancieras.rdlc" />
-    <EmbeddedResource Include="Vista\RazonesFinancieras.resx">
-      <DependentUpon>RazonesFinancieras.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="FinanzasDataSet.xsc">
-      <DependentUpon>FinanzasDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FinanzasDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FinanzasDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FinanzasDataSet.xss">
-      <DependentUpon>FinanzasDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
