@@ -59,15 +59,7 @@ namespace Finanzas.Vista
             base.WndProc(ref m);
         }
 
-        public void Guardar_activos (BunifuDataGridView datagrid)
-        {
-            double monto;
-            for (int i = 0 ;i < datagrid.RowCount - 1 ;i++)
-            {
-                monto = double.Parse(datagrid.Rows [i].Cells [0].Value.ToString());
-                CCuenta.Insertart_monto(i + 1, monto, datepicker_BG.Value, "D");
-            }
-        }
+ 
 
         private void btn_salir_Click (object sender, EventArgs e)
         {
@@ -92,9 +84,11 @@ namespace Finanzas.Vista
 
         private void btn_guardar_Click (object sender, EventArgs e)
         {
-            if (Toolkit.ValidarCampos(tabla_activo))
+            if (Toolkit.ValidarCampos(tabla_activo) && Toolkit.ValidarCampos(tabla_pasivo) && Toolkit.ValidarCampos(tabla_capital))
             {
-                //Guardar_activos(tabla_activo);
+                CCuenta.Guardar_activos(tabla_activo,datepicker_BG);
+                CCuenta.Guardar_Pasivos(tabla_pasivo, datepicker_BG);
+                CCuenta.Guardar_Capital(tabla_capital, datepicker_BG);
                 MessageBox.Show("Registro Guardados exitosamente!!");
             }
             else
@@ -172,11 +166,6 @@ namespace Finanzas.Vista
                 }
             }
             return monto;
-        }
-
-        private void tabla_pasivo_RowLeave (object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btn_minimizar_Click (object sender, EventArgs e)

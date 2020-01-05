@@ -25,6 +25,10 @@ namespace Finanzas.Vista
             tabla_pasivo.DataSource = Controlador.CConsulta.Consulta(año, "PASIVO");
             tabla_capital.DataSource = Controlador.CConsulta.Consulta(año, "CAPITAL");
             label_activo.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo", datepicker_BG.Value));
+
+            tabla_activo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
+            tabla_pasivo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
+            tabla_capital.Columns ["Monto"].DefaultCellStyle.Format = "N2";
         }
         
 
@@ -48,6 +52,16 @@ namespace Finanzas.Vista
             NuevoEstadoFinanciero nuevo_estado = new NuevoEstadoFinanciero();
             nuevo_estado.Show();
             this.Hide();
+        }
+
+        private void btn_bg_Click (object sender, EventArgs e)
+        {
+            pages_EF.SelectedIndex = 0;
+        }
+
+        private void btn_er_Click (object sender, EventArgs e)
+        {
+            pages_EF.SelectedIndex = 1;
         }
     }
 }

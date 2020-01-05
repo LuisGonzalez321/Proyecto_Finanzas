@@ -29,6 +29,7 @@
         private void InitializeComponent ()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageWindow));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.lbl_comentario = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_aceptar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -144,6 +145,7 @@
             this.ClientSize = new System.Drawing.Size(395, 183);
             this.Controls.Add(this.bunifuShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MessageWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageWindow";

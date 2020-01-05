@@ -78,12 +78,6 @@ namespace Finazas.Vista
             ef.Show();
         }
 
-        private void btn_info_Click (object sender, EventArgs e)
-        {
-            Informacion informacion = new Informacion();
-            informacion.ShowDialog();
-        }
-
         private void btn_af_Click (object sender, EventArgs e)
         {
            
@@ -98,6 +92,16 @@ namespace Finazas.Vista
         private void btn_minimizar_Click (object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_info_MouseEnter (object sender, EventArgs e)
+        {
+            string información = "Es un sistema que realiza el análisis financiero de la empresa FERRISIS (Ferretería) <br>" +
+                                 "1 - Realiza análsis vertical y horizontal <br>" +
+                                 "2 - Elabora las razones financieras <br>" +
+                                 "3 - Elabora estado de origen y aplicación de fondo y fljo neto de efectivo <br>" +
+                                 "4 - Realiza apalancamiento <br>";
+            bunifuToolTip1.SetToolTip(btn_info, información);
         }
     }
 }

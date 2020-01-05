@@ -73,6 +73,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
       <HintPath>..\..\..\Downloads\Bunifu-UI-WinForms-1.11.5.1_ShareAppsCrack.com\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\..\Downloads\Bunifu-UI-WinForms-1.11.5.1_ShareAppsCrack.com\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
       <HintPath>..\..\..\Downloads\Bunifu-UI-WinForms-1.11.5.1_ShareAppsCrack.com\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
     </Reference>
@@ -131,12 +134,6 @@
     <Compile Include="Vista\EstadosFinancieros.Designer.cs">
       <DependentUpon>EstadosFinancieros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Informacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Informacion.Designer.cs">
-      <DependentUpon>Informacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,9 +175,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\EstadosFinancieros.resx">
       <DependentUpon>EstadosFinancieros.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Informacion.resx">
-      <DependentUpon>Informacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>

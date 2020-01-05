@@ -40,6 +40,10 @@ namespace Finanzas.Controlador.Herramientas
             {
                 e.Handled = true;
             }
+            if (e.KeyChar == 22)
+            {
+                e.Handled = true;
+            }
         }
 
         public static bool ValidarCampos (Bunifu.UI.WinForms.BunifuDataGridView datagrid)

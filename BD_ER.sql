@@ -537,7 +537,8 @@ Alter procedure Catalogo_Cuentas
 	@tipo varchar(10)
 as
 	select
-		c.NombreCuenta
+		c.NombreCuenta,
+		c.IdCuenta
 	from Cuenta c 
 	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
 	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
@@ -546,17 +547,20 @@ go
 
 
 /*  Muestra las utilidades  */
-create procedure MostrarUtilidades
+create procedure MostrarUtilidadesNeta
 @fecha int
 	as
-	declare @monto money = (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where t.fecha = @fecha and c.IdCuenta = 36)
+	declare @monto money = (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2020 and c.IdCuenta = 36)
 	select 
-		((select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2019 and c.IdCuenta = 36) -
-		 (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2019 and c.IdCuenta = 37)) as Utilidad_Bruta
+		((select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2020 and c.IdCuenta = 36) -
+		 (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2020 and c.IdCuenta = 37)) as Utilidad_Bruta
 	from transacción t 
 	inner join Cuenta c on c.IdCuenta = t.IdCuenta 
-	where t.fecha = @fecha
+	where year(t.fecha) = 2020
 go
+
+
+
 
 
 /* =============================== Razones financieras  ================================*/
@@ -572,7 +576,7 @@ go
 
 
 /*-------------------------------------------------------------------------------------*/
-Create Procedure Razón_deuda 2020
+Create Procedure Razón_deuda
 	@año int
 as
 	declare @activo money = (select sum(t.Monto) from transacción t
@@ -609,7 +613,7 @@ go
 Create procedure Razon_ácida
 	@año int
 as
-	declare @Activo_Circulante money = (select ''+dbo.Suma_Cuenta(@año, 'Activo Circulante'))
+	declare @Activo_Circulante money = (select dbo.Suma_Cuenta(@año, 'Activo Circulante'))
 	
 	declare @Inventario money = (
 							select t.Monto 
@@ -617,9 +621,9 @@ as
 							inner join Cuenta c on c.IdCuenta = t.IdCuenta 
 							where Year(t.fecha) = @año and c.NombreCuenta = 'Inventario')
 
-	declare @Pasivo_Circulante money = (select ''+dbo.Suma_Cuenta(@año, 'Pasivo CP'))
+	declare @Pasivo_Circulante money = (select dbo.Suma_Cuenta(@año, 'Pasivo CP'))
 
-	select ((@Activo_Circulante - @Inventario) / @Pasivo_Circulante ) as Rotación_Inventario
+	select ((@Activo_Circulante - @Inventario) / @Pasivo_Circulante ) as Razon_ácida
 go
 
 

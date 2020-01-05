@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Finanzas.Modelo
 {
-    class MRazónCuenta
+    public class MRazónCuenta
     {
         public string nombre;
         public DateTime fecha;

@@ -27,5 +27,36 @@ namespace Finanzas.Controlador
             return new MCuenta().Mostrar_EstadoResultado();
         }
 
+        public static void Guardar_activos (Bunifu.UI.WinForms.BunifuDataGridView datagrid, Bunifu.UI.WinForms.BunifuDatePicker datepicker_BG)
+        {
+            double monto;
+            for (int i = 0 ;i < datagrid.RowCount;i++)
+            {
+                monto = double.Parse(datagrid.Rows [i].Cells [0].Value.ToString());
+                if (Insertart_monto(i + 1, monto, datepicker_BG.Value, "D") == false)
+                return;
+            }
+        }
+
+        public static void Guardar_Pasivos (Bunifu.UI.WinForms.BunifuDataGridView datagrid, Bunifu.UI.WinForms.BunifuDatePicker datepicker_BG)
+        {
+            double monto;
+            for (int i = 0 ;i < datagrid.RowCount ;i++)
+            {
+                monto = double.Parse(datagrid.Rows [i].Cells [0].Value.ToString());
+                Insertart_monto(i + 17, monto, datepicker_BG.Value, "H");
+            }
+        }
+
+        public static void Guardar_Capital (Bunifu.UI.WinForms.BunifuDataGridView datagrid, Bunifu.UI.WinForms.BunifuDatePicker datepicker_BG)
+        {
+            double monto;
+            for (int i = 0 ;i < datagrid.RowCount; i++)
+            {
+                monto = double.Parse(datagrid.Rows [i].Cells [0].Value.ToString());
+                Insertart_monto(i + 25, monto, datepicker_BG.Value, "H");
+            }
+        }
+
     }
 }
