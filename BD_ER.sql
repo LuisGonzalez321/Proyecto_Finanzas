@@ -572,7 +572,7 @@ go
 
 
 /*-------------------------------------------------------------------------------------*/
-Create Procedure Razón_deuda
+Create Procedure Razón_deuda 2020
 	@año int
 as
 	declare @activo money = (select sum(t.Monto) from transacción t

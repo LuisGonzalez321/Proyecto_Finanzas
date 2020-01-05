@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Finanzas.Controlador
 {
@@ -25,5 +26,6 @@ namespace Finanzas.Controlador
         {
             return new MCuenta().Mostrar_EstadoResultado();
         }
+
     }
 }

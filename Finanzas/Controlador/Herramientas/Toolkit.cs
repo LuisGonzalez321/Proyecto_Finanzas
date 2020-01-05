@@ -35,7 +35,6 @@ namespace Finanzas.Controlador.Herramientas
             {
                 e.Handled = true;
             }
-
             // solo 1 punto decimal
             if ((e.KeyChar == ',') && ((sender as System.Windows.Forms.TextBox).Text.IndexOf(',') > -1))
             {
@@ -53,6 +52,17 @@ namespace Finanzas.Controlador.Herramientas
                 }
             }
             return true;
+        }
+
+        public static void Formato_tabla (Bunifu.UI.WinForms.BunifuDataGridView [] datagrid)
+        {
+            foreach (Bunifu.UI.WinForms.BunifuDataGridView tabla in datagrid)
+            {
+                tabla.Columns ["NombreCuenta"].ReadOnly = true;
+                tabla.Columns ["NombreCuenta"].DisplayIndex = 0;
+                string nombre_tabla = tabla.Columns [0].Name;
+                tabla.Columns [nombre_tabla].DisplayIndex = 1;
+            }
         }
 
     }

@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent ()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
@@ -44,10 +48,8 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.gradiente_panel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btn_configuración = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_info = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_ef = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -70,7 +72,7 @@
             this.lbl_BG = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_estado = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_configuración = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.gradiente_panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -102,6 +104,70 @@
             this.gradiente_panel1.Quality = 10;
             this.gradiente_panel1.Size = new System.Drawing.Size(229, 610);
             this.gradiente_panel1.TabIndex = 0;
+            // 
+            // btn_configuración
+            // 
+            this.btn_configuración.AllowToggling = false;
+            this.btn_configuración.AnimationSpeed = 200;
+            this.btn_configuración.AutoGenerateColors = false;
+            this.btn_configuración.BackColor = System.Drawing.Color.Transparent;
+            this.btn_configuración.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btn_configuración.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_configuración.BackgroundImage")));
+            this.btn_configuración.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_configuración.ButtonText = "Configuración";
+            this.btn_configuración.ButtonTextMarginLeft = -13;
+            this.btn_configuración.ColorContrastOnClick = 45;
+            this.btn_configuración.ColorContrastOnHover = 45;
+            this.btn_configuración.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btn_configuración.CustomizableEdges = borderEdges7;
+            this.btn_configuración.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_configuración.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btn_configuración.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn_configuración.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_configuración.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btn_configuración.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.btn_configuración.ForeColor = System.Drawing.Color.White;
+            this.btn_configuración.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_configuración.IconMarginLeft = 0;
+            this.btn_configuración.IconPadding = 1;
+            this.btn_configuración.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_configuración.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btn_configuración.IdleBorderRadius = 3;
+            this.btn_configuración.IdleBorderThickness = 1;
+            this.btn_configuración.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btn_configuración.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btn_configuración.IdleIconLeftImage")));
+            this.btn_configuración.IdleIconRightImage = ((System.Drawing.Image)(resources.GetObject("btn_configuración.IdleIconRightImage")));
+            this.btn_configuración.IndicateFocus = false;
+            this.btn_configuración.Location = new System.Drawing.Point(3, 400);
+            this.btn_configuración.Name = "btn_configuración";
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties13.BorderRadius = 3;
+            stateProperties13.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties13.BorderThickness = 1;
+            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties13.ForeColor = System.Drawing.Color.White;
+            stateProperties13.IconLeftImage = null;
+            stateProperties13.IconRightImage = null;
+            this.btn_configuración.onHoverState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties14.BorderRadius = 3;
+            stateProperties14.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties14.BorderThickness = 1;
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties14.ForeColor = System.Drawing.Color.White;
+            stateProperties14.IconLeftImage = null;
+            stateProperties14.IconRightImage = null;
+            this.btn_configuración.OnPressedState = stateProperties14;
+            this.btn_configuración.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_configuración.Size = new System.Drawing.Size(226, 41);
+            this.btn_configuración.TabIndex = 10;
+            this.btn_configuración.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_configuración.TextMarginLeft = -13;
+            this.btn_configuración.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuCustomLabel1
             // 
@@ -482,7 +548,7 @@
             // 
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(944, 3);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(944, 0);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(37, 37);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -656,76 +722,17 @@
             this.btn_minimizar.ImageActive = null;
             this.btn_minimizar.Location = new System.Drawing.Point(900, 0);
             this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(38, 39);
+            this.btn_minimizar.Size = new System.Drawing.Size(38, 37);
             this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_minimizar.TabIndex = 10;
             this.btn_minimizar.TabStop = false;
             this.btn_minimizar.Zoom = 10;
             this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
-            // btn_configuración
+            // elipse
             // 
-            this.btn_configuración.AllowToggling = false;
-            this.btn_configuración.AnimationSpeed = 200;
-            this.btn_configuración.AutoGenerateColors = false;
-            this.btn_configuración.BackColor = System.Drawing.Color.Transparent;
-            this.btn_configuración.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btn_configuración.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_configuración.BackgroundImage")));
-            this.btn_configuración.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_configuración.ButtonText = "Configuración";
-            this.btn_configuración.ButtonTextMarginLeft = -13;
-            this.btn_configuración.ColorContrastOnClick = 45;
-            this.btn_configuración.ColorContrastOnHover = 45;
-            this.btn_configuración.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btn_configuración.CustomizableEdges = borderEdges7;
-            this.btn_configuración.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_configuración.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btn_configuración.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_configuración.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_configuración.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn_configuración.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.btn_configuración.ForeColor = System.Drawing.Color.White;
-            this.btn_configuración.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_configuración.IconMarginLeft = 0;
-            this.btn_configuración.IconPadding = 1;
-            this.btn_configuración.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_configuración.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btn_configuración.IdleBorderRadius = 3;
-            this.btn_configuración.IdleBorderThickness = 1;
-            this.btn_configuración.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btn_configuración.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btn_configuración.IdleIconLeftImage")));
-            this.btn_configuración.IdleIconRightImage = ((System.Drawing.Image)(resources.GetObject("btn_configuración.IdleIconRightImage")));
-            this.btn_configuración.IndicateFocus = false;
-            this.btn_configuración.Location = new System.Drawing.Point(3, 400);
-            this.btn_configuración.Name = "btn_configuración";
-            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties13.BorderRadius = 3;
-            stateProperties13.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties13.BorderThickness = 1;
-            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties13.ForeColor = System.Drawing.Color.White;
-            stateProperties13.IconLeftImage = null;
-            stateProperties13.IconRightImage = null;
-            this.btn_configuración.onHoverState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties14.BorderRadius = 3;
-            stateProperties14.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties14.BorderThickness = 1;
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties14.ForeColor = System.Drawing.Color.White;
-            stateProperties14.IconLeftImage = null;
-            stateProperties14.IconRightImage = null;
-            this.btn_configuración.OnPressedState = stateProperties14;
-            this.btn_configuración.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_configuración.Size = new System.Drawing.Size(226, 41);
-            this.btn_configuración.TabIndex = 10;
-            this.btn_configuración.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_configuración.TextMarginLeft = -13;
-            this.btn_configuración.UseDefaultRadiusAndThickness = true;
+            this.elipse.ElipseRadius = 7;
+            this.elipse.TargetControl = this;
             // 
             // MenuPrincipal
             // 
@@ -786,5 +793,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_estado;
         private Bunifu.Framework.UI.BunifuImageButton btn_minimizar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_configuración;
+        private Bunifu.Framework.UI.BunifuElipse elipse;
     }
 }

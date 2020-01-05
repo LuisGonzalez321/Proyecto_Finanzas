@@ -108,7 +108,6 @@ namespace Finazas.Modelo
                 DtResultado = null;
             }
             return DtResultado;
-
         }
 
         public DataTable Mostrar_EstadoResultado()
@@ -191,6 +190,6 @@ namespace Finazas.Modelo
             return flag;
         }
 
-
+      
     }
 }

@@ -149,11 +149,15 @@
             // tabla_activo
             // 
             this.tabla_activo.AllowCustomTheming = false;
+            this.tabla_activo.AllowUserToAddRows = false;
+            this.tabla_activo.AllowUserToResizeColumns = false;
+            this.tabla_activo.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.tabla_activo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tabla_activo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tabla_activo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_activo.BackgroundColor = System.Drawing.Color.White;
+            this.tabla_activo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabla_activo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tabla_activo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -164,7 +168,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tabla_activo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tabla_activo.ColumnHeadersHeight = 40;
+            this.tabla_activo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabla_activo.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.tabla_activo.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.tabla_activo.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -192,6 +196,7 @@
             this.tabla_activo.EnableHeadersVisualStyles = false;
             this.tabla_activo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_activo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_activo.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_activo.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_activo.Location = new System.Drawing.Point(22, 79);
             this.tabla_activo.Name = "tabla_activo";
@@ -377,11 +382,14 @@
             // tabla_pasivo
             // 
             this.tabla_pasivo.AllowCustomTheming = false;
+            this.tabla_pasivo.AllowUserToAddRows = false;
+            this.tabla_pasivo.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.tabla_pasivo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.tabla_pasivo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tabla_pasivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_pasivo.BackgroundColor = System.Drawing.Color.White;
+            this.tabla_pasivo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabla_pasivo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tabla_pasivo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -420,6 +428,7 @@
             this.tabla_pasivo.EnableHeadersVisualStyles = false;
             this.tabla_pasivo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_pasivo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_pasivo.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_pasivo.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_pasivo.Location = new System.Drawing.Point(496, 79);
             this.tabla_pasivo.Name = "tabla_pasivo";
@@ -436,11 +445,14 @@
             // tabla_capital
             // 
             this.tabla_capital.AllowCustomTheming = false;
+            this.tabla_capital.AllowUserToAddRows = false;
+            this.tabla_capital.AllowUserToResizeRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
             this.tabla_capital.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.tabla_capital.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tabla_capital.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_capital.BackgroundColor = System.Drawing.Color.White;
+            this.tabla_capital.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabla_capital.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tabla_capital.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -479,6 +491,7 @@
             this.tabla_capital.EnableHeadersVisualStyles = false;
             this.tabla_capital.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_capital.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.tabla_capital.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_capital.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_capital.Location = new System.Drawing.Point(496, 344);
             this.tabla_capital.Name = "tabla_capital";

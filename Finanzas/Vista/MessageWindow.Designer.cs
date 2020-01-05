@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent ()
         {
+            this.components = new System.ComponentModel.Container();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.lbl_comentario = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_aceptar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbl_nombre = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCards1.SuspendLayout();
             this.bunifuShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -129,6 +131,11 @@
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(395, 183);
             this.bunifuShadowPanel1.TabIndex = 1;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 7;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // MessageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,5 +162,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_nombre;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_comentario;
         private Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel bunifuShadowPanel1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

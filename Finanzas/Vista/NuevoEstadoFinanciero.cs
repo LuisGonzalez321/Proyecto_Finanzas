@@ -16,9 +16,22 @@ namespace Finanzas.Vista
 {
     public partial class NuevoEstadoFinanciero: Form
     {
+
         public NuevoEstadoFinanciero ()
         {
             InitializeComponent();
+        }
+
+
+        private void NuevoEstadoFinanciero_Load (object sender, EventArgs e)
+        {
+            elipse.ApplyElipse(this, 7);
+            tabla_activo.DataSource = CConsulta.Catalogo_Cuentas("ACTIVO");
+            tabla_pasivo.DataSource = CConsulta.Catalogo_Cuentas("PASIVO");
+            tabla_capital.DataSource = CConsulta.Catalogo_Cuentas("CAPITAL");
+            tabla_er.DataSource = CCuenta.Mostrar_EstadoResultado();
+            BunifuDataGridView [] da = { tabla_activo,tabla_pasivo,tabla_capital, tabla_er};
+            Toolkit.Formato_tabla(da);
         }
 
         private const int cGrip = 16;
@@ -46,15 +59,6 @@ namespace Finanzas.Vista
             base.WndProc(ref m);
         }
 
-        public void Formato_tabla (BunifuDataGridView[] datagrid)
-        {
-            foreach (BunifuDataGridView tabla in datagrid)
-            {
-                tabla.Columns [1].ReadOnly = true;
-                tabla.Columns [0].DefaultCellStyle.Format = "#,##";
-            }
-        }
-
         public void Guardar_activos (BunifuDataGridView datagrid)
         {
             double monto;
@@ -78,20 +82,12 @@ namespace Finanzas.Vista
         {           
             double monto = suma_monto_datagrid(tabla_activo);
             label_activo.Text = "TOTAL ACTIVO :" + monto;   
-        }
+        }     
 
-      
-
-        private void tabla_capital_CellValueChanged (object sender, DataGridViewCellEventArgs e)
+        private void Suma_MontoTabla_CellValueChanged (object sender, DataGridViewCellEventArgs e)
         {
-            double monto = suma_monto_datagrid(tabla_capital) + suma_monto_datagrid(tabla_pasivo);
-            label_pc.Text = "TOTAL PASIVO Y CAPITAL: "+ monto;
-        }
-
-        private void tabla_pasivo_CellValueChanged (object sender, DataGridViewCellEventArgs e)
-        {
-            double monto = suma_monto_datagrid(tabla_capital) + suma_monto_datagrid(tabla_pasivo);
-            label_pc.Text = "TOTAL PASIVO Y CAPITAL: " + monto;
+            double montoF = suma_monto_datagrid(tabla_capital) + suma_monto_datagrid(tabla_pasivo);
+            label_pc.Text = "TOTAL PASIVO Y CAPITAL :" + montoF;
         }
 
         private void btn_guardar_Click (object sender, EventArgs e)
@@ -99,7 +95,7 @@ namespace Finanzas.Vista
             if (Toolkit.ValidarCampos(tabla_activo))
             {
                 //Guardar_activos(tabla_activo);
-                MessageBox.Show("");
+                MessageBox.Show("Registro Guardados exitosamente!!");
             }
             else
             {
@@ -116,6 +112,7 @@ namespace Finanzas.Vista
         private void btn_bg_Click (object sender, EventArgs e)
         {
             page_EF.PageIndex = 0;
+            lbl_texto.Text = "Balance General";
         }
 
         private void btn_guardar2_Click (object sender, EventArgs e)
@@ -153,25 +150,15 @@ namespace Finanzas.Vista
         private void btn_er_Click (object sender, EventArgs e)
         {
             page_EF.PageIndex = 1;
+            lbl_texto.Text = "Estado de resultados";
         }
 
-        private void tabla_activo_EditingControlShowing (object sender, DataGridViewEditingControlShowingEventArgs e)
+        private void Tabla_EditingControlShowing (object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             DataGridViewTextBoxEditingControl dText = (DataGridViewTextBoxEditingControl) e.Control;
 
             dText.KeyPress -= new KeyPressEventHandler(Finanzas.Controlador.Herramientas.Toolkit.ValidarNumeros_KeyPress);
             dText.KeyPress += new KeyPressEventHandler(Finanzas.Controlador.Herramientas.Toolkit.ValidarNumeros_KeyPress);
-        }
-
-        private void NuevoEstadoFinanciero_Load (object sender, EventArgs e)
-        {
-            tabla_activo.DataSource = CConsulta.Catalogo_Cuentas("ACTIVO");
-            tabla_pasivo.DataSource = CConsulta.Catalogo_Cuentas("PASIVO");
-            tabla_capital.DataSource = CConsulta.Catalogo_Cuentas("CAPITAL");
-            tabla_er.DataSource = CCuenta.Mostrar_EstadoResultado();
-            /*    Agrega algunas validaciones   */
-            BunifuDataGridView [] da = { tabla_activo, tabla_pasivo, tabla_capital, tabla_er };
-            Formato_tabla(da);
         }
 
         public double suma_monto_datagrid (BunifuDataGridView datagrid)
@@ -185,6 +172,16 @@ namespace Finanzas.Vista
                 }
             }
             return monto;
+        }
+
+        private void tabla_pasivo_RowLeave (object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_minimizar_Click (object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
