@@ -45,9 +45,7 @@ namespace Finanzas.Vista
 
         private void btn_nuevo_Click (object sender, EventArgs e)
         {
-            NuevoEstadoFinanciero nuevo_estado = new NuevoEstadoFinanciero();
-            nuevo_estado.Show();
-            this.Hide();
+
         }
     }
 }

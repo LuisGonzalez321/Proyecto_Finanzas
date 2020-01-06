@@ -81,19 +81,16 @@ namespace Finazas.Vista
 
         private void btn_info_Click (object sender, EventArgs e)
         {
-            Informacion informacion = new Informacion();
-            informacion.ShowDialog();
         }
 
         private void btn_af_Click (object sender, EventArgs e)
         {
-           
+            Análisis_Financiero analisis = new Análisis_Financiero();
+            analisis.Show();
         }
 
         private void btn_rf_Click (object sender, EventArgs e)
         {
-            RazonesFinancieras rf = new RazonesFinancieras();
-            rf.Show();
         }
 
         private void btn_minimizar_Click (object sender, EventArgs e)

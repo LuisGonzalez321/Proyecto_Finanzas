@@ -109,5 +109,28 @@ namespace Finazas.Modelo
 
         }
 
+        public DataTable Consultas_query (string sql)
+        {
+            DataTable DtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.cadena;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = sql;
+                SqlCmd.CommandType = CommandType.Text;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
     }
 }

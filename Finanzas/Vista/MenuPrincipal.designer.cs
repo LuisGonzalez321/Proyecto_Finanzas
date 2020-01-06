@@ -530,10 +530,6 @@
             this.radial_gauge.Name = "radial_gauge";
             this.radial_gauge.Prefix = "";
             this.radial_gauge.ProgressBackColor = System.Drawing.Color.LightBlue;
-            this.radial_gauge.ProgressBgColor = System.Drawing.Color.LightBlue;
-            this.radial_gauge.ProgressColor = System.Drawing.Color.DodgerBlue;
-            this.radial_gauge.ProgressColor1 = System.Drawing.Color.DodgerBlue;
-            this.radial_gauge.ProgressColor2 = System.Drawing.Color.Red;
             this.radial_gauge.ProgressColorHigh = System.Drawing.Color.Red;
             this.radial_gauge.ProgressColorLow = System.Drawing.Color.DodgerBlue;
             this.radial_gauge.ProgressHighValueMark = 50;

@@ -192,7 +192,6 @@
             this.tabla_activo.EnableHeadersVisualStyles = false;
             this.tabla_activo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_activo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_activo.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_activo.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_activo.Location = new System.Drawing.Point(22, 79);
             this.tabla_activo.Name = "tabla_activo";
@@ -420,7 +419,6 @@
             this.tabla_pasivo.EnableHeadersVisualStyles = false;
             this.tabla_pasivo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_pasivo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_pasivo.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_pasivo.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_pasivo.Location = new System.Drawing.Point(496, 79);
             this.tabla_pasivo.Name = "tabla_pasivo";
@@ -479,7 +477,6 @@
             this.tabla_capital.EnableHeadersVisualStyles = false;
             this.tabla_capital.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_capital.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_capital.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_capital.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_capital.Location = new System.Drawing.Point(496, 344);
             this.tabla_capital.Name = "tabla_capital";

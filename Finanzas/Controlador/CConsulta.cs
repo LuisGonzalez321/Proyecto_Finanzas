@@ -21,5 +21,10 @@ namespace Finanzas.Controlador
             return new MCuenta().Catalogo_Cuentas(tipo);
         }
 
+        public static DataTable Consultas_query ()
+        {
+            return new MCuenta().Consultas_query("select distinct year(fecha) as fecha from transacción");
+        }
+
     }
 }
