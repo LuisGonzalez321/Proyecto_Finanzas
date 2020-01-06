@@ -123,6 +123,7 @@ namespace Finazas.Modelo
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
+
             }
             catch (Exception ex)
             {

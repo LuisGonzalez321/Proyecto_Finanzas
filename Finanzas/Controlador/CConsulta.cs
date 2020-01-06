@@ -21,9 +21,16 @@ namespace Finanzas.Controlador
             return new MCuenta().Catalogo_Cuentas(tipo);
         }
 
-        public static DataTable Consultas_query ()
+        public static List<string> Consultas_query ()
         {
-            return new MCuenta().Consultas_query("select distinct year(fecha) as fecha from transacción");
+            DataTable dt = new MCuenta().Consultas_query("select distinct year(fecha) as fecha from transacción");
+            List<string> lista_fecha = new List<string>();
+
+            for (int i = 0 ;i < dt.Rows.Count ;i++)
+            {
+                lista_fecha.Add(dt.Rows[i]["fecha"].ToString());
+            }
+            return lista_fecha;
         }
 
     }

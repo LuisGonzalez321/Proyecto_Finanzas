@@ -594,6 +594,8 @@ create procedure MostrarUtilidades
 	from transacción t 
 	inner join Cuenta c on c.IdCuenta = t.IdCuenta 
 	where t.fecha = @fecha
-go
+	go
+
+
 
 select distinct year(fecha) as fecha from transacción
