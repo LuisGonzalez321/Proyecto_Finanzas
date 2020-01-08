@@ -3,13 +3,6 @@
 
 use Finanzas
 
-create table Categoría
-(
-	IdCategoría int primary key identity(1,1),
-	Nombre varchar(50),
-	Descripción text
-)
-
 create table Empleado
 (
 	IdEmpleado int primary key identity(1,1),
@@ -20,80 +13,6 @@ create table Empleado
 	Ciudad varchar(50),
 	Jefe int foreign key references Empleado(IdEmpleado)
 )
-
-create table Proveedor
-(
-	IdProveedor int primary key identity(1,1),
-	Nombre varchar(50),
-	Dirección varchar(100),
-	Ciudad varchar(50),
-	Teléfono varchar(12),
-	Correo varchar(50)
-)
-
-create table Producto
-(
-	IdProducto int primary key identity(1,1),
-	Nombre varchar(50),
-	IdCategoría int foreign key references Categoría(IdCategoría),
-	Precio_unitario money,
-	Stock int,
-	Descontinuado int
-)
-
-create table Compra
-(
-	IdCompra int primary key identity(1,1),
-	IdProducto int foreign key references Producto(IdProducto),
-	IdProveedor int foreign key references Proveedor(IdProveedor),
-	IdEmpleado int foreign key references Empleado(IdEmpleado),
-	Fecha date
-)
-
-create table Detalle_Compra
-(
-	IdDetalleCompra int primary key identity(1,1),
-	IdCompra int foreign key  references Compra(IdCompra),	
-	Precio money,
-	cantidad int,
-	Forma_pago varchar(50),
-	Moneda varchar(50),
-	Descripción text
-)
-
-create table Cliente
-(
-	IdCliente int primary key identity(1,1),
-	Nombres varchar(50),
-	Apellidos varchar(50),
-	Teléfono varchar(12),
-	Dirección varchar(100),
-	Ciudad varchar(50)
-)
-
-create table Venta
-(
-	IdVenta int primary key identity(1,1),
-	IdCliente int foreign key references Cliente(IdCliente),
-	IdEmpleado int foreign key references Empleado(IdEmpleado),
-	Fecha_Orden date,
-	Fecha_Llegada date,
-	Ciudad varchar(50)
-)
-
-create table Detalle_venta
-(
-	IdDetalleVenta int primary key identity(1,1),
-	IdProducto int foreign key references Producto(IdProducto),
-	IdVenta int foreign  key references Venta(IdVenta),
-	PrecioUnitario money,
-	Cantidad int,
-	Descuento float,
-	Descripción text,
-	Moneda varchar(50)
-)
-go
-
 
 Create table Usuario
 (
@@ -120,6 +39,7 @@ create table SubCategoríaCuenta
 	SubNombre varchar(20) 
 )
 
+
 Create table Cuenta
 (
 	IdCuenta int primary key identity(1,1),
@@ -137,166 +57,6 @@ create table transacción
 )
 go
 
-/* ---------------------------------------------------------------------------  */
-
-/*
-	Creacion de procedimiento almacenados (Insertar, Actualizar, Mostrar, Borrar)
-	"cATEGORIA"
-*/
-
-create procedure Insertar_Categoría
-	@Nombre varchar(50),
-	@Descripción text
-as
-insert into Categoría values(@Nombre, @Descripción)
-go
-	
-
-Create procedure Mostrar_Categoría
-as
-select * from Categoría
-go
-
-/*
-	Creacion de procedimiento almacenados (Insertar, Actualizar, Mostrar, Borrar)
-	"Proveedor"
-*/
-
-
-Create procedure Insertar_Proveedor
-	@Nombre varchar(50),
-	@Dirección varchar(100),
-	@Ciudad varchar(50),
-	@Teléfono varchar(12),
-	@Correo varchar(50)
-as
-Insert into Proveedor values (@Nombre,@Dirección, @Ciudad, @Teléfono,@Correo)
-go
-
-Create procedure Mostar_Proveedor
-as
-select * from Proveedor
-go
-
-/*
-	Creacion de procedimiento almacenados (Insertar, Actualizar, Mostrar, Borrar)
-	"CLIENTE"
-*/
-
-Create procedure Insertar_Cliente
-	@Nombres varchar(50),
-	@Apellidos varchar(50),
-	@Teléfono varchar(12),
-	@Dirección varchar(100),
-	@Ciudad varchar(50)
-as
-Insert into Cliente values(@Nombres, @Apellidos, @Teléfono, @Dirección, @Ciudad)
-go
-
-Create procedure Mostrar_Cliente
-as
-select * from Cliente
-go
-
-/*
-	Creacion de procedimiento almacenados (Insertar, Actualizar, Mostrar, Borrar)
-	"EMPLEADO"
-*/
-
-create procedure Insertar_Empleado
-	@Nombres varchar(50),
-	@Apellidos varchar(50),
-	@Dirección varchar(100),
-	@Teléfono varchar(12),
-	@Ciudad varchar(50),
-	@Jefe int
-as
-insert into Empleado values(@Nombres, @Apellidos, @Dirección, @Teléfono, @Ciudad, @Jefe)
-go
-
-
-create procedure Mostrar_Empleado
-as
-select * from Empleado
-go
-
-
-/*
-	Creacion de procedimiento almacenados (Insertar, Actualizar, Mostrar, Borrar)
-	"Venta"
-*/
-
-create procedure Insertar_Venta
-	@IdCliente int,
-	@IdEmpleado int,
-	@Fecha_Llegada date,
-	@Ciudad varchar(50)
-as
-
-Insert into Venta values (@IdCliente, @IdEmpleado, GETDATE(), @Fecha_Llegada, @Ciudad)
-go
-
-/*
-	IdProducto int foreign key references Producto(IdProducto),
-	IdVenta int foreign  key references Venta(IdVenta),
-	PrecioUnitario money,
-	Cantidad int,
-	Descuento float,
-	Descripción text,
-	Moneda varchar(50)
-*/
-
-Create procedure Insertar_DetalleVenta
-	@IdProducto int,
-	@IdVenta int,
-	@PrecioUnitario money,
-	@Cantidad int,
-	@Descuento float,
-	@Descripción text,
-	@Moneda varchar(50)
-as
-Insert into Detalle_venta values(@IdProducto, @IdVenta, @PrecioUnitario, @Cantidad, @Descuento, @Descripción, @Moneda)
-go
-
-
-/*
-	Creacion de procedimiento almacenados (Insertar, Actualizar, Mostrar, Borrar)
-	"Venta"
-*/
-
-Create procedure Insertar_Compra
-	@IdProducto int,
-	@IdProveedor int,
-	@IdEmpleado int,
-	@Fecha date
-as
-Insert into Compra values(@IdProducto, @IdProveedor, @IdEmpleado, @Fecha)
-go
-
-Create procedure Insertar_DetalleCompra
-	@IdCompra int,
-	@Precio money,
-	@cantidad int,
-	@Forma_pago varchar(50),
-	@Moneda varchar(50),
-	@Descripción text
-as
-Insert into Detalle_Compra values(@IdCompra, @Precio, @cantidad, @Forma_pago, @Moneda, @Descripción)
-go
-
-
-execute Insertar_Categoría 'Construcción','Es una categoría que es para la construcción'
-execute Insertar_Categoría 'Herramientas','Es una categoría que son herramientas de construcción'
-execute Insertar_Categoría 'Decoración','Es una categoría que son herramienats de decoración'
-execute Insertar_Categoría 'Reparación','Es una categoría que son herramientas de reparación'
-
-
-Execute insertar_Empleado 'Luis Gabriel', 'González López', 'De la rocargo 5 al lago cuadra 1/2 arriba','75591715', 'Managua',null
-
-Insert into Usuario values (1,'gabx01','1234','Jefe')
-go
-
-
 Create procedure Validar_Acceso
 	@usuario varchar(50),
 	@contraseña varchar(100),
@@ -304,6 +64,10 @@ Create procedure Validar_Acceso
 as
 	select IdUsuario from Usuario where Nombre_Usuario = @usuario and Contraseña = @contraseña and Rol = @rol
 go
+
+
+insert into Empleado values( 'Luis Gabriel', 'González López', 'De la rocargo 5 al lago cuadra 1/2 arriba','75591715', 'Managua',null)
+Insert into Usuario values (1,'gabx01','1234','Jefe')
 
 --Execute Validar_Acceso 'gabx01', '1234', 'Jefe'
 
@@ -338,7 +102,6 @@ insert into SubCategoríaCuenta values (6,'Gastos Venta')
 insert into SubCategoríaCuenta values (6,'Gastos Operativos')
 insert into SubCategoríaCuenta values (6,'Otros Gastos')
 
-select * from SubCategoríaCuenta
 /*---------------------------------------------------------------------------------*/
 
 /*  activo circulante  */
@@ -389,29 +152,25 @@ go
 insert into Cuenta values(10,'Ventas')
 insert into Cuenta values(10,'Devoluciones sobre venta')
 insert into Cuenta values(10,'Descuento sobre venta')
-insert into Cuenta values(10,'Venta de activo fijo')
-insert into Cuenta values(10,'Ventas al credito')
-insert into Cuenta values(10,'Ventas Netas')
+insert into Cuenta values(10,'Ventas netas al credito')
+insert into Cuenta values(10,'Otros ingresos')
 
 /* Costos */
 insert into Cuenta values(12,'Costo de ventas')
-insert into Cuenta values(12,'Compras')
-insert into Cuenta values(12,'Devoluciones sobre Compras')
-insert into Cuenta values(12,'Rebaja sobre compras')
 
 /*  Gastos de admon */
 insert into Cuenta values(13,'Sueldo Gerente')
 insert into Cuenta values(13,'Publicidad')
 insert into Cuenta values(13,'Consumo de luz')
 
-/* Gastos financieros */
-insert into Cuenta values(14,'Intereses pagados')
-insert into Cuenta values(14,'Producto Financiero')
-
 /* Gastos de venta*/
 insert into Cuenta values(15,'Sueldo empleado')
 insert into Cuenta values(15,'Papelería y utiles')
 insert into Cuenta values(15,'Impuesto sobre ventas')
+
+/* Gastos financieros */
+insert into Cuenta values(14,'Intereses pagados')
+insert into Cuenta values(14,'Producto Financiero')
 
 /* Gastos operativos */
 insert into Cuenta values(16,'Operación de la empresa')
@@ -421,7 +180,12 @@ insert into Cuenta values(17,'Perdida en venta de activo fijo')
 insert into Cuenta values(17,'Rentas pagadas')
 insert into Cuenta values(17,'Dividendos Pagados')
 
-select * from Cuenta
+insert into Cuenta values(17,'Gastos de depreciación de oficina')
+insert into Cuenta values(17,'Gastos de depreciación de vehículo')
+insert into Cuenta values(17,'Amortización')
+
+--ISR
+insert into Cuenta values(17,'Impuesto sobre renta')
 
 
 --Activos corrientes
@@ -471,7 +235,46 @@ insert into Transacción values(27,26344.5,GETDATE(),'H')
 insert into Transacción values(28,250000,GETDATE(),'H')
 
 
+/*  ER   */
 
+--ventas
+insert into transacción values(29,280000,GETDATE(),'H')
+insert into transacción values(30,-4000,GETDATE(),'H')
+insert into transacción values(31,-1500,GETDATE(),'H')
+insert into transacción values(32, 0.00, GETDATE(),'H')
+insert into transacción values(33,0.00,GETDATE(),'H')
+
+--costo de venta
+insert into transacción values(34,82800,GETDATE(),'D')
+
+
+--gastos de admon
+insert into transacción values(35,24000,GETDATE(),'H')
+insert into transacción values(36,12000,GETDATE(),'H')
+insert into transacción values(37,34400,GETDATE(),'H')
+
+
+--gastos de venta
+
+insert into transacción values(38,20000,GETDATE(),'H')
+insert into transacción values(39,10000,GETDATE(),'H')
+insert into transacción values(40,3000,GETDATE(),'H')
+
+--gastos financieros
+
+insert into transacción values(41,2000,GETDATE(),'H')
+insert into transacción values(42,1000,GETDATE(),'H')
+
+/*otros gastos*/
+
+insert into transacción values (43,0.00,GETDATE(),'H')
+insert into transacción values (44,0.00,GETDATE(),'H')
+insert into transacción values (45,0.00,GETDATE(),'H')
+insert into transacción values (46,0.00,GETDATE(),'H')
+insert into transacción values (47,0.00,GETDATE(),'H')
+insert into transacción values (48,0.00,GETDATE(),'H')
+insert into transacción values (49,0.00,GETDATE(),'H')
+insert into transacción values (50,25590,GETDATE(),'H')
 
 
 go
@@ -502,8 +305,7 @@ Create procedure MostrarBalanceGeneral
 	@fecha int,
 	@tipo varchar(10)
 as
-	select 
-		c.IdCuenta, 
+	select
 		c.NombreCuenta,
 		t.Monto
 	from transacción t
@@ -516,7 +318,6 @@ go
 create procedure Mostrar_EstadoResultado
 as
 	select
-		c.IdCuenta,
 		c.NombreCuenta from Cuenta c 
 	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
 	inner join CategoríaCuenta cc on sc.IdCategoríaCuenta = cc.IdCategoríaCuenta
@@ -533,12 +334,11 @@ select Convert(int,sum(t.Monto)) as Total_Activo  from transacción t
 	where year(t.fecha) = @año and cc.Nombre = 'ACTIVO'
 go
 
-Alter procedure Catalogo_Cuentas
+Create procedure Catalogo_Cuentas
 	@tipo varchar(10)
 as
 	select
-		c.NombreCuenta,
-		c.IdCuenta
+		c.NombreCuenta
 	from Cuenta c 
 	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
 	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
@@ -547,24 +347,40 @@ go
 
 
 /*  Muestra las utilidades  */
-create procedure MostrarUtilidadesNeta
-@fecha int
-	as
-	declare @monto money = (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2020 and c.IdCuenta = 36)
-	select 
-		((select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2020 and c.IdCuenta = 36) -
-		 (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2020 and c.IdCuenta = 37)) as Utilidad_Bruta
-	from transacción t 
-	inner join Cuenta c on c.IdCuenta = t.IdCuenta 
-	where year(t.fecha) = 2020
-go
 
+CREATE FUNCTION Mostrar_Utilidad_Bruta(@año int)
+	RETURNS money
+	WITH EXECUTE AS CALLER
+	AS
+	BEGIN
+	declare @Ventas money = (select sum(t.Monto) from transacción t 
+							 inner join Cuenta c on t.IdCuenta = c.IdCuenta 
+							 where c.IdCuenta in(29,30,31) and year(t.fecha) = @año)
 
+	declare @costo money = (select sum(t.Monto) from transacción t 
+							inner join Cuenta c on t.IdCuenta = c.IdCuenta 
+							where c.IdCuenta = 34 and year(t.fecha) = @año)
 
-
+	declare @Utilidad money = @Ventas - @costo
+	return @Utilidad
+	END
+	GO
 
 /* =============================== Razones financieras  ================================*/
 
+/*         Capital de neto de trabajo           */
+
+create procedure Capital_Trabajo
+@año int
+	as
+declare @Activo_Circulante money = (select ''+dbo.Suma_Cuenta(@año, 'Activo Circulante'))
+declare @Pasivo_Circulante money = (select ''+dbo.Suma_Cuenta(@año, 'Pasivo CP'))
+
+select (@Activo_Circulante - @Pasivo_Circulante) as Capital_Trabajo
+go
+
+
+/**                    Indice de solvencia                   */
 Create procedure Indice_solvencia
 	@año int
 as
@@ -574,8 +390,91 @@ as
 	select (@Activo_Circulante / @Pasivo_Circulante) as Indice_solvencia
 go
 
+/*         Razón de prueba ácida          **/
+Create procedure Razon_ácida
+	@año int
+as
+	declare @Activo_Circulante money = (select dbo.Suma_Cuenta(@año, 'Activo Circulante'))
+	
+	declare @Inventario money = (
+							select t.Monto 
+							from transacción t 
+							inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+							where Year(t.fecha) = @año and c.NombreCuenta = 'Inventario')
 
-/*-------------------------------------------------------------------------------------*/
+	declare @Pasivo_Circulante money = (select dbo.Suma_Cuenta(@año, 'Pasivo CP'))
+
+	select ((@Activo_Circulante - @Inventario) / @Pasivo_Circulante ) as Razon_ácida
+go
+
+/*--------------------------Razones de actividad ------------------------------------------------------*/
+
+/*  Rotacion de Inventario   */
+go
+create procedure Rotación_Inventario
+@año int
+	as
+declare @CostoVenta money = (select t.Monto 
+							 from transacción t 
+							 inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+							 where Year(t.fecha) = @año and c.NombreCuenta = 'Costo de ventas')
+
+declare @Inventario money = (select t.Monto 
+							from transacción t 
+							inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+							where Year(t.fecha) = @año and c.NombreCuenta = 'Inventario')
+
+select ''+(@CostoVenta/@Inventario) as Rotación_Inventario
+go
+
+
+/*   Rotación cuentas por cobrar   */
+create procedure Rotación_Cuentas_por_cobrar
+@año int
+	as
+declare @ventas_credito money = (select t.Monto 
+							 from transacción t 
+							 inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+							 where Year(t.fecha) = @año and c.NombreCuenta = 'Ventas netas al credito')
+
+declare @cuentas money = (select t.Monto 
+							from transacción t 
+							inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+							where Year(t.fecha) = @año and c.NombreCuenta = 'Cuentas por cobrar')
+
+select ''+(@ventas_credito/@cuentas) as Rotación_Cuentas_por_cobrar
+go
+
+/*        Rotacion proveedores      */
+Mostrar_Todo 2020
+go
+create procedure Rotación_proveedores 2020
+@año int
+	as
+declare @CostoVenta money = (select t.Monto 
+							 from transacción t 
+							 inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+							 where Year(t.fecha) = 2020 and c.NombreCuenta = 'Costo de ventas')
+declare @cuentas money = (select t.Monto 
+							from transacción t 
+							inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+							where Year(t.fecha) = 2020 and c.NombreCuenta = 'Cuentas por pagar')
+declare @Inventario_inicial money = (select t.Monto 
+									from transacción t 
+									inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+									where Year(t.fecha) - 1 = 2020 and c.NombreCuenta = 'Inventario')
+declare @Inventario_final money = (select t.Monto 
+									from transacción t 
+									inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+									where Year(t.fecha) = 2020 and c.NombreCuenta = 'Inventario')
+
+declare @compras money = @CostoVenta + @Inventario_final - @Inventario_inicial
+select ''+(@compras/@cuentas) as Rotación_proveedores
+go
+
+
+
+/*    Razon de deuda   */
 Create Procedure Razón_deuda
 	@año int
 as
@@ -609,38 +508,6 @@ as
 go 
 
 
-/*         Razón de prueba ácida          **/
-Create procedure Razon_ácida
-	@año int
-as
-	declare @Activo_Circulante money = (select dbo.Suma_Cuenta(@año, 'Activo Circulante'))
-	
-	declare @Inventario money = (
-							select t.Monto 
-							from transacción t 
-							inner join Cuenta c on c.IdCuenta = t.IdCuenta 
-							where Year(t.fecha) = @año and c.NombreCuenta = 'Inventario')
-
-	declare @Pasivo_Circulante money = (select dbo.Suma_Cuenta(@año, 'Pasivo CP'))
-
-	select ((@Activo_Circulante - @Inventario) / @Pasivo_Circulante ) as Razon_ácida
-go
-
-
-/*         Capital de neto de trabajo           */
-
-create procedure Capital_Trabajo
-@año int
-	as
-declare @Activo_Circulante money = (select ''+dbo.Suma_Cuenta(@año, 'Activo Circulante'))
-declare @Pasivo_Circulante money = (select ''+dbo.Suma_Cuenta(@año, 'Pasivo CP'))
-
-select (@Activo_Circulante - @Pasivo_Circulante) as Capital_Trabajo
-go
-
-
-
-
 /*  Catalogo de cuentas del estado de reultados */
 Create procedure Insertar_monto
 @IdCuenta int,
@@ -651,3 +518,16 @@ Create procedure Insertar_monto
 Insert into transacción values(@IdCuenta,@Monto,@Fecha,@Concepto)
 go
 
+Create procedure Mostrar_Todo
+@año int
+as
+	select 
+		c.IdCuenta,
+		sc.SubNombre,
+		c.NombreCuenta,
+		t.Monto
+		from Cuenta c
+	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
+	inner join transacción t on t.IdCuenta = c.IdCuenta
+where year(t.fecha) = @año
+go

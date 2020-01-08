@@ -31,30 +31,26 @@ namespace Finanzas.Vista
         private void InitializeComponent ()
         {
             this.components = new System.ComponentModel.Container();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoEstadoFinanciero));
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.lbl_texto = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btn_salir = new Bunifu.Framework.UI.BunifuImageButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
             this.page_EF = new Bunifu.UI.WinForms.BunifuPages();
             this.tabpage_BG = new System.Windows.Forms.TabPage();
             this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -96,9 +92,10 @@ namespace Finanzas.Vista
             this.lbl_utilidad = new Bunifu.UI.WinForms.BunifuLabel();
             this.nombreCuentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
+            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lbl_texto = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btn_salir = new Bunifu.Framework.UI.BunifuImageButton();
             this.page_EF.SuspendLayout();
             this.tabpage_BG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_capital)).BeginInit();
@@ -106,68 +103,9 @@ namespace Finanzas.Vista
             ((System.ComponentModel.ISupportInitialize)(this.tabla_activo)).BeginInit();
             this.tabpage_ER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_er)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.btn_minimizar);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_texto);
-            this.bunifuGradientPanel1.Controls.Add(this.btn_salir);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.DodgerBlue;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.DodgerBlue;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(980, 45);
-            this.bunifuGradientPanel1.TabIndex = 26;
-            // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.ImageActive = null;
-            this.btn_minimizar.Location = new System.Drawing.Point(902, 0);
-            this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(36, 35);
-            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_minimizar.TabIndex = 15;
-            this.btn_minimizar.TabStop = false;
-            this.btn_minimizar.Zoom = 10;
-            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
-            // 
-            // lbl_texto
-            // 
-            this.lbl_texto.AutoEllipsis = false;
-            this.lbl_texto.CursorType = null;
-            this.lbl_texto.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.lbl_texto.ForeColor = System.Drawing.Color.White;
-            this.lbl_texto.Location = new System.Drawing.Point(403, 5);
-            this.lbl_texto.Name = "lbl_texto";
-            this.lbl_texto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_texto.Size = new System.Drawing.Size(174, 34);
-            this.lbl_texto.TabIndex = 14;
-            this.lbl_texto.Text = "Balance General";
-            this.lbl_texto.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_texto.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // btn_salir
-            // 
-            this.btn_salir.BackColor = System.Drawing.Color.Transparent;
-            this.btn_salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_salir.Image")));
-            this.btn_salir.ImageActive = null;
-            this.btn_salir.Location = new System.Drawing.Point(944, 0);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(36, 35);
-            this.btn_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_salir.TabIndex = 8;
-            this.btn_salir.TabStop = false;
-            this.btn_salir.Zoom = 10;
-            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
             // page_EF
             // 
@@ -175,34 +113,34 @@ namespace Finanzas.Vista
             this.page_EF.AllowTransitions = true;
             this.page_EF.Controls.Add(this.tabpage_BG);
             this.page_EF.Controls.Add(this.tabpage_ER);
-            this.page_EF.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.page_EF.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.page_EF.Location = new System.Drawing.Point(0, 45);
             this.page_EF.Multiline = true;
             this.page_EF.Name = "page_EF";
-            this.page_EF.Page = this.tabpage_BG;
-            this.page_EF.PageIndex = 0;
-            this.page_EF.PageName = "tabpage_BG";
-            this.page_EF.PageTitle = "tabpage_BG";
+            this.page_EF.Page = this.tabpage_ER;
+            this.page_EF.PageIndex = 1;
+            this.page_EF.PageName = "tabpage_ER";
+            this.page_EF.PageTitle = "tabpage_ER";
             this.page_EF.SelectedIndex = 0;
             this.page_EF.Size = new System.Drawing.Size(980, 565);
             this.page_EF.TabIndex = 27;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 1F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.page_EF.Transition = animation2;
-            this.page_EF.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Leaf;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.page_EF.Transition = animation1;
+            this.page_EF.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // tabpage_BG
             // 
@@ -291,22 +229,22 @@ namespace Finanzas.Vista
             this.tabla_capital.AllowUserToAddRows = false;
             this.tabla_capital.AllowUserToDeleteRows = false;
             this.tabla_capital.AllowUserToResizeRows = false;
-            dataGridViewCellStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle55.ForeColor = System.Drawing.Color.Black;
-            this.tabla_capital.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Black;
+            this.tabla_capital.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
             this.tabla_capital.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_capital.BackgroundColor = System.Drawing.Color.White;
             this.tabla_capital.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabla_capital.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tabla_capital.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle56.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle56.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle56.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_capital.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_capital.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.tabla_capital.ColumnHeadersHeight = 40;
             this.tabla_capital.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3});
@@ -326,15 +264,15 @@ namespace Finanzas.Vista
             this.tabla_capital.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.tabla_capital.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.tabla_capital.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle58.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle58.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle58.Format = "N2";
-            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_capital.DefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle40.Format = "N2";
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_capital.DefaultCellStyle = dataGridViewCellStyle40;
             this.tabla_capital.EnableHeadersVisualStyles = false;
             this.tabla_capital.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_capital.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -343,9 +281,9 @@ namespace Finanzas.Vista
             this.tabla_capital.Location = new System.Drawing.Point(508, 291);
             this.tabla_capital.Name = "tabla_capital";
             this.tabla_capital.RowHeadersVisible = false;
-            dataGridViewCellStyle59.Format = "N2";
-            dataGridViewCellStyle59.NullValue = "0.00";
-            this.tabla_capital.RowsDefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle41.Format = "N2";
+            dataGridViewCellStyle41.NullValue = "0.00";
+            this.tabla_capital.RowsDefaultCellStyle = dataGridViewCellStyle41;
             this.tabla_capital.RowTemplate.Height = 40;
             this.tabla_capital.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tabla_capital.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -359,9 +297,9 @@ namespace Finanzas.Vista
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle57.Format = "N2";
-            dataGridViewCellStyle57.NullValue = "0.00";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle39.Format = "N2";
+            dataGridViewCellStyle39.NullValue = "0.00";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle39;
             this.dataGridViewTextBoxColumn3.HeaderText = "Monto";
             this.dataGridViewTextBoxColumn3.MaxInputLength = 100;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -374,22 +312,22 @@ namespace Finanzas.Vista
             this.tabla_pasivo.AllowUserToAddRows = false;
             this.tabla_pasivo.AllowUserToDeleteRows = false;
             this.tabla_pasivo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle60.ForeColor = System.Drawing.Color.Black;
-            this.tabla_pasivo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
+            this.tabla_pasivo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle42;
             this.tabla_pasivo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_pasivo.BackgroundColor = System.Drawing.Color.White;
             this.tabla_pasivo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabla_pasivo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tabla_pasivo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle61.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle61.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle61.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle61.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_pasivo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_pasivo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
             this.tabla_pasivo.ColumnHeadersHeight = 40;
             this.tabla_pasivo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
@@ -409,15 +347,15 @@ namespace Finanzas.Vista
             this.tabla_pasivo.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.tabla_pasivo.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.tabla_pasivo.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle63.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle63.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle63.Format = "N2";
-            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_pasivo.DefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.Format = "N2";
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_pasivo.DefaultCellStyle = dataGridViewCellStyle45;
             this.tabla_pasivo.EnableHeadersVisualStyles = false;
             this.tabla_pasivo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_pasivo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -426,9 +364,9 @@ namespace Finanzas.Vista
             this.tabla_pasivo.Location = new System.Drawing.Point(508, 45);
             this.tabla_pasivo.Name = "tabla_pasivo";
             this.tabla_pasivo.RowHeadersVisible = false;
-            dataGridViewCellStyle64.Format = "N2";
-            dataGridViewCellStyle64.NullValue = "0.00";
-            this.tabla_pasivo.RowsDefaultCellStyle = dataGridViewCellStyle64;
+            dataGridViewCellStyle46.Format = "N2";
+            dataGridViewCellStyle46.NullValue = "0.00";
+            this.tabla_pasivo.RowsDefaultCellStyle = dataGridViewCellStyle46;
             this.tabla_pasivo.RowTemplate.Height = 40;
             this.tabla_pasivo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tabla_pasivo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -442,9 +380,9 @@ namespace Finanzas.Vista
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle62.Format = "C2";
-            dataGridViewCellStyle62.NullValue = "0.00";
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle44.Format = "C2";
+            dataGridViewCellStyle44.NullValue = "0.00";
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle44;
             this.dataGridViewTextBoxColumn2.HeaderText = "Monto";
             this.dataGridViewTextBoxColumn2.MaxInputLength = 100;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -682,22 +620,22 @@ namespace Finanzas.Vista
             this.tabla_activo.AllowUserToAddRows = false;
             this.tabla_activo.AllowUserToDeleteRows = false;
             this.tabla_activo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle65.ForeColor = System.Drawing.Color.Black;
-            this.tabla_activo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle65;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.Black;
+            this.tabla_activo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle47;
             this.tabla_activo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_activo.BackgroundColor = System.Drawing.Color.White;
             this.tabla_activo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabla_activo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tabla_activo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle66.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle66.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle66.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle66.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle66.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle66.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_activo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle66;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_activo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle48;
             this.tabla_activo.ColumnHeadersHeight = 40;
             this.tabla_activo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Monto});
@@ -717,16 +655,16 @@ namespace Finanzas.Vista
             this.tabla_activo.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.tabla_activo.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.tabla_activo.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle68.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle68.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle68.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle68.Format = "C2";
-            dataGridViewCellStyle68.NullValue = "0.00";
-            dataGridViewCellStyle68.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle68.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle68.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_activo.DefaultCellStyle = dataGridViewCellStyle68;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle50.Format = "C2";
+            dataGridViewCellStyle50.NullValue = "0.00";
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_activo.DefaultCellStyle = dataGridViewCellStyle50;
             this.tabla_activo.EnableHeadersVisualStyles = false;
             this.tabla_activo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_activo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -735,9 +673,9 @@ namespace Finanzas.Vista
             this.tabla_activo.Location = new System.Drawing.Point(35, 64);
             this.tabla_activo.Name = "tabla_activo";
             this.tabla_activo.RowHeadersVisible = false;
-            dataGridViewCellStyle69.Format = "C2";
-            dataGridViewCellStyle69.NullValue = "0.00";
-            this.tabla_activo.RowsDefaultCellStyle = dataGridViewCellStyle69;
+            dataGridViewCellStyle51.Format = "C2";
+            dataGridViewCellStyle51.NullValue = "0.00";
+            this.tabla_activo.RowsDefaultCellStyle = dataGridViewCellStyle51;
             this.tabla_activo.RowTemplate.Height = 40;
             this.tabla_activo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tabla_activo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -751,8 +689,8 @@ namespace Finanzas.Vista
             // Monto
             // 
             this.Monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle67.NullValue = "0.00";
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle67;
+            dataGridViewCellStyle49.NullValue = "0.00";
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle49;
             this.Monto.HeaderText = "MontoA";
             this.Monto.MaxInputLength = 100;
             this.Monto.Name = "Monto";
@@ -935,22 +873,22 @@ namespace Finanzas.Vista
             this.tabla_er.AllowCustomTheming = false;
             this.tabla_er.AllowUserToAddRows = false;
             this.tabla_er.AllowUserToResizeRows = false;
-            dataGridViewCellStyle70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle70.ForeColor = System.Drawing.Color.Black;
-            this.tabla_er.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle70;
+            dataGridViewCellStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.Black;
+            this.tabla_er.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle52;
             this.tabla_er.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_er.BackgroundColor = System.Drawing.Color.White;
             this.tabla_er.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabla_er.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tabla_er.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle71.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle71.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle71.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle71.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle71.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle71.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_er.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle71;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle53.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle53.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_er.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle53;
             this.tabla_er.ColumnHeadersHeight = 40;
             this.tabla_er.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MontoER});
@@ -970,14 +908,14 @@ namespace Finanzas.Vista
             this.tabla_er.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.tabla_er.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.tabla_er.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle72.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle72.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle72.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle72.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle72.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle72.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_er.DefaultCellStyle = dataGridViewCellStyle72;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle54.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle54.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_er.DefaultCellStyle = dataGridViewCellStyle54;
             this.tabla_er.EnableHeadersVisualStyles = false;
             this.tabla_er.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_er.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -1214,23 +1152,104 @@ namespace Finanzas.Vista
             this.elipse.ElipseRadius = 5;
             this.elipse.TargetControl = this;
             // 
+            // bunifuFormDock1
+            // 
+            this.bunifuFormDock1.AllowFormDragging = true;
+            this.bunifuFormDock1.AllowFormDropShadow = true;
+            this.bunifuFormDock1.AllowFormResizing = true;
+            this.bunifuFormDock1.AllowHidingBottomRegion = true;
+            this.bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.RightBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.TopBorder.ShowBorder = true;
+            this.bunifuFormDock1.ContainerControl = this;
+            this.bunifuFormDock1.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
+            this.bunifuFormDock1.DockingIndicatorsOpacity = 0.5D;
+            this.bunifuFormDock1.DockingOptions.DockAll = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomLeft = false;
+            this.bunifuFormDock1.DockingOptions.DockBottomRight = false;
+            this.bunifuFormDock1.DockingOptions.DockFullScreen = false;
+            this.bunifuFormDock1.DockingOptions.DockLeft = false;
+            this.bunifuFormDock1.DockingOptions.DockRight = false;
+            this.bunifuFormDock1.DockingOptions.DockTopLeft = false;
+            this.bunifuFormDock1.DockingOptions.DockTopRight = false;
+            this.bunifuFormDock1.FormDraggingOpacity = 0.9D;
+            this.bunifuFormDock1.ParentForm = this;
+            this.bunifuFormDock1.ShowCursorChanges = true;
+            this.bunifuFormDock1.ShowDockingIndicators = true;
+            this.bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
+            this.bunifuFormDock1.TitleBarOptions.BunifuFormDock = this.bunifuFormDock1;
+            this.bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
+            this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
+            this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.ImageActive = null;
+            this.btn_minimizar.Location = new System.Drawing.Point(899, 0);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(36, 35);
+            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_minimizar.TabIndex = 30;
+            this.btn_minimizar.TabStop = false;
+            this.btn_minimizar.Zoom = 10;
+            // 
+            // lbl_texto
+            // 
+            this.lbl_texto.AutoEllipsis = false;
+            this.lbl_texto.CursorType = null;
+            this.lbl_texto.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.lbl_texto.ForeColor = System.Drawing.Color.White;
+            this.lbl_texto.Location = new System.Drawing.Point(400, 5);
+            this.lbl_texto.Name = "lbl_texto";
+            this.lbl_texto.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_texto.Size = new System.Drawing.Size(174, 34);
+            this.lbl_texto.TabIndex = 29;
+            this.lbl_texto.Text = "Balance General";
+            this.lbl_texto.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_texto.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // btn_salir
+            // 
+            this.btn_salir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_salir.Image")));
+            this.btn_salir.ImageActive = null;
+            this.btn_salir.Location = new System.Drawing.Point(941, 0);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(36, 35);
+            this.btn_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_salir.TabIndex = 28;
+            this.btn_salir.TabStop = false;
+            this.btn_salir.Zoom = 10;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
             // NuevoEstadoFinanciero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(980, 610);
+            this.Controls.Add(this.btn_minimizar);
+            this.Controls.Add(this.lbl_texto);
+            this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.page_EF);
-            this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoEstadoFinanciero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo estado financiero";
             this.Load += new System.EventHandler(this.NuevoEstadoFinanciero_Load);
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
             this.page_EF.ResumeLayout(false);
             this.tabpage_BG.ResumeLayout(false);
             this.tabpage_BG.PerformLayout();
@@ -1240,14 +1259,14 @@ namespace Finanzas.Vista
             this.tabpage_ER.ResumeLayout(false);
             this.tabpage_ER.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_er)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.UI.WinForms.BunifuLabel lbl_texto;
-        private Bunifu.Framework.UI.BunifuImageButton btn_salir;
         private Bunifu.UI.WinForms.BunifuPages page_EF;
         private System.Windows.Forms.TabPage tabpage_BG;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
@@ -1289,6 +1308,9 @@ namespace Finanzas.Vista
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator7;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator8;
         private Bunifu.Framework.UI.BunifuElipse elipse;
+        private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
         private Bunifu.Framework.UI.BunifuImageButton btn_minimizar;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_texto;
+        private Bunifu.Framework.UI.BunifuImageButton btn_salir;
     }
 }

@@ -24,11 +24,15 @@ namespace Finanzas.Vista
             tabla_activo.DataSource = Controlador.CConsulta.Consulta(año, "ACTIVO");
             tabla_pasivo.DataSource = Controlador.CConsulta.Consulta(año, "PASIVO");
             tabla_capital.DataSource = Controlador.CConsulta.Consulta(año, "CAPITAL");
-            label_activo.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo", datepicker_BG.Value));
+
+            double montoPC = (suma_monto_datagrid(tabla_pasivo) + suma_monto_datagrid(tabla_capital));
+            label_activo.Text = "TOTAL ACTIVO :" + suma_monto_datagrid(tabla_activo);
+            label_pc.Text = "TOTAL PASIVO Y CAPITAL:" + montoPC;
 
             tabla_activo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
             tabla_pasivo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
             tabla_capital.Columns ["Monto"].DefaultCellStyle.Format = "N2";
+
         }
         
 
@@ -63,5 +67,19 @@ namespace Finanzas.Vista
         {
             pages_EF.SelectedIndex = 1;
         }
+
+        public double suma_monto_datagrid (Bunifu.UI.WinForms.BunifuDataGridView datagrid)
+        {
+            double monto = 0;
+            for (int i = 0 ;i < datagrid.RowCount ;i++)
+            {
+                if (datagrid.Rows [i].Cells [2].Value != null)
+                {
+                    monto += double.Parse(datagrid.Rows [i].Cells [2].Value.ToString());
+                }
+            }
+            return monto;
+        }
+
     }
 }

@@ -25,7 +25,6 @@ namespace Finanzas.Vista
 
         private void NuevoEstadoFinanciero_Load (object sender, EventArgs e)
         {
-            elipse.ApplyElipse(this, 7);
             tabla_activo.DataSource = CConsulta.Catalogo_Cuentas("ACTIVO");
             tabla_pasivo.DataSource = CConsulta.Catalogo_Cuentas("PASIVO");
             tabla_capital.DataSource = CConsulta.Catalogo_Cuentas("CAPITAL");
@@ -34,39 +33,11 @@ namespace Finanzas.Vista
             Toolkit.Formato_tabla(da);
         }
 
-        private const int cGrip = 16;
-        private const int cCaption = 32;
-        /*
-         * Metodo para poder mover la ventana
-         */
-        protected override void WndProc (ref Message m)
-        {
-            if (m.Msg == 0x84)
-            {
-                Point pos = new Point(m.LParam.ToInt32());
-                pos = this.bunifuGradientPanel1.PointToClient(pos);
-                if (pos.Y < cCaption)
-                {
-                    m.Result = (IntPtr) 2;
-                    return;
-                }
-                if (pos.X >= this.bunifuGradientPanel1.ClientSize.Width - cGrip && pos.Y >= this.bunifuGradientPanel1.ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr) 17;
-                    return;
-                }
-            }
-            base.WndProc(ref m);
-        }
-
- 
-
         private void btn_salir_Click (object sender, EventArgs e)
         {
             if (MessageBox.Show("Desea Salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 this.Hide();
-                Environment.Exit(0);
             }
         }
 
@@ -97,12 +68,6 @@ namespace Finanzas.Vista
             }
         }
 
-        private void btn_cancelar_Click_1 (object sender, EventArgs e)
-        {
-            MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            this.Hide();
-        }
-
         private void btn_bg_Click (object sender, EventArgs e)
         {
             page_EF.PageIndex = 0;
@@ -117,8 +82,7 @@ namespace Finanzas.Vista
                 for (int i = 0; i < tabla_er.RowCount; i++)
                 {
                     monto = double.Parse(tabla_er.Rows [i].Cells [0].Value.ToString());
-                    //CCuenta.Insertart_monto(i + 29, monto, datepicker_BG.Value, "D");
-                    MessageBox.Show("");
+                    CCuenta.Insertart_monto(i + 29, monto, datepicker_BG.Value, "D");
                 }
                 MessageBox.Show("Se ha guardado exitosamente");
             }
@@ -131,14 +95,18 @@ namespace Finanzas.Vista
 
         private void btn_cancelar2_Click (object sender, EventArgs e)
         {
-            MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            this.Hide();
+            if (MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                this.Hide();
+            }
         }
 
         private void btn_cancelar_Click (object sender, EventArgs e)
         {
-            MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            this.Hide();
+            if (MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                this.Hide();
+            }
         }
 
         private void btn_er_Click (object sender, EventArgs e)

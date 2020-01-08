@@ -269,7 +269,7 @@
             this.bunifuVScrollBar2.BorderThickness = 1;
             this.bunifuVScrollBar2.DurationBeforeShrink = 2000;
             this.bunifuVScrollBar2.LargeChange = 10;
-            this.bunifuVScrollBar2.Location = new System.Drawing.Point(911, 292);
+            this.bunifuVScrollBar2.Location = new System.Drawing.Point(911, 297);
             this.bunifuVScrollBar2.Maximum = 100;
             this.bunifuVScrollBar2.Minimum = 0;
             this.bunifuVScrollBar2.MinimumThumbLength = 18;
@@ -280,7 +280,7 @@
             this.bunifuVScrollBar2.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
             this.bunifuVScrollBar2.ScrollBarColor = System.Drawing.SystemColors.Control;
             this.bunifuVScrollBar2.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar2.Size = new System.Drawing.Size(12, 151);
+            this.bunifuVScrollBar2.Size = new System.Drawing.Size(12, 146);
             this.bunifuVScrollBar2.SmallChange = 1;
             this.bunifuVScrollBar2.TabIndex = 66;
             this.bunifuVScrollBar2.ThumbColor = System.Drawing.Color.DodgerBlue;
@@ -340,7 +340,7 @@
             this.tabla_capital.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.tabla_capital.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_capital.HeaderForeColor = System.Drawing.Color.White;
-            this.tabla_capital.Location = new System.Drawing.Point(523, 292);
+            this.tabla_capital.Location = new System.Drawing.Point(523, 297);
             this.tabla_capital.Name = "tabla_capital";
             this.tabla_capital.ReadOnly = true;
             this.tabla_capital.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -371,7 +371,7 @@
             this.bunifuVScrollBar1.BorderThickness = 1;
             this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
             this.bunifuVScrollBar1.LargeChange = 10;
-            this.bunifuVScrollBar1.Location = new System.Drawing.Point(911, 39);
+            this.bunifuVScrollBar1.Location = new System.Drawing.Point(911, 62);
             this.bunifuVScrollBar1.Maximum = 100;
             this.bunifuVScrollBar1.Minimum = 0;
             this.bunifuVScrollBar1.MinimumThumbLength = 18;
@@ -382,11 +382,11 @@
             this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
             this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.SystemColors.Control;
             this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar1.Size = new System.Drawing.Size(12, 207);
+            this.bunifuVScrollBar1.Size = new System.Drawing.Size(12, 198);
             this.bunifuVScrollBar1.SmallChange = 1;
             this.bunifuVScrollBar1.TabIndex = 65;
             this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuVScrollBar1.ThumbLength = 20;
+            this.bunifuVScrollBar1.ThumbLength = 19;
             this.bunifuVScrollBar1.ThumbMargin = 1;
             this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
             this.bunifuVScrollBar1.Value = 0;
@@ -442,7 +442,7 @@
             this.tabla_pasivo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.tabla_pasivo.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_pasivo.HeaderForeColor = System.Drawing.Color.White;
-            this.tabla_pasivo.Location = new System.Drawing.Point(523, 39);
+            this.tabla_pasivo.Location = new System.Drawing.Point(523, 62);
             this.tabla_pasivo.Name = "tabla_pasivo";
             this.tabla_pasivo.ReadOnly = true;
             this.tabla_pasivo.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -450,7 +450,7 @@
             this.tabla_pasivo.RowTemplate.Height = 40;
             this.tabla_pasivo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tabla_pasivo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tabla_pasivo.Size = new System.Drawing.Size(382, 207);
+            this.tabla_pasivo.Size = new System.Drawing.Size(382, 198);
             this.tabla_pasivo.TabIndex = 63;
             this.tabla_pasivo.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -506,7 +506,7 @@
             this.tabla_activo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.tabla_activo.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_activo.HeaderForeColor = System.Drawing.Color.White;
-            this.tabla_activo.Location = new System.Drawing.Point(49, 39);
+            this.tabla_activo.Location = new System.Drawing.Point(49, 62);
             this.tabla_activo.Name = "tabla_activo";
             this.tabla_activo.ReadOnly = true;
             this.tabla_activo.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -514,7 +514,7 @@
             this.tabla_activo.RowTemplate.Height = 40;
             this.tabla_activo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tabla_activo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tabla_activo.Size = new System.Drawing.Size(402, 454);
+            this.tabla_activo.Size = new System.Drawing.Size(402, 440);
             this.tabla_activo.TabIndex = 62;
             this.tabla_activo.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -570,7 +570,7 @@
             this.btn_nuevo.IconVisible = true;
             this.btn_nuevo.IconZoom = 90D;
             this.btn_nuevo.IsTab = false;
-            this.btn_nuevo.Location = new System.Drawing.Point(523, 445);
+            this.btn_nuevo.Location = new System.Drawing.Point(523, 454);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btn_nuevo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -582,6 +582,7 @@
             this.btn_nuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nuevo.Textcolor = System.Drawing.Color.White;
             this.btn_nuevo.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_er
             // 
@@ -605,13 +606,13 @@
             this.btn_er.IconVisible = true;
             this.btn_er.IconZoom = 90D;
             this.btn_er.IsTab = false;
-            this.btn_er.Location = new System.Drawing.Point(713, 445);
+            this.btn_er.Location = new System.Drawing.Point(713, 454);
             this.btn_er.Name = "btn_er";
             this.btn_er.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btn_er.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btn_er.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_er.selected = false;
-            this.btn_er.Size = new System.Drawing.Size(210, 48);
+            this.btn_er.Size = new System.Drawing.Size(192, 48);
             this.btn_er.TabIndex = 58;
             this.btn_er.Text = "Estado de Resultado";
             this.btn_er.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -634,7 +635,7 @@
             this.datepicker_BG.Icon = ((System.Drawing.Image)(resources.GetObject("datepicker_BG.Icon")));
             this.datepicker_BG.IconColor = System.Drawing.Color.DodgerBlue;
             this.datepicker_BG.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.datepicker_BG.Location = new System.Drawing.Point(234, 3);
+            this.datepicker_BG.Location = new System.Drawing.Point(234, 19);
             this.datepicker_BG.MinimumSize = new System.Drawing.Size(217, 32);
             this.datepicker_BG.Name = "datepicker_BG";
             this.datepicker_BG.Size = new System.Drawing.Size(217, 32);
@@ -659,7 +660,7 @@
             this.Scrollbar_A.BorderThickness = 1;
             this.Scrollbar_A.DurationBeforeShrink = 2000;
             this.Scrollbar_A.LargeChange = 10;
-            this.Scrollbar_A.Location = new System.Drawing.Point(457, 41);
+            this.Scrollbar_A.Location = new System.Drawing.Point(457, 62);
             this.Scrollbar_A.Maximum = 100;
             this.Scrollbar_A.Minimum = 0;
             this.Scrollbar_A.MinimumThumbLength = 18;
@@ -670,11 +671,11 @@
             this.Scrollbar_A.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
             this.Scrollbar_A.ScrollBarColor = System.Drawing.SystemColors.Control;
             this.Scrollbar_A.ShrinkSizeLimit = 3;
-            this.Scrollbar_A.Size = new System.Drawing.Size(14, 452);
+            this.Scrollbar_A.Size = new System.Drawing.Size(12, 440);
             this.Scrollbar_A.SmallChange = 1;
             this.Scrollbar_A.TabIndex = 56;
             this.Scrollbar_A.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.Scrollbar_A.ThumbLength = 44;
+            this.Scrollbar_A.ThumbLength = 43;
             this.Scrollbar_A.ThumbMargin = 1;
             this.Scrollbar_A.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
             this.Scrollbar_A.Value = 0;
@@ -685,7 +686,7 @@
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.bunifuLabel3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuLabel3.Location = new System.Drawing.Point(523, -2);
+            this.bunifuLabel3.Location = new System.Drawing.Point(523, 16);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(80, 35);
@@ -700,7 +701,7 @@
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuLabel2.Location = new System.Drawing.Point(523, 252);
+            this.bunifuLabel2.Location = new System.Drawing.Point(523, 257);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(76, 34);
@@ -715,7 +716,7 @@
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuLabel1.Location = new System.Drawing.Point(49, 1);
+            this.bunifuLabel1.Location = new System.Drawing.Point(49, 17);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(79, 34);
