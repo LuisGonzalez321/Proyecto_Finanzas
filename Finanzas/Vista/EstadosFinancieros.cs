@@ -24,6 +24,7 @@ namespace Finanzas.Vista
             tabla_activo.DataSource = Controlador.CConsulta.Consulta(año, "ACTIVO");
             tabla_pasivo.DataSource = Controlador.CConsulta.Consulta(año, "PASIVO");
             tabla_capital.DataSource = Controlador.CConsulta.Consulta(año, "CAPITAL");
+            tabla_er.DataSource = Controlador.CCuenta.Estado_Resultados(año);
 
             double montoPC = (suma_monto_datagrid(tabla_pasivo) + suma_monto_datagrid(tabla_capital));
             label_activo.Text = "TOTAL ACTIVO :" + suma_monto_datagrid(tabla_activo);
@@ -32,7 +33,7 @@ namespace Finanzas.Vista
             tabla_activo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
             tabla_pasivo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
             tabla_capital.Columns ["Monto"].DefaultCellStyle.Format = "N2";
-
+            tabla_er.Columns ["Monto"].DefaultCellStyle.Format = "N2";
         }
         
 
@@ -73,9 +74,9 @@ namespace Finanzas.Vista
             double monto = 0;
             for (int i = 0 ;i < datagrid.RowCount ;i++)
             {
-                if (datagrid.Rows [i].Cells [2].Value != null)
+                if (datagrid.Rows [i].Cells [1].Value != null)
                 {
-                    monto += double.Parse(datagrid.Rows [i].Cells [2].Value.ToString());
+                    monto += double.Parse(datagrid.Rows [i].Cells [1].Value.ToString());
                 }
             }
             return monto;

@@ -140,5 +140,10 @@ namespace Finanzas.Vista
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void tabla_er_CellContentClick (object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -315,6 +315,19 @@ as
 	where Year(t.fecha) = @fecha and cc.Nombre = @tipo
 go
 
+create procedure Estado_Resultados
+	@fecha int
+as
+	select
+		c.NombreCuenta,
+		t.Monto
+	from transacción t
+	inner join Cuenta c on c.IdCuenta = t.IdCuenta
+	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
+	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
+	where Year(t.fecha) = @fecha and cc.Nombre in('INGRESOS','COSTOS','GASTOS')
+go
+
 create procedure Mostrar_EstadoResultado
 as
 	select
@@ -448,7 +461,7 @@ go
 /*        Rotacion proveedores      */
 Mostrar_Todo 2020
 go
-create procedure Rotación_proveedores 2020
+create procedure Rotación_proveedores
 @año int
 	as
 declare @CostoVenta money = (select t.Monto 

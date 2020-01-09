@@ -58,5 +58,10 @@ namespace Finanzas.Controlador
             }
         }
 
+        public static DataTable Estado_Resultados (int año)
+        {
+            return new MCuenta().Estado_Resultados(año);
+        }
+
     }
 }

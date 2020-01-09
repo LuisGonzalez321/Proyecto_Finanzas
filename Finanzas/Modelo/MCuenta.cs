@@ -190,6 +190,36 @@ namespace Finazas.Modelo
             return flag;
         }
 
-      
+        public DataTable Estado_Resultados (int año)
+        {
+            DataTable DtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.cadena;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Estado_Resultados";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParDato1 = new SqlParameter();
+                ParDato1.ParameterName = "@fecha";
+                ParDato1.SqlDbType = SqlDbType.Int;
+                ParDato1.Value = año;
+                SqlCmd.Parameters.Add(ParDato1);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
+
     }
 }
