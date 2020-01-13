@@ -117,7 +117,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(980, 35);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(980, 50);
             this.bunifuGradientPanel1.TabIndex = 13;
             // 
             // bunifuLabel4
@@ -126,7 +126,7 @@
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            this.bunifuLabel4.Location = new System.Drawing.Point(393, -2);
+            this.bunifuLabel4.Location = new System.Drawing.Point(403, 8);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(174, 34);
@@ -142,7 +142,7 @@
             this.pages_EF.Controls.Add(this.page_BG);
             this.pages_EF.Controls.Add(this.page_ER);
             this.pages_EF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pages_EF.Location = new System.Drawing.Point(0, 35);
+            this.pages_EF.Location = new System.Drawing.Point(0, 50);
             this.pages_EF.Multiline = true;
             this.pages_EF.Name = "pages_EF";
             this.pages_EF.Page = this.page_BG;
@@ -150,7 +150,7 @@
             this.pages_EF.PageName = "page_BG";
             this.pages_EF.PageTitle = "BalanceGeneral";
             this.pages_EF.SelectedIndex = 0;
-            this.pages_EF.Size = new System.Drawing.Size(980, 575);
+            this.pages_EF.Size = new System.Drawing.Size(980, 560);
             this.pages_EF.TabIndex = 53;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -193,7 +193,7 @@
             this.page_BG.Location = new System.Drawing.Point(4, 4);
             this.page_BG.Name = "page_BG";
             this.page_BG.Padding = new System.Windows.Forms.Padding(3);
-            this.page_BG.Size = new System.Drawing.Size(972, 549);
+            this.page_BG.Size = new System.Drawing.Size(972, 534);
             this.page_BG.TabIndex = 0;
             this.page_BG.Text = "BalanceGeneral";
             this.page_BG.UseVisualStyleBackColor = true;
@@ -217,7 +217,7 @@
             this.bunifuSeparator6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator6.LineThickness = 1;
-            this.bunifuSeparator6.Location = new System.Drawing.Point(13, 536);
+            this.bunifuSeparator6.Location = new System.Drawing.Point(13, 521);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
             this.bunifuSeparator6.Size = new System.Drawing.Size(946, 10);
             this.bunifuSeparator6.TabIndex = 75;
@@ -232,7 +232,7 @@
             this.bunifuSeparator7.LineThickness = 1;
             this.bunifuSeparator7.Location = new System.Drawing.Point(959, 3);
             this.bunifuSeparator7.Name = "bunifuSeparator7";
-            this.bunifuSeparator7.Size = new System.Drawing.Size(10, 543);
+            this.bunifuSeparator7.Size = new System.Drawing.Size(10, 528);
             this.bunifuSeparator7.TabIndex = 74;
             this.bunifuSeparator7.Transparency = 255;
             this.bunifuSeparator7.Vertical = true;
@@ -245,7 +245,7 @@
             this.bunifuSeparator8.LineThickness = 1;
             this.bunifuSeparator8.Location = new System.Drawing.Point(3, 3);
             this.bunifuSeparator8.Name = "bunifuSeparator8";
-            this.bunifuSeparator8.Size = new System.Drawing.Size(10, 543);
+            this.bunifuSeparator8.Size = new System.Drawing.Size(10, 528);
             this.bunifuSeparator8.TabIndex = 73;
             this.bunifuSeparator8.Transparency = 255;
             this.bunifuSeparator8.Vertical = true;

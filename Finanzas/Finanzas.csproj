@@ -73,6 +73,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
       <HintPath>..\..\..\Downloads\Bunifu-UI-WinForms-1.11.5.1_ShareAppsCrack.com\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\Downloads\Bunifu-UI-WinForms-1.11.5.1_ShareAppsCrack.com\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
       <HintPath>..\..\..\Downloads\Bunifu-UI-WinForms-1.11.5.1_ShareAppsCrack.com\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
     </Reference>
@@ -131,6 +134,18 @@
     <Compile Include="Vista\Análisis_Financiero.Designer.cs">
       <DependentUpon>Análisis_Financiero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Apalancamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Apalancamiento.Designer.cs">
+      <DependentUpon>Apalancamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Entrada_Salida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Entrada_Salida.Designer.cs">
+      <DependentUpon>Entrada_Salida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\EstadosFinancieros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +190,12 @@
     </Compile>
     <EmbeddedResource Include="Vista\Análisis_Financiero.resx">
       <DependentUpon>Análisis_Financiero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Apalancamiento.resx">
+      <DependentUpon>Apalancamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Entrada_Salida.resx">
+      <DependentUpon>Entrada_Salida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\EstadosFinancieros.resx">
       <DependentUpon>EstadosFinancieros.cs</DependentUpon>

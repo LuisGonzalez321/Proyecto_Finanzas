@@ -27,17 +27,15 @@ namespace Finanzas.Vista
             this.comentario = comentario;
         }
 
-
-
-        private void btn_aceptar_Click (object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void MessageWindow_Load (object sender, EventArgs e)
         {
             lbl_nombre.Text = nombre;
             lbl_comentario.Text = comentario;
+        }
+
+        private void btn_aceptar_Click_1 (object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

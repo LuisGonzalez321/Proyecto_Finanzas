@@ -73,9 +73,9 @@ namespace Finanzas.Vista
             double monto = 0;
             for (int i = 0 ;i < datagrid.RowCount ;i++)
             {
-                if (datagrid.Rows [i].Cells [2].Value != null)
+                if (datagrid.Rows [i].Cells [1].Value != null)
                 {
-                    monto += double.Parse(datagrid.Rows [i].Cells [2].Value.ToString());
+                    monto += double.Parse(datagrid.Rows [i].Cells [1].Value.ToString());
                 }
             }
             return monto;

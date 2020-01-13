@@ -121,30 +121,9 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>97</value>
+    <value>25</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_aceptar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAALUAAAApCAYAAABz92iRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVHhe7dwva1tRGIDxfpK6urq5ubm6yrm5ubl+ialR
-        sVIxmBhMbEysTGzMTJWKwlxEIaIQMYgYRBQiBu947r3nsktursxyXp4fXAjpH/Xk8ObmnByElIxRKx2j
-        VjpGrXSMWukYtdKZjHr9J+LqLuLF14innyIev404PPfy2v1FezT4/EvEx1nEat1FOmJr1D/u239E0IR9
-        s4hYrLofSjtGezT4bR5x9r1tk7jHbETNK4A/evY5YvnQPSntmalOB1Hziyfvt78CpH3DRHH6YThFDKKm
-        fINWbRhLmLeLPmqKZymXavTyOuLitn3cRM1dDgZvZ2jVioYZnee/u6gZORg9pJqxUrNiN1Fz749bJVLN
-        Zst2tW6ifvKuXbalmjGCHL3uoj6+nP6ERqoFnz42UfNAysColY5RKx2jVjpGrXSMWukYtdIxaqXTR82n
-        MHwaI9Wuj5odeh7VUgZ91OyjZj+1VDP2L7GPqYm6bNmTala2UDdRM3pQuHO1ala2UDdR49VNe0k1Kt9P
-        gz5qVmkOL/781T0hVYJjiEwaZft0HzUYtMs5L6kGBM1izInyYhA1WKkJu5zMlfYV8zMr9L9BYyNqMIpw
-        N4RXAO8oPWWufcGIUeZn3hiOndgajbrgFcAtkkdv2pvaXl7/++LoYfl+x20mo5ZqZNRKx6iVjlErHaNW
-        MhF/AW2bg85u5dRJAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="lbl_comentario.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: Gray; text-align: left; }</value>
-  </data>
-  <data name="lbl_nombre.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: DodgerBlue; text-align: left; }</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAgBAAAAAAAAAAAAAAAAAAAA

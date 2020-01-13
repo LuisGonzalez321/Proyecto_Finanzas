@@ -41,12 +41,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btn_eye = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_eye)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_ingresar
@@ -104,7 +106,7 @@
             this.txt_contraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txt_contraseña.MaxLength = 32767;
             this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.Size = new System.Drawing.Size(232, 35);
+            this.txt_contraseña.Size = new System.Drawing.Size(222, 35);
             this.txt_contraseña.TabIndex = 3;
             this.txt_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -174,7 +176,7 @@
             this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usuario.MaxLength = 32767;
             this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(232, 35);
+            this.txt_usuario.Size = new System.Drawing.Size(222, 35);
             this.txt_usuario.TabIndex = 2;
             this.txt_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -228,12 +230,26 @@
             this.elipse.ElipseRadius = 7;
             this.elipse.TargetControl = this;
             // 
+            // btn_eye
+            // 
+            this.btn_eye.Image = ((System.Drawing.Image)(resources.GetObject("btn_eye.Image")));
+            this.btn_eye.ImageActive = null;
+            this.btn_eye.Location = new System.Drawing.Point(289, 272);
+            this.btn_eye.Name = "btn_eye";
+            this.btn_eye.Size = new System.Drawing.Size(31, 26);
+            this.btn_eye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_eye.TabIndex = 9;
+            this.btn_eye.TabStop = false;
+            this.btn_eye.Zoom = 10;
+            this.btn_eye.Click += new System.EventHandler(this.btn_eye_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(332, 462);
+            this.Controls.Add(this.btn_eye);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
@@ -253,6 +269,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_eye)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,6 +287,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuImageButton btn_minimizar;
         private Bunifu.Framework.UI.BunifuElipse elipse;
+        private Bunifu.Framework.UI.BunifuImageButton btn_eye;
     }
 }
 

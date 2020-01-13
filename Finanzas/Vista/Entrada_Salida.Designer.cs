@@ -1,6 +1,6 @@
 ﻿namespace Finanzas.Vista
 {
-    partial class Análisis_Financiero
+    partial class Entrada_Salida
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Análisis_Financiero
+            // Entrada_Salida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 426);
-            this.Name = "Análisis_Financiero";
-            this.Text = "Análisis Financiero";
+            this.ClientSize = new System.Drawing.Size(894, 632);
+            this.Name = "Entrada_Salida";
+            this.Text = "Entrada_Salida";
             this.ResumeLayout(false);
 
         }

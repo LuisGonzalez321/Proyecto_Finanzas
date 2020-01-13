@@ -345,7 +345,6 @@ as
 	where cc.Nombre = @tipo
 go
 
-
 /*  Muestra las utilidades  */
 
 CREATE FUNCTION Mostrar_Utilidad_Bruta(@año int)
@@ -366,6 +365,39 @@ CREATE FUNCTION Mostrar_Utilidad_Bruta(@año int)
 	END
 	GO
 
+Create Function Mostrar_UtilidadOperativa(@año int)
+returns money
+with execute as caller
+as
+begin
+	declare @utilidad money = dbo.Mostrar_Utilidad_Bruta(@año)
+
+	declare @operacion money = (select t.Monto from transacción t 
+								inner join Cuenta c on t.IdCuenta = c.IdCuenta
+								where c.NombreCuenta= 'Operación de la empresa' and year(t.fecha) = @año)
+
+	declare @utilidad_operacion money = @utilidad - @operacion
+	return @utilidad_operacion 
+end
+go
+
+CREATE FUNCTION Mostrar_UtilidadADII(@año int)
+	RETURNS money
+	WITH EXECUTE AS CALLER
+	AS
+	BEGIN
+	declare @Ventas money = (select sum(t.Monto) from transacción t 
+							 inner join Cuenta c on t.IdCuenta = c.IdCuenta 
+							 where c.IdCuenta in(29,30,31) and year(t.fecha) = @año)
+
+	declare @costo money = (select sum(t.Monto) from transacción t 
+							inner join Cuenta c on t.IdCuenta = c.IdCuenta 
+							where c.IdCuenta = 34 and year(t.fecha) = @año)
+
+	declare @Utilidad money = @Ventas - @costo
+	return @Utilidad
+	END
+	GO
 /* =============================== Razones financieras  ================================*/
 
 /*         Capital de neto de trabajo           */
@@ -448,25 +480,36 @@ go
 /*        Rotacion proveedores      */
 Mostrar_Todo 2020
 go
-create procedure Rotación_proveedores 2020
+Alter procedure Rotación_proveedores
 @año int
 	as
+declare @Inventario_inicial money = 0
 declare @CostoVenta money = (select t.Monto 
 							 from transacción t 
 							 inner join Cuenta c on c.IdCuenta = t.IdCuenta 
-							 where Year(t.fecha) = 2020 and c.NombreCuenta = 'Costo de ventas')
+							 where Year(t.fecha) = @año and c.NombreCuenta = 'Costo de ventas')
 declare @cuentas money = (select t.Monto 
 							from transacción t 
 							inner join Cuenta c on c.IdCuenta = t.IdCuenta 
-							where Year(t.fecha) = 2020 and c.NombreCuenta = 'Cuentas por pagar')
-declare @Inventario_inicial money = (select t.Monto 
-									from transacción t 
-									inner join Cuenta c on c.IdCuenta = t.IdCuenta 
-									where Year(t.fecha) - 1 = 2020 and c.NombreCuenta = 'Inventario')
+							where Year(t.fecha) = @año and c.NombreCuenta = 'Cuentas por pagar')
+
+if exists (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+			where Year(t.fecha) - 1 = @año and c.NombreCuenta = 'Inventario')
+begin
+	 set @Inventario_inicial = (select t.Monto 
+								from transacción t 
+								inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+								where Year(t.fecha) - 1 = @año and c.NombreCuenta = 'Inventario')
+end
+else
+begin
+	set @Inventario_inicial = 0
+end
+
 declare @Inventario_final money = (select t.Monto 
 									from transacción t 
 									inner join Cuenta c on c.IdCuenta = t.IdCuenta 
-									where Year(t.fecha) = 2020 and c.NombreCuenta = 'Inventario')
+									where Year(t.fecha) = @año and c.NombreCuenta = 'Inventario')
 
 declare @compras money = @CostoVenta + @Inventario_final - @Inventario_inicial
 select ''+(@compras/@cuentas) as Rotación_proveedores
@@ -507,6 +550,32 @@ as
 	select (@pasivos_totales / @Capital_social) as Razon_PasivoCapital
 go 
 
+
+/*   Rotacion activo fijo    */
+create procedure Rotación_ActivoFijo
+@año int
+	as
+	declare @activo_fijo money = (dbo.Suma_Cuenta(@año,'Activo Fijo '))
+	declare @ventas money = (select t.Monto
+							 from Cuenta c 
+						   	 inner join transacción t on t.IdCuenta = c.IdCuenta 
+							 where Year(t.fecha) = @año and c.NombreCuenta = 'Ventas')
+	select (@ventas / @activo_fijo) as Rotación_ActivoFijo
+go
+
+create procedure Rotación_ActivoTotal
+@año int
+as
+	declare @activo_total money = (select sum(t.Monto)
+								  from Cuenta c 
+						   		  inner join transacción t on t.IdCuenta = c.IdCuenta 
+								  where Year(t.fecha) = @año and c.IdCuenta between 1 and 16)
+	declare @ventas money = (select t.Monto
+							 from Cuenta c 
+						   	 inner join transacción t on t.IdCuenta = c.IdCuenta 
+							 where Year(t.fecha) = @año and c.NombreCuenta = 'Ventas')
+	select (@ventas / @activo_total) as Rotación_ActivoTotal
+go
 
 /*  Catalogo de cuentas del estado de reultados */
 Create procedure Insertar_monto

@@ -68,12 +68,29 @@ namespace Finazas
             {
                 MessageBox.Show("Hubo un error");
             }
-          
+
         }
 
         private void btn_minimizar_Click (object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        int count = 1;
+
+        private void btn_eye_Click (object sender, EventArgs e)
+        {
+            if (count == 1)
+            {
+                txt_contraseña.isPassword = false;
+                count = 0;
+            }
+            else
+            {
+                txt_contraseña.isPassword = true;
+                count = 1;
+            }
+
         }
     }
 }

@@ -240,6 +240,18 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
+  <data name="btn_eye.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAGYktHRAD/AP8A/6C9p5MAAAFgSURBVEhL7ZQ7TsNAFEVdIBo+BTUSS4GwHRaAgugJy8gOopDe
+        EliW45/kwulS8VsABWW4xxqTeDz5NEYUudKVZube9+x5b2a8Pf43wjA8y7LsJk3TifgqfhsynqDhMfbd
+        4fv+gRL0xS9xsYV4+sSY8M2IouhcAdOVBLtySqxJ40ae5xcyzq1AOIrj+LIoiiOYJMmVOHb45uQw6Zoo
+        y/JYhpkVAG+NpQX14M7hn5HLWJaQMLSMcISmgEMle9T8Q3wXB6yZuCfRjhui/YItO0wLyoKu8cDWWDNa
+        z1qvSE70Clp4sQ2w3qrG/Lmtf6IFQXDi0OAzegVNtn2Astj6G5pOzqlDg8sPrCtRvU2NXSV6QFNvrh1a
+        s0RAi60myzRGo6Ga8xF2YjeZW96IE5tNBpRDQuuYchSNpQXp97ZfdB9TsOGicRR7BEJTFtefr79oNTp9
+        Kmp0+titorPneo8/hOf9AK+bNk4ajPNTAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAgBAAAAAAAAAAAAAAAAAAAA

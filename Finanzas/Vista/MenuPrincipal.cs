@@ -103,5 +103,16 @@ namespace Finazas.Vista
                                  "4 - Realiza apalancamiento <br>";
             bunifuToolTip1.SetToolTip(btn_info, información);
         }
+
+        private void lbl_estado_Click (object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_palanca_Click (object sender, EventArgs e)
+        {
+            Apalancamiento palanca = new Apalancamiento();
+            palanca.Show();
+        }
     }
 }
