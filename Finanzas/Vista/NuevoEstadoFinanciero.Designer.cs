@@ -76,10 +76,12 @@ namespace Finanzas.Vista
             this.datepicker_BG = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tabpage_ER = new System.Windows.Forms.TabPage();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_utilidad = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -90,14 +92,12 @@ namespace Finanzas.Vista
             this.btn_bg = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_guardar2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.scroll_er = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.lbl_utilidad = new Bunifu.UI.WinForms.BunifuLabel();
             this.nombreCuentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_texto = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_salir = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.page_EF.SuspendLayout();
             this.tabpage_BG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_capital)).BeginInit();
@@ -279,7 +279,6 @@ namespace Finanzas.Vista
             this.tabla_capital.EnableHeadersVisualStyles = false;
             this.tabla_capital.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_capital.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_capital.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_capital.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_capital.Location = new System.Drawing.Point(508, 291);
             this.tabla_capital.Name = "tabla_capital";
@@ -362,7 +361,6 @@ namespace Finanzas.Vista
             this.tabla_pasivo.EnableHeadersVisualStyles = false;
             this.tabla_pasivo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_pasivo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_pasivo.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_pasivo.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_pasivo.Location = new System.Drawing.Point(508, 45);
             this.tabla_pasivo.Name = "tabla_pasivo";
@@ -671,7 +669,6 @@ namespace Finanzas.Vista
             this.tabla_activo.EnableHeadersVisualStyles = false;
             this.tabla_activo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_activo.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_activo.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_activo.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_activo.Location = new System.Drawing.Point(35, 64);
             this.tabla_activo.Name = "tabla_activo";
@@ -817,6 +814,21 @@ namespace Finanzas.Vista
             this.tabpage_ER.Text = "tabpage_ER";
             this.tabpage_ER.UseVisualStyleBackColor = true;
             // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.CursorType = null;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(144)))), ((int)(((byte)(240)))));
+            this.bunifuLabel4.Location = new System.Drawing.Point(36, 11);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(173, 34);
+            this.bunifuLabel4.TabIndex = 70;
+            this.bunifuLabel4.Text = "Ingresos-Costos";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.bunifuLabel8);
@@ -825,7 +837,7 @@ namespace Finanzas.Vista
             this.groupBox1.Controls.Add(this.lbl_utilidad);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(616, 40);
+            this.groupBox1.Location = new System.Drawing.Point(616, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(337, 429);
             this.groupBox1.TabIndex = 69;
@@ -838,7 +850,7 @@ namespace Finanzas.Vista
             this.bunifuLabel8.CursorType = null;
             this.bunifuLabel8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel8.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuLabel8.Location = new System.Drawing.Point(18, 135);
+            this.bunifuLabel8.Location = new System.Drawing.Point(18, 128);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel8.Size = new System.Drawing.Size(235, 33);
@@ -853,7 +865,7 @@ namespace Finanzas.Vista
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuLabel7.Location = new System.Drawing.Point(18, 230);
+            this.bunifuLabel7.Location = new System.Drawing.Point(18, 224);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel7.Size = new System.Drawing.Size(280, 33);
@@ -876,6 +888,21 @@ namespace Finanzas.Vista
             this.bunifuLabel5.Text = "Utilidad Bruta:";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbl_utilidad
+            // 
+            this.lbl_utilidad.AutoEllipsis = false;
+            this.lbl_utilidad.CursorType = null;
+            this.lbl_utilidad.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.lbl_utilidad.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbl_utilidad.Location = new System.Drawing.Point(18, 320);
+            this.lbl_utilidad.Name = "lbl_utilidad";
+            this.lbl_utilidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_utilidad.Size = new System.Drawing.Size(155, 35);
+            this.lbl_utilidad.TabIndex = 44;
+            this.lbl_utilidad.Text = "Utilidad Neta :";
+            this.lbl_utilidad.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_utilidad.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuSeparator4
             // 
@@ -934,8 +961,8 @@ namespace Finanzas.Vista
             this.tabla_er.AllowCustomTheming = false;
             this.tabla_er.AllowUserToAddRows = false;
             this.tabla_er.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
             this.tabla_er.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.tabla_er.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_er.BackgroundColor = System.Drawing.Color.White;
@@ -953,13 +980,13 @@ namespace Finanzas.Vista
             this.tabla_er.ColumnHeadersHeight = 40;
             this.tabla_er.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MontoER});
-            this.tabla_er.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.tabla_er.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.tabla_er.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.tabla_er.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
             this.tabla_er.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.tabla_er.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.tabla_er.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.tabla_er.CurrentTheme.GridColor = System.Drawing.Color.White;
+            this.tabla_er.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_er.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
             this.tabla_er.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.tabla_er.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
@@ -972,15 +999,14 @@ namespace Finanzas.Vista
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tabla_er.DefaultCellStyle = dataGridViewCellStyle18;
             this.tabla_er.EnableHeadersVisualStyles = false;
-            this.tabla_er.GridColor = System.Drawing.Color.White;
+            this.tabla_er.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.tabla_er.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.tabla_er.HeaderBgColor = System.Drawing.Color.Empty;
             this.tabla_er.HeaderForeColor = System.Drawing.Color.White;
             this.tabla_er.Location = new System.Drawing.Point(36, 51);
             this.tabla_er.Name = "tabla_er";
@@ -1144,21 +1170,6 @@ namespace Finanzas.Vista
             this.scroll_er.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
             this.scroll_er.Value = 0;
             // 
-            // lbl_utilidad
-            // 
-            this.lbl_utilidad.AutoEllipsis = false;
-            this.lbl_utilidad.CursorType = null;
-            this.lbl_utilidad.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.lbl_utilidad.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbl_utilidad.Location = new System.Drawing.Point(18, 322);
-            this.lbl_utilidad.Name = "lbl_utilidad";
-            this.lbl_utilidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_utilidad.Size = new System.Drawing.Size(155, 35);
-            this.lbl_utilidad.TabIndex = 44;
-            this.lbl_utilidad.Text = "Utilidad Neta :";
-            this.lbl_utilidad.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_utilidad.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // nombreCuentaDataGridViewTextBoxColumn
             // 
             this.nombreCuentaDataGridViewTextBoxColumn.Name = "nombreCuentaDataGridViewTextBoxColumn";
@@ -1249,21 +1260,6 @@ namespace Finanzas.Vista
             this.btn_salir.TabStop = false;
             this.btn_salir.Zoom = 10;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(144)))), ((int)(((byte)(240)))));
-            this.bunifuLabel4.Location = new System.Drawing.Point(36, 11);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(173, 34);
-            this.bunifuLabel4.TabIndex = 70;
-            this.bunifuLabel4.Text = "Ingresos-Costos";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // NuevoEstadoFinanciero
             // 

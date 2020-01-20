@@ -31,12 +31,12 @@ namespace Finanzas.Controlador.Herramientas
 
         public static void ValidarNumeros_KeyPress (object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && ((e.KeyChar != ',') && (e.KeyChar != '-')))
             {
                 e.Handled = true;
             }
             // solo 1 punto decimal
-            if ((e.KeyChar == ',') && ((sender as System.Windows.Forms.TextBox).Text.IndexOf(',') > -1))
+            if (((e.KeyChar == '-') && (e.KeyChar == ',')) && ( (sender as System.Windows.Forms.TextBox).Text.IndexOf(',') > -1) )  
             {
                 e.Handled = true;
             }
@@ -44,6 +44,7 @@ namespace Finanzas.Controlador.Herramientas
             {
                 e.Handled = true;
             }
+
         }
 
         public static bool ValidarCampos (Bunifu.UI.WinForms.BunifuDataGridView datagrid)

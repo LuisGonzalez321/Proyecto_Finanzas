@@ -109,11 +109,6 @@
     <Compile Include="Controlador\CConsulta.cs" />
     <Compile Include="Controlador\CRazónCuenta.cs" />
     <Compile Include="Controlador\CUsuario.cs" />
-    <Compile Include="FinanzasDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FinanzasDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,17 +207,6 @@
     <EmbeddedResource Include="Vista\RazonesFinancieras.resx">
       <DependentUpon>RazonesFinancieras.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="FinanzasDataSet.xsc">
-      <DependentUpon>FinanzasDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FinanzasDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FinanzasDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FinanzasDataSet.xss">
-      <DependentUpon>FinanzasDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

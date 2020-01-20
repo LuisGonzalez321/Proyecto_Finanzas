@@ -16,29 +16,28 @@ namespace Finanzas.Vista
         public EstadosFinancieros ()
         {
             InitializeComponent();
-        }
-
-        public void Cargar_datos ()
-        {
             int año = datepicker_BG.Value.Year;
             tabla_activo.DataSource = Controlador.CConsulta.Consulta(año, "ACTIVO");
             tabla_pasivo.DataSource = Controlador.CConsulta.Consulta(año, "PASIVO");
             tabla_capital.DataSource = Controlador.CConsulta.Consulta(año, "CAPITAL");
+        }
+
+        public void Cargar_datos ()
+        {
 
             double montoPC = (suma_monto_datagrid(tabla_pasivo) + suma_monto_datagrid(tabla_capital));
-            label_activo.Text = "TOTAL ACTIVO :" + suma_monto_datagrid(tabla_activo);
+          //  label_activo.Text = "TOTAL ACTIVO :" + suma_monto_datagrid(tabla_activo);
             label_pc.Text = "TOTAL PASIVO Y CAPITAL:" + montoPC;
 
             tabla_activo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
             tabla_pasivo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
             tabla_capital.Columns ["Monto"].DefaultCellStyle.Format = "N2";
-
         }
         
 
         private void EstadosFinancieros_Load (object sender, EventArgs e)
         {
-            Cargar_datos();
+            //Cargar_datos();
         }
 
         private void btn_salir_Click (object sender, EventArgs e)
@@ -48,7 +47,7 @@ namespace Finanzas.Vista
 
         private void datepicker_BG_ValueChanged (object sender, EventArgs e)
         {
-            Cargar_datos();
+          
         }
 
         private void btn_nuevo_Click (object sender, EventArgs e)
@@ -81,5 +80,10 @@ namespace Finanzas.Vista
             return monto;
         }
 
+        private void btn_buscar_Click (object sender, EventArgs e)
+        {
+            int año = datepicker_BG.Value.Year;
+            tabla_activo.DataSource = Controlador.CConsulta.Consulta(año, "ACTIVO");
+        }
     }
 }

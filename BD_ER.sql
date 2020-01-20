@@ -265,9 +265,11 @@ insert into transacción values(40,3000,GETDATE(),'H')
 insert into transacción values(41,2000,GETDATE(),'H')
 insert into transacción values(42,1000,GETDATE(),'H')
 
-/*otros gastos*/
+/*gastos operativos*/
 
-insert into transacción values (43,0.00,GETDATE(),'H')
+insert into transacción values (43,103400.00,GETDATE(),'H')
+
+/* Otros gastos*/
 insert into transacción values (44,0.00,GETDATE(),'H')
 insert into transacción values (45,0.00,GETDATE(),'H')
 insert into transacción values (46,0.00,GETDATE(),'H')
@@ -322,16 +324,6 @@ as
 	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
 	inner join CategoríaCuenta cc on sc.IdCategoríaCuenta = cc.IdCategoríaCuenta
 	where cc.Nombre in('INGRESOS','COSTOS','GASTOS')
-go
-
-Create procedure Total_Activo
-@año int
-as
-select Convert(int,sum(t.Monto)) as Total_Activo  from transacción t
-	inner join Cuenta c on c.IdCuenta = t.IdCuenta
-	inner join SubCategoríaCuenta sc on sc.IdSubCategoríaCuenta = c.IdSubCategoríaCuenta
-	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
-	where year(t.fecha) = @año and cc.Nombre = 'ACTIVO'
 go
 
 Create procedure Catalogo_Cuentas
@@ -478,7 +470,7 @@ select ''+(@ventas_credito/@cuentas) as Rotación_Cuentas_por_cobrar
 go
 
 /*        Rotacion proveedores      */
-Mostrar_Todo 2020
+
 go
 Alter procedure Rotación_proveedores
 @año int
