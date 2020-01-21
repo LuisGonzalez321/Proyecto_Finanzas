@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Finanzas.Controlador.Herramientas
 {
@@ -68,6 +69,11 @@ namespace Finanzas.Controlador.Herramientas
                 string nombre_tabla = tabla.Columns [0].Name;
                 tabla.Columns [nombre_tabla].DisplayIndex = 1;
             }
+        }
+
+        public static bool validar_camposTextbox(string texto)
+        {
+            return texto != null ? true : false;
         }
 
     }
