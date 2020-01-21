@@ -58,5 +58,10 @@ namespace Finanzas.Controlador
             }
         }
 
+        public static double Mostrar_utilidad (string utilidad, int año)
+        {
+            return new MCuenta().Mostrar_Utilidad(utilidad, año);
+        }
+
     }
 }

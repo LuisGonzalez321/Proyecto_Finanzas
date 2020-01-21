@@ -21,5 +21,18 @@ namespace Finanzas.Controlador
             return new MCuenta().Catalogo_Cuentas(tipo);
         }
 
+
+        public static DataTable Cargar_EstadoResultado (int año)
+        {
+            DataTable tabla_ingresos = new MCuenta().Consulta(año, "INGRESOS");
+            DataTable tabla_costos = new MCuenta().Consulta(año, "COSTOS");
+            DataTable tabla_gastos = new MCuenta().Consulta(año, "GASTOS");
+
+            tabla_ingresos.Merge(tabla_costos);
+            tabla_ingresos.Merge(tabla_gastos);
+
+            return tabla_ingresos;
+        }
+
     }
 }

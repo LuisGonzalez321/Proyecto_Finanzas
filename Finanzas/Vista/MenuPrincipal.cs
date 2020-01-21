@@ -18,12 +18,12 @@ namespace Finazas.Vista
         public MenuPrincipal ()
         {
             InitializeComponent();
-            lbl_BG.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo",datepicker.Value) );
+            lbl_BG.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo", datepicker.Value));
             int valor = Convert.ToInt32(CRazónCuenta.Razon_cuenta("Razón_deuda", datepicker.Value));
             radial_gauge.Value = valor;
             lbl_estado.Text = Finanzas.Controlador.Herramientas.Toolkit.Estado_Empresa(valor);
         }
-  
+
 
         private const int cGrip = 16;
         private const int cCaption = 32;
@@ -70,7 +70,7 @@ namespace Finazas.Vista
                 gradiente_panel1.Visible = true;
             }
         }
-        
+
 
         private void btn_ef_Click (object sender, EventArgs e)
         {

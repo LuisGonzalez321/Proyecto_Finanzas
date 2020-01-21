@@ -190,6 +190,38 @@ namespace Finazas.Modelo
             return flag;
         }
 
+
+        public double Mostrar_Utilidad(string utilidad, int año)
+        {
+
+            DataTable datatable = new DataTable();
+            SqlConnection sqlcon = new SqlConnection();
+            DataRow datarow;
+
+            try
+            {
+                sqlcon.ConnectionString = Conexion.cadena;
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.Connection = sqlcon;
+                sqlcmd.CommandText = "select ' ' + " + utilidad + "(" + año + ")";
+                sqlcmd.CommandType = CommandType.Text;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(sqlcmd);
+                SqlDat.Fill(datatable);
+                if (datatable.Rows.Count > 0)
+                {
+                    datarow = datatable.Rows [0];
+                    return Convert.ToDouble(datarow [0].ToString());
+                }
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return 0;
+            }
+        }
+
       
     }
 }

@@ -96,12 +96,14 @@
             this.btn_UtilidadOper = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.groupBox1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -314,6 +316,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.btn_minimizar);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel1);
             this.bunifuGradientPanel1.Controls.Add(this.btn_salir);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuDatePicker1);
@@ -854,6 +857,7 @@
             this.btn_rotaciónInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_rotaciónInventario.TextMarginLeft = -43;
             this.btn_rotaciónInventario.UseDefaultRadiusAndThickness = true;
+            this.btn_rotaciónInventario.Click += new System.EventHandler(this.btn_rotaciónInventario_Click);
             // 
             // btn_CuentasCobrar
             // 
@@ -1165,6 +1169,20 @@
             this.bunifuElipse1.ElipseRadius = 7;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.ImageActive = null;
+            this.btn_minimizar.Location = new System.Drawing.Point(901, 0);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(36, 37);
+            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_minimizar.TabIndex = 31;
+            this.btn_minimizar.TabStop = false;
+            this.btn_minimizar.Zoom = 10;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
+            // 
             // RazonesFinancieras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1190,6 +1208,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1220,5 +1239,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_ActivoTotal;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_ActivoFijo;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuImageButton btn_minimizar;
     }
 }

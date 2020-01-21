@@ -266,7 +266,6 @@ insert into transacción values(41,2000,GETDATE(),'H')
 insert into transacción values(42,1000,GETDATE(),'H')
 
 /*gastos operativos*/
-
 insert into transacción values (43,103400.00,GETDATE(),'H')
 
 /* Otros gastos*/
@@ -276,8 +275,7 @@ insert into transacción values (46,0.00,GETDATE(),'H')
 insert into transacción values (47,0.00,GETDATE(),'H')
 insert into transacción values (48,0.00,GETDATE(),'H')
 insert into transacción values (49,0.00,GETDATE(),'H')
-insert into transacción values (50,25590,GETDATE(),'H')
-
+insert into transacción values (50,25445.00,GETDATE(),'H')
 
 go
 /*  Funcion para obtener las sumas de alguna categoría de cuenta */
@@ -373,23 +371,44 @@ begin
 end
 go
 
-CREATE FUNCTION Mostrar_UtilidadADII(@año int)
+
+CREATE FUNCTION Mostrar_UtilidadADI(@año int)
 	RETURNS money
 	WITH EXECUTE AS CALLER
 	AS
 	BEGIN
-	declare @Ventas money = (select sum(t.Monto) from transacción t 
-							 inner join Cuenta c on t.IdCuenta = c.IdCuenta 
-							 where c.IdCuenta in(29,30,31) and year(t.fecha) = @año)
+	
 
-	declare @costo money = (select sum(t.Monto) from transacción t 
-							inner join Cuenta c on t.IdCuenta = c.IdCuenta 
-							where c.IdCuenta = 34 and year(t.fecha) = @año)
+	declare @Utilidad_operativa money =dbo.Mostrar_UtilidadOperativa(@año)
 
-	declare @Utilidad money = @Ventas - @costo
+	declare @gastos_finan money =  ( select sum(t.Monto) from transacción t 
+									 inner join Cuenta c on t.IdCuenta = c.IdCuenta
+									 where c.NombreCuenta in('Intereses pagados', 'Producto Financiero')  and year(t.fecha) = @año)
+
+	declare @Utilidad money = @Utilidad_operativa -  @gastos_finan
 	return @Utilidad
 	END
-	GO
+	go
+
+go
+
+Create function Mostrar_UtilidadNeta(@año int)
+    returns money
+	with execute as caller
+	as
+	begin
+	declare @UAII money = dbo.Mostrar_UtilidadADI(@año)
+
+	declare @impuesto money = ( select sum(t.Monto) from transacción t 
+								inner join Cuenta c on t.IdCuenta = c.IdCuenta
+								where c.NombreCuenta = 'Impuesto sobre renta'  and year(t.fecha) = @año)
+
+	declare @UNE money = @UAII - @impuesto
+
+	return @UNE
+	end
+	go
+
 /* =============================== Razones financieras  ================================*/
 
 /*         Capital de neto de trabajo           */
@@ -451,6 +470,22 @@ declare @Inventario money = (select t.Monto
 select ''+(@CostoVenta/@Inventario) as Rotación_Inventario
 go
 
+
+/*   Rotacion */
+
+create procedure Rotacion_Interes
+@año int
+as
+
+		declare @UAII money = dbo.Mostrar_UtilidadOperativa(@año)
+
+		declare @interes money = (select t.Monto 
+								  from transacción t 
+							      inner join Cuenta c on c.IdCuenta = t.IdCuenta 
+							      where Year(t.fecha) = @año and c.NombreCuenta = 'Intereses pagados')
+
+select ''+(@UAII / @interes) as Rotacion_Interes
+go
 
 /*   Rotación cuentas por cobrar   */
 create procedure Rotación_Cuentas_por_cobrar
@@ -566,8 +601,60 @@ as
 							 from Cuenta c 
 						   	 inner join transacción t on t.IdCuenta = c.IdCuenta 
 							 where Year(t.fecha) = @año and c.NombreCuenta = 'Ventas')
+
 	select (@ventas / @activo_total) as Rotación_ActivoTotal
 go
+
+/*  M utilidad bruta  */
+
+create procedure MUB
+@año int
+as
+
+	declare @ventas money = (select t.Monto
+								   from Cuenta c 
+						   		   inner join transacción t on t.IdCuenta = c.IdCuenta 
+								   where Year(t.fecha) = @año and c.NombreCuenta = 'Ventas')
+
+	declare @UB money = dbo.Mostrar_Utilidad_Bruta(@año)
+
+	select (@UB / @ventas) as MUB
+go
+
+/*  M utilidad operativa  */
+
+create procedure MUO
+@año int
+as
+
+	declare @ventas money = (select t.Monto
+								   from Cuenta c 
+						   		   inner join transacción t on t.IdCuenta = c.IdCuenta 
+								   where Year(t.fecha) = @año and c.NombreCuenta = 'Ventas')
+
+	declare @UO money = dbo.Mostrar_UtilidadOperativa(@año)
+
+	select (@UO / @ventas) as MUO
+go
+
+/*  M utilidad neta   */
+
+create procedure MUN
+@año int
+as
+
+	declare @ventas money = (select t.Monto
+								   from Cuenta c 
+						   		   inner join transacción t on t.IdCuenta = c.IdCuenta 
+								   where Year(t.fecha) = @año and c.NombreCuenta = 'Ventas')
+
+	declare @UN money = dbo.Mostrar_UtilidadNeta(@año)
+
+	select (@UN / @ventas) as MUN
+go
+
+
+
 
 /*  Catalogo de cuentas del estado de reultados */
 Create procedure Insertar_monto

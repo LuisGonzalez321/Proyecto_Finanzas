@@ -17,8 +17,8 @@ namespace Finanzas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Finazas.Vista.MenuPrincipal());
-            //Application.Run(new Login());
+            //Application.Run(new Finanzas.Vista.RazonesFinancieras());
+            Application.Run(new Login());
         }   
     }
 }

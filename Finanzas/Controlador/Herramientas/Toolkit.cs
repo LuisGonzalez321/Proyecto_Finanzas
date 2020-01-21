@@ -48,7 +48,7 @@ namespace Finanzas.Controlador.Herramientas
 
         }
 
-        public static bool ValidarCampos (Bunifu.UI.WinForms.BunifuDataGridView datagrid)
+        public static bool ValidarCampos (DataGridView datagrid)
         {
             for (int i = 0 ;i < datagrid.RowCount ;i++)
             {
@@ -60,7 +60,7 @@ namespace Finanzas.Controlador.Herramientas
             return true;
         }
 
-        public static void Formato_tabla (Bunifu.UI.WinForms.BunifuDataGridView [] datagrid)
+        public static void Formato_tabla (DataGridView [] datagrid)
         {
             foreach (Bunifu.UI.WinForms.BunifuDataGridView tabla in datagrid)
             {

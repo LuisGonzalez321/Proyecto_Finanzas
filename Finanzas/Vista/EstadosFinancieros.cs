@@ -16,18 +16,30 @@ namespace Finanzas.Vista
         public EstadosFinancieros ()
         {
             InitializeComponent();
-            int año = datepicker_BG.Value.Year;
-            tabla_activo.DataSource = Controlador.CConsulta.Consulta(año, "ACTIVO");
-            tabla_pasivo.DataSource = Controlador.CConsulta.Consulta(año, "PASIVO");
-            tabla_capital.DataSource = Controlador.CConsulta.Consulta(año, "CAPITAL");
         }
 
         public void Cargar_datos ()
         {
 
+            int año = datepicker_BG.Value.Year;
+            tabla_activo.DataSource = Controlador.CConsulta.Consulta(año, "ACTIVO");
+            tabla_pasivo.DataSource = Controlador.CConsulta.Consulta(año, "PASIVO");
+            tabla_capital.DataSource = Controlador.CConsulta.Consulta(año, "CAPITAL");
+            tabla_er.DataSource = Controlador.CConsulta.Cargar_EstadoResultado(año);
+
+
+            /* cARGAR TODAS LA UTLIDADES*/
+
+            lbl_UB.Text = "Utilidad Bruta: " + CCuenta.Mostrar_utilidad("dbo.Mostrar_Utilidad_Bruta", año);
+            lbl_UO.Text = "Utilidad Operativa: " + CCuenta.Mostrar_utilidad("dbo.Mostrar_UtilidadOperativa", año);
+            lbl_UDI.Text = "Utilidad despues de IR: " + CCuenta.Mostrar_utilidad("dbo.Mostrar_UtilidadADI", año);
+            lbl_UN.Text = "Utilidad Neta: " + CCuenta.Mostrar_utilidad("dbo.Mostrar_UtilidadNeta", año);
+
+
+
             double montoPC = (suma_monto_datagrid(tabla_pasivo) + suma_monto_datagrid(tabla_capital));
-          //  label_activo.Text = "TOTAL ACTIVO :" + suma_monto_datagrid(tabla_activo);
-            label_pc.Text = "TOTAL PASIVO Y CAPITAL:" + montoPC;
+            label_activo.Text = "TOTAL ACTIVO :" + suma_monto_datagrid(tabla_activo);
+            label_pc.Text = "TOTAL PASIVO Y CAPITAL:" + montoPC; 
 
             tabla_activo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
             tabla_pasivo.Columns ["Monto"].DefaultCellStyle.Format = "N2";
@@ -37,17 +49,12 @@ namespace Finanzas.Vista
 
         private void EstadosFinancieros_Load (object sender, EventArgs e)
         {
-            //Cargar_datos();
+            Cargar_datos();
         }
 
         private void btn_salir_Click (object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void datepicker_BG_ValueChanged (object sender, EventArgs e)
-        {
-          
         }
 
         private void btn_nuevo_Click (object sender, EventArgs e)
@@ -67,7 +74,7 @@ namespace Finanzas.Vista
             pages_EF.SelectedIndex = 1;
         }
 
-        public double suma_monto_datagrid (Bunifu.UI.WinForms.BunifuDataGridView datagrid)
+        public double suma_monto_datagrid (DataGridView datagrid)
         {
             double monto = 0;
             for (int i = 0 ;i < datagrid.RowCount ;i++)
@@ -82,8 +89,12 @@ namespace Finanzas.Vista
 
         private void btn_buscar_Click (object sender, EventArgs e)
         {
-            int año = datepicker_BG.Value.Year;
-            tabla_activo.DataSource = Controlador.CConsulta.Consulta(año, "ACTIVO");
+            Cargar_datos();
+        }
+
+        private void btn_minimizar_Click (object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
