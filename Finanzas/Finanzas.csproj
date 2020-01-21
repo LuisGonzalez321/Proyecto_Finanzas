@@ -171,6 +171,12 @@
     <Compile Include="Vista\RazonesFinancieras.Designer.cs">
       <DependentUpon>RazonesFinancieras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Razones_años.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Razones_años.Designer.cs">
+      <DependentUpon>Razones_años.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\RazonesFinancieras.resx">
       <DependentUpon>RazonesFinancieras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Razones_años.resx">
+      <DependentUpon>Razones_años.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
