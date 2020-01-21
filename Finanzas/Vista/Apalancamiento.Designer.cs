@@ -37,19 +37,22 @@
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.group_financiero = new System.Windows.Forms.GroupBox();
-            this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btn_calcularGAF = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lbl_UAII = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_UPA = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.lbl_GAF = new Bunifu.UI.WinForms.BunifuLabel();
+            this.txt_dividendos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_financiero = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.txt_impuesto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.lbl_UAI = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txt_interes = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.group_operativo = new System.Windows.Forms.GroupBox();
+            this.txt_cantidad = new System.Windows.Forms.NumericUpDown();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_calcular = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_GastosOp = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -61,9 +64,6 @@
             this.txt_costos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txt_ventas = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btn_calcularGAF = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txt_cantidad = new System.Windows.Forms.NumericUpDown();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -121,7 +121,7 @@
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(4, 58);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -146,56 +146,82 @@
             // group_financiero
             // 
             this.group_financiero.Controls.Add(this.btn_calcularGAF);
-            this.group_financiero.Controls.Add(this.bunifuLabel13);
-            this.group_financiero.Controls.Add(this.bunifuLabel7);
+            this.group_financiero.Controls.Add(this.lbl_UAII);
+            this.group_financiero.Controls.Add(this.lbl_UPA);
             this.group_financiero.Controls.Add(this.bunifuThinButton21);
-            this.group_financiero.Controls.Add(this.bunifuLabel8);
-            this.group_financiero.Controls.Add(this.bunifuMaterialTextbox2);
+            this.group_financiero.Controls.Add(this.lbl_GAF);
+            this.group_financiero.Controls.Add(this.txt_dividendos);
             this.group_financiero.Controls.Add(this.bunifuLabel9);
             this.group_financiero.Controls.Add(this.btn_financiero);
             this.group_financiero.Controls.Add(this.bunifuLabel10);
-            this.group_financiero.Controls.Add(this.bunifuMaterialTextbox3);
-            this.group_financiero.Controls.Add(this.bunifuLabel11);
+            this.group_financiero.Controls.Add(this.txt_impuesto);
+            this.group_financiero.Controls.Add(this.lbl_UAI);
             this.group_financiero.Controls.Add(this.bunifuLabel12);
-            this.group_financiero.Controls.Add(this.bunifuMaterialTextbox4);
+            this.group_financiero.Controls.Add(this.txt_interes);
             this.group_financiero.Dock = System.Windows.Forms.DockStyle.Top;
             this.group_financiero.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.group_financiero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.group_financiero.Location = new System.Drawing.Point(3, 443);
+            this.group_financiero.Location = new System.Drawing.Point(3, 436);
             this.group_financiero.Name = "group_financiero";
-            this.group_financiero.Size = new System.Drawing.Size(950, 78);
+            this.group_financiero.Size = new System.Drawing.Size(950, 209);
             this.group_financiero.TabIndex = 15;
             this.group_financiero.TabStop = false;
             this.group_financiero.Text = "Apalancamiento";
             // 
-            // bunifuLabel13
+            // btn_calcularGAF
             // 
-            this.bunifuLabel13.AutoEllipsis = false;
-            this.bunifuLabel13.CursorType = null;
-            this.bunifuLabel13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuLabel13.Location = new System.Drawing.Point(18, 195);
-            this.bunifuLabel13.Name = "bunifuLabel13";
-            this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel13.Size = new System.Drawing.Size(300, 23);
-            this.bunifuLabel13.TabIndex = 14;
-            this.bunifuLabel13.Text = "Utilidad antes de impuestos e interes(UAII): ";
-            this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel13.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.btn_calcularGAF.ActiveBorderThickness = 1;
+            this.btn_calcularGAF.ActiveCornerRadius = 20;
+            this.btn_calcularGAF.ActiveFillColor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcularGAF.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_calcularGAF.ActiveLineColor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcularGAF.BackColor = System.Drawing.Color.White;
+            this.btn_calcularGAF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_calcularGAF.BackgroundImage")));
+            this.btn_calcularGAF.ButtonText = "Calcular";
+            this.btn_calcularGAF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_calcularGAF.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_calcularGAF.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcularGAF.IdleBorderThickness = 1;
+            this.btn_calcularGAF.IdleCornerRadius = 20;
+            this.btn_calcularGAF.IdleFillColor = System.Drawing.Color.White;
+            this.btn_calcularGAF.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_calcularGAF.IdleLineColor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcularGAF.Location = new System.Drawing.Point(288, 374);
+            this.btn_calcularGAF.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_calcularGAF.Name = "btn_calcularGAF";
+            this.btn_calcularGAF.Size = new System.Drawing.Size(140, 41);
+            this.btn_calcularGAF.TabIndex = 15;
+            this.btn_calcularGAF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_calcularGAF.Click += new System.EventHandler(this.btn_calcularGAF_Click);
             // 
-            // bunifuLabel7
+            // lbl_UAII
             // 
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.Location = new System.Drawing.Point(18, 295);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(180, 23);
-            this.bunifuLabel7.TabIndex = 13;
-            this.bunifuLabel7.Text = "Utilidad por acción(UPA) :";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_UAII.AutoEllipsis = false;
+            this.lbl_UAII.CursorType = null;
+            this.lbl_UAII.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UAII.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_UAII.Location = new System.Drawing.Point(18, 195);
+            this.lbl_UAII.Name = "lbl_UAII";
+            this.lbl_UAII.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_UAII.Size = new System.Drawing.Size(300, 23);
+            this.lbl_UAII.TabIndex = 14;
+            this.lbl_UAII.Text = "Utilidad antes de impuestos e interes(UAII): ";
+            this.lbl_UAII.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_UAII.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbl_UPA
+            // 
+            this.lbl_UPA.AutoEllipsis = false;
+            this.lbl_UPA.CursorType = null;
+            this.lbl_UPA.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UPA.Location = new System.Drawing.Point(18, 295);
+            this.lbl_UPA.Name = "lbl_UPA";
+            this.lbl_UPA.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_UPA.Size = new System.Drawing.Size(180, 23);
+            this.lbl_UPA.TabIndex = 13;
+            this.lbl_UPA.Text = "Utilidad por acción(UPA) :";
+            this.lbl_UPA.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_UPA.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuThinButton21
             // 
@@ -222,42 +248,42 @@
             this.bunifuThinButton21.TabIndex = 12;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuLabel8
+            // lbl_GAF
             // 
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.CursorType = null;
-            this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel8.Location = new System.Drawing.Point(18, 340);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(261, 23);
-            this.bunifuLabel8.TabIndex = 9;
-            this.bunifuLabel8.Text = "Grado de apalancamiento financiero :";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_GAF.AutoEllipsis = false;
+            this.lbl_GAF.CursorType = null;
+            this.lbl_GAF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_GAF.Location = new System.Drawing.Point(18, 340);
+            this.lbl_GAF.Name = "lbl_GAF";
+            this.lbl_GAF.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_GAF.Size = new System.Drawing.Size(261, 23);
+            this.lbl_GAF.TabIndex = 9;
+            this.lbl_GAF.Text = "Grado de apalancamiento financiero :";
+            this.lbl_GAF.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_GAF.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuMaterialTextbox2
+            // txt_dividendos
             // 
-            this.bunifuMaterialTextbox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox2.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "0.00";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(275, 233);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.MaxLength = 32767;
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(114, 33);
-            this.bunifuMaterialTextbox2.TabIndex = 7;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_dividendos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_dividendos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_dividendos.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_dividendos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_dividendos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_dividendos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_dividendos.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_dividendos.HintText = "0.00";
+            this.txt_dividendos.isPassword = false;
+            this.txt_dividendos.LineFocusedColor = System.Drawing.Color.DodgerBlue;
+            this.txt_dividendos.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_dividendos.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
+            this.txt_dividendos.LineThickness = 3;
+            this.txt_dividendos.Location = new System.Drawing.Point(275, 233);
+            this.txt_dividendos.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_dividendos.MaxLength = 12;
+            this.txt_dividendos.Name = "txt_dividendos";
+            this.txt_dividendos.Size = new System.Drawing.Size(114, 33);
+            this.txt_dividendos.TabIndex = 7;
+            this.txt_dividendos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // bunifuLabel9
             // 
@@ -298,7 +324,7 @@
             this.btn_financiero.IconZoom = 90D;
             this.btn_financiero.IsTab = false;
             this.btn_financiero.Location = new System.Drawing.Point(3, 21);
-            this.btn_financiero.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_financiero.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_financiero.Name = "btn_financiero";
             this.btn_financiero.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btn_financiero.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -327,43 +353,43 @@
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuMaterialTextbox3
+            // txt_impuesto
             // 
-            this.bunifuMaterialTextbox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox3.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "0.00";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(155, 142);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.MaxLength = 32767;
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(118, 37);
-            this.bunifuMaterialTextbox3.TabIndex = 2;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_impuesto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_impuesto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_impuesto.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_impuesto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_impuesto.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_impuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_impuesto.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_impuesto.HintText = "0.00";
+            this.txt_impuesto.isPassword = false;
+            this.txt_impuesto.LineFocusedColor = System.Drawing.Color.DodgerBlue;
+            this.txt_impuesto.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_impuesto.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
+            this.txt_impuesto.LineThickness = 3;
+            this.txt_impuesto.Location = new System.Drawing.Point(155, 142);
+            this.txt_impuesto.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_impuesto.MaxLength = 12;
+            this.txt_impuesto.Name = "txt_impuesto";
+            this.txt_impuesto.Size = new System.Drawing.Size(118, 37);
+            this.txt_impuesto.TabIndex = 2;
+            this.txt_impuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // bunifuLabel11
+            // lbl_UAI
             // 
-            this.bunifuLabel11.AutoEllipsis = false;
-            this.bunifuLabel11.CursorType = null;
-            this.bunifuLabel11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuLabel11.Location = new System.Drawing.Point(18, 116);
-            this.bunifuLabel11.Name = "bunifuLabel11";
-            this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel11.Size = new System.Drawing.Size(237, 23);
-            this.bunifuLabel11.TabIndex = 6;
-            this.bunifuLabel11.Text = "Utilidad antes de impuestos(UAI) : ";
-            this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_UAI.AutoEllipsis = false;
+            this.lbl_UAI.CursorType = null;
+            this.lbl_UAI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UAI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_UAI.Location = new System.Drawing.Point(18, 116);
+            this.lbl_UAI.Name = "lbl_UAI";
+            this.lbl_UAI.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_UAI.Size = new System.Drawing.Size(237, 23);
+            this.lbl_UAI.TabIndex = 6;
+            this.lbl_UAI.Text = "Utilidad antes de impuestos(UAI) : ";
+            this.lbl_UAI.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_UAI.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel12
             // 
@@ -380,28 +406,28 @@
             this.bunifuLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel12.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuMaterialTextbox4
+            // txt_interes
             // 
-            this.bunifuMaterialTextbox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox4.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox4.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox4.HintText = "0.00";
-            this.bunifuMaterialTextbox4.isPassword = false;
-            this.bunifuMaterialTextbox4.LineFocusedColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuMaterialTextbox4.LineThickness = 3;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(138, 71);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox4.MaxLength = 32767;
-            this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(118, 33);
-            this.bunifuMaterialTextbox4.TabIndex = 5;
-            this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_interes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_interes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_interes.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_interes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_interes.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_interes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_interes.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_interes.HintText = "0.00";
+            this.txt_interes.isPassword = false;
+            this.txt_interes.LineFocusedColor = System.Drawing.Color.DodgerBlue;
+            this.txt_interes.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_interes.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
+            this.txt_interes.LineThickness = 3;
+            this.txt_interes.Location = new System.Drawing.Point(138, 71);
+            this.txt_interes.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_interes.MaxLength = 12;
+            this.txt_interes.Name = "txt_interes";
+            this.txt_interes.Size = new System.Drawing.Size(118, 33);
+            this.txt_interes.TabIndex = 5;
+            this.txt_interes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // group_operativo
             // 
@@ -423,10 +449,38 @@
             this.group_operativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.group_operativo.Location = new System.Drawing.Point(3, 21);
             this.group_operativo.Name = "group_operativo";
-            this.group_operativo.Size = new System.Drawing.Size(950, 422);
+            this.group_operativo.Size = new System.Drawing.Size(950, 415);
             this.group_operativo.TabIndex = 14;
             this.group_operativo.TabStop = false;
             this.group_operativo.Text = "Apalancamiento";
+            // 
+            // txt_cantidad
+            // 
+            this.txt_cantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cantidad.Location = new System.Drawing.Point(197, 82);
+            this.txt_cantidad.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.txt_cantidad.Name = "txt_cantidad";
+            this.txt_cantidad.Size = new System.Drawing.Size(105, 25);
+            this.txt_cantidad.TabIndex = 13;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuLabel3.Location = new System.Drawing.Point(18, 82);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(145, 23);
+            this.bunifuLabel3.TabIndex = 14;
+            this.bunifuLabel3.Text = "Nivel de producción:";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btn_calcular
             // 
@@ -471,7 +525,7 @@
             this.txt_GastosOp.LineThickness = 3;
             this.txt_GastosOp.Location = new System.Drawing.Point(232, 283);
             this.txt_GastosOp.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_GastosOp.MaxLength = 32767;
+            this.txt_GastosOp.MaxLength = 12;
             this.txt_GastosOp.Name = "txt_GastosOp";
             this.txt_GastosOp.Size = new System.Drawing.Size(114, 33);
             this.txt_GastosOp.TabIndex = 10;
@@ -523,7 +577,7 @@
             this.txt_CostosF.LineThickness = 3;
             this.txt_CostosF.Location = new System.Drawing.Point(175, 227);
             this.txt_CostosF.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_CostosF.MaxLength = 32767;
+            this.txt_CostosF.MaxLength = 12;
             this.txt_CostosF.Name = "txt_CostosF";
             this.txt_CostosF.Size = new System.Drawing.Size(114, 33);
             this.txt_CostosF.TabIndex = 7;
@@ -614,7 +668,7 @@
             this.txt_costos.LineThickness = 3;
             this.txt_costos.Location = new System.Drawing.Point(123, 167);
             this.txt_costos.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_costos.MaxLength = 32767;
+            this.txt_costos.MaxLength = 12;
             this.txt_costos.Name = "txt_costos";
             this.txt_costos.Size = new System.Drawing.Size(118, 37);
             this.txt_costos.TabIndex = 2;
@@ -652,64 +706,11 @@
             this.txt_ventas.LineThickness = 3;
             this.txt_ventas.Location = new System.Drawing.Point(123, 126);
             this.txt_ventas.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ventas.MaxLength = 32767;
+            this.txt_ventas.MaxLength = 12;
             this.txt_ventas.Name = "txt_ventas";
             this.txt_ventas.Size = new System.Drawing.Size(118, 33);
             this.txt_ventas.TabIndex = 5;
             this.txt_ventas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btn_calcularGAF
-            // 
-            this.btn_calcularGAF.ActiveBorderThickness = 1;
-            this.btn_calcularGAF.ActiveCornerRadius = 20;
-            this.btn_calcularGAF.ActiveFillColor = System.Drawing.Color.DodgerBlue;
-            this.btn_calcularGAF.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_calcularGAF.ActiveLineColor = System.Drawing.Color.DodgerBlue;
-            this.btn_calcularGAF.BackColor = System.Drawing.Color.White;
-            this.btn_calcularGAF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_calcularGAF.BackgroundImage")));
-            this.btn_calcularGAF.ButtonText = "Calcular";
-            this.btn_calcularGAF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_calcularGAF.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_calcularGAF.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btn_calcularGAF.IdleBorderThickness = 1;
-            this.btn_calcularGAF.IdleCornerRadius = 20;
-            this.btn_calcularGAF.IdleFillColor = System.Drawing.Color.White;
-            this.btn_calcularGAF.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_calcularGAF.IdleLineColor = System.Drawing.Color.DodgerBlue;
-            this.btn_calcularGAF.Location = new System.Drawing.Point(288, 374);
-            this.btn_calcularGAF.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_calcularGAF.Name = "btn_calcularGAF";
-            this.btn_calcularGAF.Size = new System.Drawing.Size(140, 41);
-            this.btn_calcularGAF.TabIndex = 15;
-            this.btn_calcularGAF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_cantidad
-            // 
-            this.txt_cantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cantidad.Location = new System.Drawing.Point(197, 82);
-            this.txt_cantidad.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.txt_cantidad.Name = "txt_cantidad";
-            this.txt_cantidad.Size = new System.Drawing.Size(105, 25);
-            this.txt_cantidad.TabIndex = 13;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuLabel3.Location = new System.Drawing.Point(18, 82);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(145, 23);
-            this.bunifuLabel3.TabIndex = 14;
-            this.bunifuLabel3.Text = "Nivel de producción:";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // Apalancamiento
             // 
@@ -749,18 +750,18 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox group_financiero;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_UAII;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_UPA;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_GAF;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_dividendos;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
         private Bunifu.Framework.UI.BunifuFlatButton btn_financiero;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_impuesto;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_UAI;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel12;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_interes;
         private System.Windows.Forms.GroupBox group_operativo;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_calcular;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_GastosOp;

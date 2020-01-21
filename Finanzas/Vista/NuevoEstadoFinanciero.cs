@@ -17,6 +17,8 @@ namespace Finanzas.Vista
     public partial class NuevoEstadoFinanciero: Form
     {
 
+        double activo = 0 , pasivo_capital = 0;
+
         public NuevoEstadoFinanciero ()
         {
             InitializeComponent();
@@ -43,24 +45,34 @@ namespace Finanzas.Vista
 
         private void tabla_activo_CellValueChanged (object sender, DataGridViewCellEventArgs e)
         {           
-            double monto = suma_monto_datagrid(tabla_activo);
-            label_activo.Text = "TOTAL ACTIVO :" + monto;   
+            activo = suma_monto_datagrid(tabla_activo);
+            label_activo.Text = "TOTAL ACTIVO :" + activo;   
         }     
 
         private void Suma_MontoTabla_CellValueChanged (object sender, DataGridViewCellEventArgs e)
         {
-            double montoF = suma_monto_datagrid(tabla_capital) + suma_monto_datagrid(tabla_pasivo);
-            label_pc.Text = "TOTAL PASIVO Y CAPITAL :" + montoF;
+            pasivo_capital = suma_monto_datagrid(tabla_capital) + suma_monto_datagrid(tabla_pasivo);
+            label_pc.Text = "TOTAL PASIVO Y CAPITAL :" + pasivo_capital;
         }
 
         private void btn_guardar_Click (object sender, EventArgs e)
         {
-            if (Toolkit.ValidarCampos(tabla_activo) && Toolkit.ValidarCampos(tabla_pasivo) && Toolkit.ValidarCampos(tabla_capital))
+            if (Toolkit.ValidarCampos(tabla_activo) && Toolkit.ValidarCampos(tabla_pasivo) && Toolkit.ValidarCampos(tabla_capital) && Toolkit.ValidarCampos(tabla_er))
             {
-                CCuenta.Guardar_activos(tabla_activo,datepicker_BG);
-                CCuenta.Guardar_Pasivos(tabla_pasivo, datepicker_BG);
-                CCuenta.Guardar_Capital(tabla_capital, datepicker_BG);
-                MessageBox.Show("Registro Guardados exitosamente!!");
+                if (activo == pasivo_capital)
+                {
+                    CCuenta.Guardar_activos(tabla_activo, datepicker_BG);
+                    CCuenta.Guardar_Pasivos(tabla_pasivo, datepicker_BG);
+                    CCuenta.Guardar_Capital(tabla_capital, datepicker_BG);
+
+                    double monto = 0;
+                    for (int i = 0 ;i < tabla_er.RowCount ;i++)
+                    {
+                        monto = double.Parse(tabla_er.Rows [i].Cells [0].Value.ToString());
+                        CCuenta.Insertart_monto(i + 29, monto, datepicker_BG.Value, "D");
+                    }
+                    MessageBox.Show("Registro Guardados exitosamente!!");
+                }
             }
             else
             {
@@ -72,25 +84,6 @@ namespace Finanzas.Vista
         {
             page_EF.PageIndex = 0;
             lbl_texto.Text = "Balance General";
-        }
-
-        private void btn_guardar2_Click (object sender, EventArgs e)
-        {
-            if (Toolkit.ValidarCampos(tabla_er))
-            {
-                double monto = 0;
-                for (int i = 0; i < tabla_er.RowCount; i++)
-                {
-                    monto = double.Parse(tabla_er.Rows [i].Cells [0].Value.ToString());
-                    CCuenta.Insertart_monto(i + 29, monto, datepicker_BG.Value, "D");
-                }
-                MessageBox.Show("Se ha guardado exitosamente");
-            }
-            else
-            {
-                MessageBox.Show("Verifique los campos");
-            }
-
         }
 
         private void btn_cancelar2_Click (object sender, EventArgs e)

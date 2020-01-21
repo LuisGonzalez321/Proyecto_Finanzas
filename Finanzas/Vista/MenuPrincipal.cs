@@ -19,6 +19,8 @@ namespace Finazas.Vista
         {
             InitializeComponent();
             lbl_BG.Text = "BALANCE GENERAL :" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo", datepicker.Value));
+            lbl_utilidad.Text = "ESTADO DE RESULTADOS :" + CCuenta.Mostrar_utilidad("dbo.Mostrar_UtilidadNeta", datepicker.Value.Year);
+
             int valor = Convert.ToInt32(CRazónCuenta.Razon_cuenta("Razón_deuda", datepicker.Value));
             radial_gauge.Value = valor;
             lbl_estado.Text = Finanzas.Controlador.Herramientas.Toolkit.Estado_Empresa(valor);
