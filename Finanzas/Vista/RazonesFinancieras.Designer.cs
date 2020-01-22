@@ -77,6 +77,7 @@
             this.btn_cnt = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_is = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_salir = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -94,16 +95,15 @@
             this.btn_UtilidadNeta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_UtilidadBruta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_UtilidadOper = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_análisis_años = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.groupBox1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -330,6 +330,20 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(980, 61);
             this.bunifuGradientPanel1.TabIndex = 1;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.ImageActive = null;
+            this.btn_minimizar.Location = new System.Drawing.Point(901, 0);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(36, 37);
+            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_minimizar.TabIndex = 31;
+            this.btn_minimizar.TabStop = false;
+            this.btn_minimizar.Zoom = 10;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -1129,59 +1143,46 @@
             this.btn_UtilidadOper.UseDefaultRadiusAndThickness = true;
             this.btn_UtilidadOper.Click += new System.EventHandler(this.btn_UtilidadOper_Click);
             // 
-            // bunifuFlatButton1
+            // btn_análisis_años
             // 
-            this.bunifuFlatButton1.Active = false;
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Análisis entre años";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(717, 561);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(217, 37);
-            this.bunifuFlatButton1.TabIndex = 4;
-            this.bunifuFlatButton1.Text = "Análisis entre años";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.DodgerBlue;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_análisis_años.Active = false;
+            this.btn_análisis_años.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.btn_análisis_años.BackColor = System.Drawing.Color.White;
+            this.btn_análisis_años.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_análisis_años.BorderRadius = 0;
+            this.btn_análisis_años.ButtonText = "Análisis entre años";
+            this.btn_análisis_años.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_análisis_años.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_análisis_años.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_análisis_años.Iconimage = null;
+            this.btn_análisis_años.Iconimage_right = null;
+            this.btn_análisis_años.Iconimage_right_Selected = null;
+            this.btn_análisis_años.Iconimage_Selected = null;
+            this.btn_análisis_años.IconMarginLeft = 0;
+            this.btn_análisis_años.IconMarginRight = 0;
+            this.btn_análisis_años.IconRightVisible = true;
+            this.btn_análisis_años.IconRightZoom = 0D;
+            this.btn_análisis_años.IconVisible = true;
+            this.btn_análisis_años.IconZoom = 90D;
+            this.btn_análisis_años.IsTab = false;
+            this.btn_análisis_años.Location = new System.Drawing.Point(717, 561);
+            this.btn_análisis_años.Name = "btn_análisis_años";
+            this.btn_análisis_años.Normalcolor = System.Drawing.Color.White;
+            this.btn_análisis_años.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.btn_análisis_años.OnHoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_análisis_años.selected = false;
+            this.btn_análisis_años.Size = new System.Drawing.Size(217, 37);
+            this.btn_análisis_años.TabIndex = 4;
+            this.btn_análisis_años.Text = "Análisis entre años";
+            this.btn_análisis_años.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_análisis_años.Textcolor = System.Drawing.Color.DodgerBlue;
+            this.btn_análisis_años.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_análisis_años.Click += new System.EventHandler(this.btn_análisis_años_Click);
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 7;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.ImageActive = null;
-            this.btn_minimizar.Location = new System.Drawing.Point(901, 0);
-            this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(36, 37);
-            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_minimizar.TabIndex = 31;
-            this.btn_minimizar.TabStop = false;
-            this.btn_minimizar.Zoom = 10;
-            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // RazonesFinancieras
             // 
@@ -1189,7 +1190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(980, 610);
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btn_análisis_años);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -1204,11 +1205,11 @@
             this.groupBox1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1223,7 +1224,7 @@
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
         private Bunifu.Framework.UI.BunifuImageButton btn_salir;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_análisis_años;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_is;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_pa;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_cnt;

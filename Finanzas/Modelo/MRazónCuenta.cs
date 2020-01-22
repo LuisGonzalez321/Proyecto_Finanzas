@@ -59,7 +59,6 @@ namespace Finanzas.Modelo
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
                 return 0;
             }
         }

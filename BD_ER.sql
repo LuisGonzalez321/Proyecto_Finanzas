@@ -1,4 +1,4 @@
---drop database Finanzas
+1||--drop database Finanzas
 --create database Finanzas
 
 use Finanzas
@@ -444,7 +444,7 @@ as
 							from transacción t 
 							inner join Cuenta c on c.IdCuenta = t.IdCuenta 
 							where Year(t.fecha) = @año and c.NombreCuenta = 'Inventario')
-
+|
 	declare @Pasivo_Circulante money = (select dbo.Suma_Cuenta(@año, 'Pasivo CP'))
 
 	select ((@Activo_Circulante - @Inventario) / @Pasivo_Circulante ) as Razon_ácida
