@@ -161,9 +161,9 @@
             this.group_financiero.Dock = System.Windows.Forms.DockStyle.Top;
             this.group_financiero.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.group_financiero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.group_financiero.Location = new System.Drawing.Point(3, 436);
+            this.group_financiero.Location = new System.Drawing.Point(3, 93);
             this.group_financiero.Name = "group_financiero";
-            this.group_financiero.Size = new System.Drawing.Size(950, 209);
+            this.group_financiero.Size = new System.Drawing.Size(950, 425);
             this.group_financiero.TabIndex = 15;
             this.group_financiero.TabStop = false;
             this.group_financiero.Text = "Apalancamiento";
@@ -324,7 +324,7 @@
             this.btn_financiero.IconZoom = 90D;
             this.btn_financiero.IsTab = false;
             this.btn_financiero.Location = new System.Drawing.Point(3, 21);
-            this.btn_financiero.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_financiero.Margin = new System.Windows.Forms.Padding(5);
             this.btn_financiero.Name = "btn_financiero";
             this.btn_financiero.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btn_financiero.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -449,7 +449,7 @@
             this.group_operativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.group_operativo.Location = new System.Drawing.Point(3, 21);
             this.group_operativo.Name = "group_operativo";
-            this.group_operativo.Size = new System.Drawing.Size(950, 415);
+            this.group_operativo.Size = new System.Drawing.Size(950, 72);
             this.group_operativo.TabIndex = 14;
             this.group_operativo.TabStop = false;
             this.group_operativo.Text = "Apalancamiento";

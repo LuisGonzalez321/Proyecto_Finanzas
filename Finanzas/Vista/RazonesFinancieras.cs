@@ -30,9 +30,15 @@ namespace Finanzas.Vista
             string texto = "Por cada córdoba o dólar de deuda a corto plazo se cuenta <br> "+
                             "con " + valor + " de activo circulante para responder a esta obligación.";
             if (valor != 0)
-                new MessageWindow("Indice de solvencia", texto).Show();
+            {
+                MessageWindow ms = new MessageWindow("Indice de solvencia", texto);
+                ms.MostrarBotones(true);
+                ms.Show();
+            }
             else
+            {
                 MessageBox.Show("Verifique la fecha");
+            }
 
         }
 

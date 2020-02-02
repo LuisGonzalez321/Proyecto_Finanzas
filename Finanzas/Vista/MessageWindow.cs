@@ -20,11 +20,26 @@ namespace Finanzas.Vista
 
         public string Comentario { get; set; }
 
+        public void MostrarBotones (bool flag)
+        {
+            if (flag)
+            {
+                btn_derecha.Visible = true;
+                btn_izquierda.Visible = true;
+            }
+            else
+            {
+                btn_derecha.Visible = false;
+                btn_izquierda.Visible = false;
+            }
+        }
+
         public MessageWindow (string nombre, string comentario)
         {
             InitializeComponent();
             this.nombre = nombre;
             this.comentario = comentario;
+            MostrarBotones(false);
         }
 
         private void MessageWindow_Load (object sender, EventArgs e)
