@@ -16,5 +16,11 @@ namespace Finanzas.Vista
         {
             InitializeComponent();
         }
+
+        private void Entrada_Salida_Load (object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace Finanzas.Controlador.Herramientas
                 e.Handled = true;
             }
             // solo 1 punto decimal
-            if (((e.KeyChar == '-') && (e.KeyChar == ',')) && ( (sender as System.Windows.Forms.TextBox).Text.IndexOf(',') > -1) )  
+            if (((e.KeyChar == '-') && (e.KeyChar == ',')) && ((sender as System.Windows.Forms.TextBox).Text.IndexOf(',') > -1))
             {
                 e.Handled = true;
             }
@@ -71,9 +71,15 @@ namespace Finanzas.Controlador.Herramientas
             }
         }
 
-        public static bool validar_camposTextbox(string texto)
+        public static bool validar_camposTextbox (string texto)
         {
             return texto != null ? true : false;
+        }
+
+        public static bool validar_existencia_formulario (string nombre)
+        {
+            Form existe = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == nombre).SingleOrDefault<Form>();
+            return (existe != null) ? true :false;
         }
 
     }

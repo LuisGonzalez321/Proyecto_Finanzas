@@ -116,5 +116,15 @@ namespace Finazas.Vista
             Apalancamiento palanca = new Apalancamiento();
             palanca.Show();
         }
+
+        private void btn_verEFE_Click (object sender, EventArgs e)
+        {
+            Entrada_Salida entrada_salida = new Entrada_Salida();
+            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(entrada_salida.Name);
+            if (!flag)
+            {
+                entrada_salida.Show();
+            }
+        }
     }
 }
