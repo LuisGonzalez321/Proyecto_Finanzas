@@ -113,6 +113,9 @@
     <Compile Include="Controlador\CConsulta.cs" />
     <Compile Include="Controlador\CRazónCuenta.cs" />
     <Compile Include="Controlador\CUsuario.cs" />
+    <Compile Include="FinanzasDataSet.cs">
+      <DependentUpon>FinanzasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FinanzasDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

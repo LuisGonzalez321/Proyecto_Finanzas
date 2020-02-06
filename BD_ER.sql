@@ -1,23 +1,11 @@
-1||--drop database Finanzas
+--drop database Finanzas
 --create database Finanzas
 
 use Finanzas
 
-create table Empleado
-(
-	IdEmpleado int primary key identity(1,1),
-	Nombres varchar(50),
-	Apellidos varchar(50),
-	Dirección varchar(100),
-	Teléfono varchar(12),
-	Ciudad varchar(50),
-	Jefe int foreign key references Empleado(IdEmpleado)
-)
-
 Create table Usuario
 (
 	IdUsuario int primary key identity(1,1),
-	IdEmpleado int foreign key references Empleado(IdEmpleado) null,
 	Nombre_Usuario varchar(50),
 	Contraseña varchar(100),
 	Rol varchar(50)
@@ -66,8 +54,7 @@ as
 go
 
 
-insert into Empleado values( 'Luis Gabriel', 'González López', 'De la rocargo 5 al lago cuadra 1/2 arriba','75591715', 'Managua',null)
-Insert into Usuario values (1,'gabx01','1234','Jefe')
+Insert into Usuario values ('gabx01','1234','Jefe')
 
 --Execute Validar_Acceso 'gabx01', '1234', 'Jefe'
 
@@ -653,9 +640,6 @@ as
 	select (@UN / @ventas) as MUN
 go
 
-
-
-
 /*  Catalogo de cuentas del estado de reultados */
 Create procedure Insertar_monto
 @IdCuenta int,
@@ -679,3 +663,34 @@ as
 	inner join transacción t on t.IdCuenta = c.IdCuenta
 where year(t.fecha) = @año
 go
+
+Mostrar_Todo 2020
+
+/*  EFE   */
+
+
+
+select t.Monto from transacción t where year(t.fecha) = 2020
+
+
+
+create procedure Actividades_Operación
+@fecha1 int,
+@fecha2 int
+
+as
+
+declare Iterator_table cursor scroll 
+for select VM.IdCuenta, VM.SubNombre, VM.NombreCuenta, VM.Monto, VM.fecha from VMostrar_todo VM
+open Iterator_table
+	
+	create table #Actividad_Operación
+	(
+		IdCuenta int primary key,
+		NombreCuenta varchar(50),
+		Monto money,
+		tipo varchar(10)
+	)
+
+go
+
