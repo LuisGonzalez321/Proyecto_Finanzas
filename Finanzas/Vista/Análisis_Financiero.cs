@@ -69,26 +69,26 @@ namespace Finanzas.Vista
                 
                 for (int i = 0; i < tabla_ah.Rows.Count; i++)
                 {
-                    //MessageBox.Show("" + tabla_ah.Rows[1]);
-                    if (double.Parse(tabla_ah.Rows[i].Cells[4].Value.ToString()) > 0)
-                    {
-                        if(double.Parse(tabla_ah.Rows[i].Cells[4].Value.ToString()) > double.Parse(tabla_ah.Rows[15].Cells[4].Value.ToString()) )
-                        {
-                            tabla_ah.Rows[i].Cells[6].Value = "Aplicación";
-                        }     
-                        else
-                        {
-                            tabla_ah.Rows[i].Cells[6].Value = "Origen";
-                        }
-                        if (double.Parse(tabla_ah.Rows[i].Cells[4].Value.ToString()) < double.Parse(tabla_ah.Rows[15].Cells[4].Value.ToString()) )
-                        {
-                            tabla_ah.Rows[i].Cells[6].Value = "Aplicación";
-                        }
-                        else
-                        {
-                            tabla_ah.Rows[i].Cells[6].Value = "Origen";
-                        }
-                    }
+                    MessageBox.Show("" + tabla_ah.Rows[i].Cells[0].Value.ToString());
+                    //if (double.Parse(tabla_ah.Rows[i].Cells[4].Value.ToString()) > 0)
+                    //{
+                    //    if(int.Parse(tabla_ah.Rows[i].Cells[0].Value.ToString()) < int.Parse(tabla_ah.Rows[16].Cells[0].Value.ToString()) )
+                    //    {
+                    //        tabla_ah.Rows[i].Cells[6].Value = "Aplicación";
+                    //    }     
+                    //    else
+                    //    {
+                    //        tabla_ah.Rows[i].Cells[6].Value = "Origen";
+                    //    }
+                        //if (double.Parse(tabla_ah.Rows[i].Cells[4].Value.ToString()) < double.Parse(tabla_ah.Rows[15].Cells[4].Value.ToString()) )
+                        //{
+                        //    tabla_ah.Rows[i].Cells[6].Value = "Aplicación";
+                        //}
+                        //else
+                        //{
+                        //    tabla_ah.Rows[i].Cells[6].Value = "Origen";
+                        //}
+                    //}
                 }
             }
 
