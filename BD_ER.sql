@@ -1,5 +1,6 @@
---drop database Finanzas
---create database Finanzas
+
+drop database Finanzas
+create database Finanzas
 
 use Finanzas
 
@@ -484,6 +485,14 @@ go
 
 
 /*  Procedimientos para manejo de los estados financieros */
+MostrarBalanceGeneral 2020,'ACTIVO'
+GO
+MostrarBalanceGeneral 2020,'PASIVO'
+GO
+MostrarBalanceGeneral 2020,'CAPITAL'
+GO
+
+
 
 Create procedure MostrarBalanceGeneral
 	@fecha int,
@@ -510,7 +519,7 @@ select Convert(int,sum(t.Monto)) as Total_Activo  from transacción t
 	where year(t.fecha) = @año and cc.Nombre = 'ACTIVO'
 go
 
-Alter procedure Catalogo_Cuentas
+create procedure Catalogo_Cuentas
 	@tipo varchar(10)
 as
 	select
@@ -596,6 +605,97 @@ create procedure MostrarUtilidades
 	where t.fecha = @fecha
 	go
 
-
-
 select distinct year(fecha) as fecha from transacción
+
+--Procedimiento almacenado con salto de fe y mas allá Analisis Horizontal
+AV 2020, 'ACTIVO'
+go
+AV 2020, 'PASIVO'
+go
+AV 2020, 'CAPITAL'
+go
+create procedure AV
+@año int,
+@tipo varchar(10)
+	as
+	declare @cambio int =
+	(select Convert(int,sum(t.Monto)) as Total_Activo  from transacción t
+	inner join Cuenta c on c.IdCuenta = t.IdCuenta
+	inner join SubCategoríaCuenta sc on sc.IdSubCategoríaCuenta = c.IdSubCategoríaCuenta
+	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
+	where year(t.fecha) = @año and cc.Nombre = @tipo)
+
+	select c.NombreCuenta, (t.Monto/@cambio)*100 as 'VARIACIÓN %' from transacción t
+	inner join Cuenta c on c.IdCuenta = t.IdCuenta
+	inner join SubCategoríaCuenta sc on sc.IdSubCategoríaCuenta = c.IdSubCategoríaCuenta
+	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
+	where year(t.fecha) = @año and cc.Nombre = @tipo
+go
+
+AnalisisHorizontal 2020,2019,'ACTIVO'
+GO
+AnalisisHorizontal 2020,2019,'PASIVO'
+GO
+AnalisisHorizontal 2020,2019,'CAPITAL'
+GO
+
+alter procedure AnalisisHorizontal
+	@fechaA int,
+	@fechaB int,
+	@tipo varchar(10)
+as
+	declare @BalanceA table(
+	IdCuenta int,
+	NombreCuenta varchar(100),
+	Monto money
+	)
+	insert into @BalanceA 
+	select
+		c.IdCuenta, 
+		c.NombreCuenta,
+		t.Monto
+	from transacción t
+	inner join Cuenta c on c.IdCuenta = t.IdCuenta
+	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
+	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
+	where Year(t.fecha) = @fechaA and cc.Nombre = @tipo
+
+	declare @BalanceB table(
+	IdCuenta int,
+	NombreCuenta varchar(100),
+	Monto money
+	)
+	insert into @BalanceB 
+	select
+		c.IdCuenta, 
+		c.NombreCuenta,
+		t.Monto
+	from transacción t
+	inner join Cuenta c on c.IdCuenta = t.IdCuenta
+	inner join SubCategoríaCuenta sc on c.IdSubCategoríaCuenta = sc.IdSubCategoríaCuenta
+	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
+	where Year(t.fecha) = @fechaB and cc.Nombre = @tipo
+
+	select distinct a.IdCuenta, a.NombreCuenta, a.Monto, b.Monto, a.Monto-b.Monto as [Variacion Absoluta],
+	((a.Monto-b.Monto)/b.Monto)*100 as [Variacion Relativa]
+	 from @BalanceA a, @BalanceB b
+	 where a.IdCuenta = b.IdCuenta
+go
+
+/*create procedure OrigenAplicacion
+@añoA int,
+@añoB int,
+@tipo varchar(10)
+	as
+	declare @variaciones table(
+		IdCuenta int,
+		NombreCuenta varchar(100),
+		Monto money
+	)
+	insert into @variaciones 
+	select AnalisisHorizontal @añoA, @añoB, @tipo
+	
+	declare @origen table(IdCuenta int, Monto money,tipoC varchar(15)) go
+	insert into @origen select c.IdCuenta, ABS(c.Monto), 'Origen' from @variaciones c where Monto<
+	declare @aplicacion table(IdCuenta int, Monto money) 
+go*/

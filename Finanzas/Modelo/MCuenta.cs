@@ -133,5 +133,83 @@ namespace Finazas.Modelo
             return DtResultado;
         }
 
+        public DataTable Consulta_AV(int año, string tipo)
+        {
+            DataTable DtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.cadena;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "AV";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParDato1 = new SqlParameter();
+                ParDato1.ParameterName = "@año";
+                ParDato1.SqlDbType = SqlDbType.Int;
+                ParDato1.Value = año;
+                SqlCmd.Parameters.Add(ParDato1);
+
+                SqlParameter ParDato2 = new SqlParameter();
+                ParDato2.ParameterName = "@tipo";
+                ParDato2.SqlDbType = SqlDbType.VarChar;
+                ParDato2.Size = 10;
+                ParDato2.Value = tipo;
+                SqlCmd.Parameters.Add(ParDato2);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+        public DataTable Consulta_AH(int añoA, int añoB, string tipo)
+        {
+            DataTable DtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.cadena;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "AnalisisHorizontal";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParDato1 = new SqlParameter();
+                ParDato1.ParameterName = "@fechaA";
+                ParDato1.SqlDbType = SqlDbType.Int;
+                ParDato1.Value = añoA;
+                SqlCmd.Parameters.Add(ParDato1);
+
+                SqlParameter ParDato2 = new SqlParameter();
+                ParDato2.ParameterName = "@fechaB";
+                ParDato2.SqlDbType = SqlDbType.Int;
+                ParDato2.Value = añoB;
+                SqlCmd.Parameters.Add(ParDato2);
+
+                SqlParameter ParDato3 = new SqlParameter();
+                ParDato3.ParameterName = "@tipo";
+                ParDato3.SqlDbType = SqlDbType.VarChar;
+                ParDato3.Size = 10;
+                ParDato3.Value = tipo;
+                SqlCmd.Parameters.Add(ParDato3);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
     }
 }
