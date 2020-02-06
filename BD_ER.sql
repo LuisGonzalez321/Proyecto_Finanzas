@@ -286,6 +286,43 @@ go
 /*===============================================================================================*/
 
 
+/*   Procedimientos de Usuario    */
+
+
+create procedure Mostrar_Usuario
+as
+select * from Usuario
+go
+
+
+create procedure Modificar_usuario
+@idUsuario int,
+@usuario varchar(50),
+@contraseña varchar(50),
+@rol varchar(50)
+	as
+Update Usuario set Nombre_Usuario = @usuario, Contraseña = @contraseña, Rol = @rol where IdUsuario = @idUsuario
+go
+
+create procedure Insertar_usuario
+@usuario varchar(50),
+@contraseña varchar(50),
+@rol varchar(50)
+	as
+
+if not exists(select Nombre_Usuario from Usuario where Nombre_Usuario = @usuario)
+begin
+   Insert into Usuario values (@usuario, @contraseña, @rol)
+end
+go
+
+create procedure Eliminar_Usuario
+@idUsuario int
+as
+delete from Usuario where IdUsuario = @idUsuario
+go
+
+
 /*  Procedimientos para manejo de los estados financieros */
 
 Create procedure MostrarBalanceGeneral

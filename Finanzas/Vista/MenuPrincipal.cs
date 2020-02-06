@@ -76,8 +76,12 @@ namespace Finazas.Vista
 
         private void btn_ef_Click (object sender, EventArgs e)
         {
-            EstadosFinancieros ef = new EstadosFinancieros();
-            ef.Show();
+            EstadosFinancieros ef = new EstadosFinancieros(); 
+            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(ef.Name);
+            if (!flag)
+            {
+                ef.Show();
+            }
         }
 
         private void btn_af_Click (object sender, EventArgs e)
@@ -88,7 +92,11 @@ namespace Finazas.Vista
         private void btn_rf_Click (object sender, EventArgs e)
         {
             RazonesFinancieras rf = new RazonesFinancieras();
-            rf.Show();
+            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(rf.Name);
+            if (!flag)
+            {
+                rf.Show();
+            }
         }
 
         private void btn_minimizar_Click (object sender, EventArgs e)
@@ -106,15 +114,14 @@ namespace Finazas.Vista
             bunifuToolTip1.SetToolTip(btn_info, información);
         }
 
-        private void lbl_estado_Click (object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_palanca_Click (object sender, EventArgs e)
         {
             Apalancamiento palanca = new Apalancamiento();
-            palanca.Show();
+            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(palanca.Name);
+            if (!flag)
+            {
+                palanca.Show();
+            }
         }
 
         private void btn_verEFE_Click (object sender, EventArgs e)
@@ -124,6 +131,26 @@ namespace Finazas.Vista
             if (!flag)
             {
                 entrada_salida.Show();
+            }
+        }
+
+        private void btn_inicio_Click (object sender, EventArgs e)
+        {
+            pages_opciones.SelectedIndex = 0;
+        }
+
+        private void btn_configuración_Click (object sender, EventArgs e)
+        {
+            pages_opciones.SelectedIndex = 1;
+        }
+
+        private void btn_usuario_Click (object sender, EventArgs e)
+        {
+            AgregarUsuario agregar = new AgregarUsuario();
+            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(agregar.Name);
+            if (!flag)
+            {
+                agregar.Show();
             }
         }
     }
