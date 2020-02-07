@@ -294,7 +294,6 @@ as
 select * from Usuario
 go
 
-
 create procedure Modificar_usuario
 @idUsuario int,
 @usuario varchar(50),
@@ -468,7 +467,6 @@ as
 							from transacción t 
 							inner join Cuenta c on c.IdCuenta = t.IdCuenta 
 							where Year(t.fecha) = @año and c.NombreCuenta = 'Inventario')
-|
 	declare @Pasivo_Circulante money = (select dbo.Suma_Cuenta(@año, 'Pasivo CP'))
 
 	select ((@Activo_Circulante - @Inventario) / @Pasivo_Circulante ) as Razon_ácida

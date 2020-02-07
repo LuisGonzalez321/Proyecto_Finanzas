@@ -31,8 +31,10 @@ namespace Finanzas.Vista
                             "con " + valor + " de activo circulante para responder a esta obligación.";
             if (valor != 0)
             {
-                MessageWindow ms = new MessageWindow("Indice de solvencia", texto);
-                ms.MostrarBotones(true);
+                string formula = "Fórmula <br>" + 
+                                 "Activo Circ. / Pasivo Circ.";
+
+                MessageWindow ms = new MessageWindow("Indice de solvencia", texto, formula);
                 ms.Show();
             }
             else
@@ -49,9 +51,15 @@ namespace Finanzas.Vista
                             "Es decir del total de los activos de la empresa se debe el " + valor + "%";
 
             if (valor != 0)
-                new MessageWindow("Razón de deuda", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Total Pasivo / Total Activo";
+                new MessageWindow("Razón de deuda", texto, formula).Show();
+            }
             else
-                MessageBox.Show("Verifique la fecha");
+            { 
+            MessageBox.Show("Verifique la fecha");
+            }
         }
 
         private void btn_cnt_Click (object sender, EventArgs e)
@@ -61,10 +69,16 @@ namespace Finanzas.Vista
             string texto = "El Capital neto de trabajo es de " + valor + ", esto quiere decir cuenta <br> " +
                             "con ese dinero una vez habiendo cancelado con todas las <br> " +
                             "obligaciones  a corto plazo.";
-            if (valor !=  0)
-                new MessageWindow("Capital Neto Trabajo", texto).Show();
+            if (valor != 0)
+            {
+                string formula = "Fórmula <br>" +
+                                 "Activo Circ. - Pasivo Circ.";
+                new MessageWindow("Capital Neto Trabajo", texto, formula).Show();
+            }
             else
+            {
                 MessageBox.Show("Verifique la fecha");
+            }
         }
 
         private void btn_pa_Click (object sender, EventArgs e)
@@ -75,7 +89,11 @@ namespace Finanzas.Vista
                             "de la empresa esta en capacidad de responder con " + valor + " <br> " +
                             "centavos si esta decidiera no entregar sus inventarios.";
             if (valor != 0)
-                new MessageWindow("Razón de prueba ácida", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Costo de venta / Inventario";
+                new MessageWindow("Razón de prueba ácida", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -86,7 +104,11 @@ namespace Finanzas.Vista
 
             string texto = "" + valor;
             if (valor != 0)
-                new MessageWindow("Rotación de interes a utilidad", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "UAII / cargos por interes";
+                new MessageWindow("Rotación de interes a utilidad", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -98,7 +120,11 @@ namespace Finanzas.Vista
                            "empresa esta en capacidad de responder con " + valor + " centavos <br>" +
                            "si esta decidiera no entregar sus inventarios.";
             if (valor != 0)
-                new MessageWindow("Rotación de inventario", texto).Show();
+            { 
+                string formula = "Fórmula <br>" +
+                                 "(Activo Circ. - Inventario) / Pasivo Circ.";
+                new MessageWindow("Rotación de inventario", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -110,7 +136,11 @@ namespace Finanzas.Vista
             string texto = "Significa que la compañía esta realizando la cobranza " + valor + " veces <br>" +
                             "por año osea que cobra " + veces + " por año.";
             if (valor != 0)
-                new MessageWindow("Rotación cuentas por cobrar ", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Ventas / Cuentas por cobrar";
+                new MessageWindow("Rotación cuentas por cobrar ", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -121,7 +151,11 @@ namespace Finanzas.Vista
             string texto = "EL índice indica que por cada córdoba invertido en activos fijos netos <br>"+
                            "proporciona "+valor+" en ventas.";
             if (valor != 0)
-                new MessageWindow("Razón activo fijo", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Ventas / Activo fijo";
+                new MessageWindow("Razón activo fijo", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -133,7 +167,11 @@ namespace Finanzas.Vista
                            "totales se determina que cada córdoba invertido en activos es <br> " + 
                            "capaz de generar "+valor+ " centavos de ingresos por ventas";
             if (valor != 0)
-                new MessageWindow("Razón activo total", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Ventas / activo total";
+                new MessageWindow("Razón activo total", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -144,7 +182,11 @@ namespace Finanzas.Vista
 
             string texto = "Indica que por cada dólar de venta se obtiene un MUB de " + valor + " <br> centavos de dolar ";
             if (valor != 0)
-                new MessageWindow("Margen de utilidad bruta", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Utilidad Bruta / Ventas";
+                new MessageWindow("Margen de utilidad bruta", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -155,9 +197,13 @@ namespace Finanzas.Vista
 
             string texto = "La utilidad de operación representa el " + valor + " de las ventas; es decir <br> "
                             + valor  + " centavos por cada dólar en venta.";
-     
+
             if (valor != 0)
-                new MessageWindow("Margen de utilidad operativa", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Utilidad Operativa / ventas";
+                new MessageWindow("Margen de utilidad operativa", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -168,9 +214,13 @@ namespace Finanzas.Vista
 
             string texto = "El margen de utilidad neta es de " + valor + " centavos por cada dólar <br> en venta.";
 
-            
+
             if (valor != 0)
-                new MessageWindow("Margen de utilidad neta", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Utilidad Neta / Ventas";
+                new MessageWindow("Margen de utilidad neta", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -181,7 +231,11 @@ namespace Finanzas.Vista
             string texto  = null;
 
             if (valor != 0)
-                new MessageWindow("Capital Neto Trabajo", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Costo de ventas / Proveedores";
+                new MessageWindow("Capital Neto Trabajo", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }
@@ -192,7 +246,11 @@ namespace Finanzas.Vista
             string texto = "El índice explica que el " + (valor * 100) + " % de nuestro capital social representa <br>" +
                            "el pasivo a largo plazo.";
             if (valor != 0)
-                new MessageWindow("Razón pasivo/capital", texto).Show();
+            {
+                string formula = "Fórmula <br>" +
+                                 "Pasivo a LP / Capital Social";
+                new MessageWindow("Razón pasivo/capital", texto, formula).Show();
+            }
             else
                 MessageBox.Show("Verifique la fecha");
         }

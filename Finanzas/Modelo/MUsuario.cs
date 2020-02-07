@@ -98,7 +98,7 @@ namespace Finazas.Modelo
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Modificar_usuario";
+                SqlCmd.CommandText = "Mostrar_Usuario";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Ejecutamos nuestro comando

@@ -126,23 +126,11 @@
   <metadata name="tool_operativo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>140, 34</value>
   </metadata>
+  <metadata name="bunifuToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>270, 34</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuThinButton23.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIwAAAApCAYAAADnEcFjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHzSURBVHhe7dsvSyVRGIBxP4nNZrPZttmM22y2bfslNolh
-        xSBsEAwrG1wMimXTcsOCzSAYBMOCYcEgGBZefWbmDN7rnJG33vv8YOBy/VPm4ZwzM2eWQkowGKUYjFIM
-        RikGoxSDUcpoME//I35eR3w6i/j4I2L9W8Tyrse8HZxXzu/2acTxVcTDUxfAgGowv27bf0QsRDO5i7h7
-        6H6oucJ55fye30R8vmjPO+EMeRMMdfFHWycR94/dl1ooYw1MBcMvbhzV69JiYZbZ/D49s0wFQ1XGoteY
-        qljfFH0w1MQQJM368jti70/7uQmGqyEWOq5ZNIQ+WKrc/OuCYRpiOpJqGGEYaZpguP7mkkqqubpvR5km
-        mA+H7XAj1TAtrXztglndH7+7J4G7wk0wfJDeYzBKMRilGIxSDEYpBqMUg1GKwSilD4Y7eNzJk8b0wfCk
-        2u2Xek8fDPtg2A8j1fCskWeOTTDl0bVUU7bANMEwHVGP6xjVlC0wTTDYmbSHNKu8m4Y+GEYXNvte/u2+
-        kF6wbZfZp2x/6YMBC5uyd1MiFgYR3hwopoIBIwzRlF3iWkysVxhZXseCN8GA6YmrJupidezbBIuBaaes
-        V1jkDu3CHAymoC4updYO2ps2HvN9sFW3vEtfMxqMNMtglGIwSjEYpRiMEiKeAewJxCwdwLsFAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
-  <data name="bunifuFlatButton1.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_reporte.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADrwAAA68AZW8ckkAAAuNSURBVHhe7dZLjmNHlkXRnP9c

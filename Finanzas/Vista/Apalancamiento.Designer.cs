@@ -38,10 +38,16 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel_palanca = new System.Windows.Forms.Panel();
             this.group_reporte = new System.Windows.Forms.GroupBox();
+            this.lbl_report3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_info3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_report2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_info2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_report = new Bunifu.UI.WinForms.BunifuLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbl_info1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btn_reporte = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
             this.group_financiero = new System.Windows.Forms.GroupBox();
             this.btn_calcularGAF = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -72,6 +78,7 @@
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txt_ventas = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tool_operativo = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
+            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -102,7 +109,10 @@
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel4, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel4, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel4, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel4, "");
             // 
             // btn_minimizar
@@ -115,8 +125,11 @@
             this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_minimizar.TabIndex = 12;
             this.btn_minimizar.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btn_minimizar, "");
             this.tool_operativo.SetToolTip(this.btn_minimizar, "");
             this.tool_operativo.SetToolTipIcon(this.btn_minimizar, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.btn_minimizar, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btn_minimizar, "");
             this.tool_operativo.SetToolTipTitle(this.btn_minimizar, "");
             this.btn_minimizar.Zoom = 10;
             this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
@@ -131,8 +144,11 @@
             this.btn_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_salir.TabIndex = 11;
             this.btn_salir.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btn_salir, "");
             this.tool_operativo.SetToolTip(this.btn_salir, "");
             this.tool_operativo.SetToolTipIcon(this.btn_salir, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.btn_salir, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btn_salir, "");
             this.tool_operativo.SetToolTipTitle(this.btn_salir, "");
             this.btn_salir.Zoom = 10;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
@@ -146,8 +162,11 @@
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(964, 10);
             this.bunifuSeparator1.TabIndex = 14;
+            this.bunifuToolTip1.SetToolTip(this.bunifuSeparator1, "");
             this.tool_operativo.SetToolTip(this.bunifuSeparator1, "");
             this.tool_operativo.SetToolTipIcon(this.bunifuSeparator1, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuSeparator1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuSeparator1, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuSeparator1, "");
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -165,8 +184,11 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Apalancamiento Total";
             this.tool_operativo.SetToolTip(this.groupBox2, "");
+            this.bunifuToolTip1.SetToolTip(this.groupBox2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.groupBox2, null);
             this.tool_operativo.SetToolTipIcon(this.groupBox2, null);
             this.tool_operativo.SetToolTipTitle(this.groupBox2, "");
+            this.bunifuToolTip1.SetToolTipTitle(this.groupBox2, "");
             // 
             // panel_palanca
             // 
@@ -180,127 +202,257 @@
             this.panel_palanca.Size = new System.Drawing.Size(950, 500);
             this.panel_palanca.TabIndex = 0;
             this.tool_operativo.SetToolTip(this.panel_palanca, "");
+            this.bunifuToolTip1.SetToolTip(this.panel_palanca, "");
             this.tool_operativo.SetToolTipIcon(this.panel_palanca, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.panel_palanca, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel_palanca, "");
             this.tool_operativo.SetToolTipTitle(this.panel_palanca, "");
             // 
             // group_reporte
             // 
+            this.group_reporte.Controls.Add(this.lbl_report3);
+            this.group_reporte.Controls.Add(this.label3);
+            this.group_reporte.Controls.Add(this.lbl_info3);
+            this.group_reporte.Controls.Add(this.lbl_report2);
+            this.group_reporte.Controls.Add(this.label2);
+            this.group_reporte.Controls.Add(this.lbl_info2);
+            this.group_reporte.Controls.Add(this.lbl_report);
             this.group_reporte.Controls.Add(this.label1);
-            this.group_reporte.Controls.Add(this.bunifuThinButton23);
-            this.group_reporte.Controls.Add(this.bunifuLabel11);
-            this.group_reporte.Controls.Add(this.bunifuFlatButton1);
+            this.group_reporte.Controls.Add(this.lbl_info1);
+            this.group_reporte.Controls.Add(this.btn_reporte);
             this.group_reporte.Controls.Add(this.bunifuLabel14);
             this.group_reporte.Dock = System.Windows.Forms.DockStyle.Top;
             this.group_reporte.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.group_reporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.group_reporte.Location = new System.Drawing.Point(0, 136);
+            this.group_reporte.Location = new System.Drawing.Point(0, 541);
             this.group_reporte.Name = "group_reporte";
-            this.group_reporte.Size = new System.Drawing.Size(933, 413);
+            this.group_reporte.Size = new System.Drawing.Size(933, 643);
             this.group_reporte.TabIndex = 18;
             this.group_reporte.TabStop = false;
             this.group_reporte.Text = "Reporte";
             this.tool_operativo.SetToolTip(this.group_reporte, "");
+            this.bunifuToolTip1.SetToolTip(this.group_reporte, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.group_reporte, null);
             this.tool_operativo.SetToolTipIcon(this.group_reporte, null);
             this.tool_operativo.SetToolTipTitle(this.group_reporte, "");
+            this.bunifuToolTip1.SetToolTipTitle(this.group_reporte, "");
+            // 
+            // lbl_report3
+            // 
+            this.lbl_report3.AutoEllipsis = false;
+            this.lbl_report3.CursorType = null;
+            this.lbl_report3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_report3.Location = new System.Drawing.Point(20, 558);
+            this.lbl_report3.Name = "lbl_report3";
+            this.lbl_report3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_report3.Size = new System.Drawing.Size(30, 23);
+            this.lbl_report3.TabIndex = 20;
+            this.lbl_report3.Text = "Info";
+            this.lbl_report3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_report3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tool_operativo.SetToolTip(this.lbl_report3, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_report3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_report3, null);
+            this.tool_operativo.SetToolTipIcon(this.lbl_report3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_report3, "");
+            this.tool_operativo.SetToolTipTitle(this.lbl_report3, "");
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 470);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(192, 24);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Apalancamiento Total";
+            this.tool_operativo.SetToolTip(this.label3, "");
+            this.bunifuToolTip1.SetToolTip(this.label3, "");
+            this.tool_operativo.SetToolTipIcon(this.label3, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.label3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label3, "");
+            this.tool_operativo.SetToolTipTitle(this.label3, "");
+            // 
+            // lbl_info3
+            // 
+            this.lbl_info3.AutoEllipsis = false;
+            this.lbl_info3.CursorType = null;
+            this.lbl_info3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_info3.Location = new System.Drawing.Point(20, 508);
+            this.lbl_info3.Name = "lbl_info3";
+            this.lbl_info3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_info3.Size = new System.Drawing.Size(436, 44);
+            this.lbl_info3.TabIndex = 18;
+            this.lbl_info3.Text = "Que es la relación entre los ingresos por ventas y las utilidades\r\npor acción (UA" +
+    "II)\r\n";
+            this.lbl_info3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_info3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tool_operativo.SetToolTip(this.lbl_info3, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_info3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_info3, null);
+            this.tool_operativo.SetToolTipIcon(this.lbl_info3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_info3, "");
+            this.tool_operativo.SetToolTipTitle(this.lbl_info3, "");
+            this.lbl_info3.MouseEnter += new System.EventHandler(this.lbl_info3_MouseEnter);
+            // 
+            // lbl_report2
+            // 
+            this.lbl_report2.AutoEllipsis = false;
+            this.lbl_report2.CursorType = null;
+            this.lbl_report2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_report2.Location = new System.Drawing.Point(20, 392);
+            this.lbl_report2.Name = "lbl_report2";
+            this.lbl_report2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_report2.Size = new System.Drawing.Size(30, 23);
+            this.lbl_report2.TabIndex = 17;
+            this.lbl_report2.Text = "Info";
+            this.lbl_report2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_report2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tool_operativo.SetToolTip(this.lbl_report2, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_report2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_report2, null);
+            this.tool_operativo.SetToolTipIcon(this.lbl_report2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_report2, "");
+            this.tool_operativo.SetToolTipTitle(this.lbl_report2, "");
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 304);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(241, 24);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Apalancamiento Financiero";
+            this.tool_operativo.SetToolTip(this.label2, "");
+            this.bunifuToolTip1.SetToolTip(this.label2, "");
+            this.tool_operativo.SetToolTipIcon(this.label2, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.label2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label2, "");
+            this.tool_operativo.SetToolTipTitle(this.label2, "");
+            // 
+            // lbl_info2
+            // 
+            this.lbl_info2.AutoEllipsis = false;
+            this.lbl_info2.CursorType = null;
+            this.lbl_info2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_info2.Location = new System.Drawing.Point(20, 342);
+            this.lbl_info2.Name = "lbl_info2";
+            this.lbl_info2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_info2.Size = new System.Drawing.Size(435, 44);
+            this.lbl_info2.TabIndex = 15;
+            this.lbl_info2.Text = "Se refiere a la relación que existe entre las UAII y sus utilidades\r\npor acción q" +
+    "ue se obtienen del capital social.\r\n";
+            this.lbl_info2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_info2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tool_operativo.SetToolTip(this.lbl_info2, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_info2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_info2, null);
+            this.tool_operativo.SetToolTipIcon(this.lbl_info2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_info2, "");
+            this.tool_operativo.SetToolTipTitle(this.lbl_info2, "");
+            this.lbl_info2.MouseEnter += new System.EventHandler(this.lbl_info2_MouseEnter);
+            // 
+            // lbl_report
+            // 
+            this.lbl_report.AutoEllipsis = false;
+            this.lbl_report.CursorType = null;
+            this.lbl_report.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_report.Location = new System.Drawing.Point(20, 214);
+            this.lbl_report.Name = "lbl_report";
+            this.lbl_report.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_report.Size = new System.Drawing.Size(30, 23);
+            this.lbl_report.TabIndex = 14;
+            this.lbl_report.Text = "Info";
+            this.lbl_report.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_report.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tool_operativo.SetToolTip(this.lbl_report, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_report, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_report, null);
+            this.tool_operativo.SetToolTipIcon(this.lbl_report, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_report, "");
+            this.tool_operativo.SetToolTipTitle(this.lbl_report, "");
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(16, 144);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 20);
+            this.label1.Size = new System.Drawing.Size(232, 24);
             this.label1.TabIndex = 13;
             this.label1.Text = "Apalancamiento Operativo";
             this.tool_operativo.SetToolTip(this.label1, "");
+            this.bunifuToolTip1.SetToolTip(this.label1, "");
             this.tool_operativo.SetToolTipIcon(this.label1, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.label1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label1, "");
             this.tool_operativo.SetToolTipTitle(this.label1, "");
             // 
-            // bunifuThinButton23
+            // lbl_info1
             // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton23.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Calcular";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(288, 442);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(140, 41);
-            this.bunifuThinButton23.TabIndex = 12;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tool_operativo.SetToolTip(this.bunifuThinButton23, "");
-            this.tool_operativo.SetToolTipIcon(this.bunifuThinButton23, null);
-            this.tool_operativo.SetToolTipTitle(this.bunifuThinButton23, "");
+            this.lbl_info1.AutoEllipsis = false;
+            this.lbl_info1.CursorType = null;
+            this.lbl_info1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_info1.Location = new System.Drawing.Point(20, 185);
+            this.lbl_info1.Name = "lbl_info1";
+            this.lbl_info1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_info1.Size = new System.Drawing.Size(445, 23);
+            this.lbl_info1.TabIndex = 9;
+            this.lbl_info1.Text = "Es la relación que existe entre los ingresos por ventas y sus UAII.\r\n";
+            this.lbl_info1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_info1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tool_operativo.SetToolTip(this.lbl_info1, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_info1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_info1, null);
+            this.tool_operativo.SetToolTipIcon(this.lbl_info1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_info1, "");
+            this.tool_operativo.SetToolTipTitle(this.lbl_info1, "");
+            this.lbl_info1.MouseEnter += new System.EventHandler(this.lbl_info1_MouseEnter);
             // 
-            // bunifuLabel11
+            // btn_reporte
             // 
-            this.bunifuLabel11.AutoEllipsis = false;
-            this.bunifuLabel11.CursorType = null;
-            this.bunifuLabel11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel11.Location = new System.Drawing.Point(19, 174);
-            this.bunifuLabel11.Name = "bunifuLabel11";
-            this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel11.Size = new System.Drawing.Size(445, 23);
-            this.bunifuLabel11.TabIndex = 9;
-            this.bunifuLabel11.Text = "Es la relación que existe entre los ingresos por ventas y sus UAII.\r\n";
-            this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.tool_operativo.SetToolTip(this.bunifuLabel11, "");
-            this.tool_operativo.SetToolTipIcon(this.bunifuLabel11, null);
-            this.tool_operativo.SetToolTipTitle(this.bunifuLabel11, "");
-            this.bunifuLabel11.MouseEnter += new System.EventHandler(this.bunifuLabel11_MouseEnter);
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Active = false;
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 7;
-            this.bunifuFlatButton1.ButtonText = "INFORME";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(3, 21);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(927, 42);
-            this.bunifuFlatButton1.TabIndex = 0;
-            this.bunifuFlatButton1.Text = "INFORME";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tool_operativo.SetToolTip(this.bunifuFlatButton1, "");
-            this.tool_operativo.SetToolTipIcon(this.bunifuFlatButton1, null);
-            this.tool_operativo.SetToolTipTitle(this.bunifuFlatButton1, "");
+            this.btn_reporte.Active = false;
+            this.btn_reporte.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.btn_reporte.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_reporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_reporte.BorderRadius = 7;
+            this.btn_reporte.ButtonText = "INFORME";
+            this.btn_reporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_reporte.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_reporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_reporte.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_reporte.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_reporte.Iconimage")));
+            this.btn_reporte.Iconimage_right = null;
+            this.btn_reporte.Iconimage_right_Selected = null;
+            this.btn_reporte.Iconimage_Selected = null;
+            this.btn_reporte.IconMarginLeft = 0;
+            this.btn_reporte.IconMarginRight = 0;
+            this.btn_reporte.IconRightVisible = true;
+            this.btn_reporte.IconRightZoom = 0D;
+            this.btn_reporte.IconVisible = true;
+            this.btn_reporte.IconZoom = 90D;
+            this.btn_reporte.IsTab = false;
+            this.btn_reporte.Location = new System.Drawing.Point(3, 21);
+            this.btn_reporte.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btn_reporte.Name = "btn_reporte";
+            this.btn_reporte.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btn_reporte.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btn_reporte.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_reporte.selected = false;
+            this.btn_reporte.Size = new System.Drawing.Size(927, 42);
+            this.btn_reporte.TabIndex = 0;
+            this.btn_reporte.Text = "INFORME";
+            this.btn_reporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reporte.Textcolor = System.Drawing.Color.White;
+            this.btn_reporte.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tool_operativo.SetToolTip(this.btn_reporte, "");
+            this.bunifuToolTip1.SetToolTip(this.btn_reporte, "");
+            this.tool_operativo.SetToolTipIcon(this.btn_reporte, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.btn_reporte, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btn_reporte, "");
+            this.tool_operativo.SetToolTipTitle(this.btn_reporte, "");
+            this.btn_reporte.Click += new System.EventHandler(this.btn_reporte_Click);
             // 
             // bunifuLabel14
             // 
@@ -317,7 +469,10 @@
             this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel14.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel14, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel14, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel14, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel14, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel14, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel14, "");
             // 
             // group_financiero
@@ -340,13 +495,16 @@
             this.group_financiero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.group_financiero.Location = new System.Drawing.Point(0, 66);
             this.group_financiero.Name = "group_financiero";
-            this.group_financiero.Size = new System.Drawing.Size(933, 70);
+            this.group_financiero.Size = new System.Drawing.Size(933, 475);
             this.group_financiero.TabIndex = 17;
             this.group_financiero.TabStop = false;
             this.group_financiero.Text = "Apalancamiento";
             this.tool_operativo.SetToolTip(this.group_financiero, "");
+            this.bunifuToolTip1.SetToolTip(this.group_financiero, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.group_financiero, null);
             this.tool_operativo.SetToolTipIcon(this.group_financiero, null);
             this.tool_operativo.SetToolTipTitle(this.group_financiero, "");
+            this.bunifuToolTip1.SetToolTipTitle(this.group_financiero, "");
             // 
             // btn_calcularGAF
             // 
@@ -372,10 +530,13 @@
             this.btn_calcularGAF.Size = new System.Drawing.Size(140, 41);
             this.btn_calcularGAF.TabIndex = 15;
             this.btn_calcularGAF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuToolTip1.SetToolTip(this.btn_calcularGAF, "");
             this.tool_operativo.SetToolTip(this.btn_calcularGAF, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btn_calcularGAF, null);
             this.tool_operativo.SetToolTipIcon(this.btn_calcularGAF, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btn_calcularGAF, "");
             this.tool_operativo.SetToolTipTitle(this.btn_calcularGAF, "");
-            this.btn_calcularGAF.ClientSizeChanged += new System.EventHandler(this.btn_calcularGAF_Click);
+            this.btn_calcularGAF.Click += new System.EventHandler(this.btn_calcularGAF_Click);
             // 
             // lbl_UAII
             // 
@@ -392,7 +553,10 @@
             this.lbl_UAII.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_UAII.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.lbl_UAII, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_UAII, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_UAII, null);
             this.tool_operativo.SetToolTipIcon(this.lbl_UAII, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_UAII, "");
             this.tool_operativo.SetToolTipTitle(this.lbl_UAII, "");
             // 
             // lbl_UPA
@@ -409,7 +573,10 @@
             this.lbl_UPA.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_UPA.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.lbl_UPA, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_UPA, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_UPA, null);
             this.tool_operativo.SetToolTipIcon(this.lbl_UPA, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_UPA, "");
             this.tool_operativo.SetToolTipTitle(this.lbl_UPA, "");
             // 
             // bunifuThinButton21
@@ -436,8 +603,11 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(140, 41);
             this.bunifuThinButton21.TabIndex = 12;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuToolTip1.SetToolTip(this.bunifuThinButton21, "");
             this.tool_operativo.SetToolTip(this.bunifuThinButton21, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuThinButton21, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuThinButton21, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuThinButton21, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuThinButton21, "");
             // 
             // lbl_GAF
@@ -454,7 +624,10 @@
             this.lbl_GAF.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_GAF.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.lbl_GAF, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_GAF, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_GAF, null);
             this.tool_operativo.SetToolTipIcon(this.lbl_GAF, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_GAF, "");
             this.tool_operativo.SetToolTipTitle(this.lbl_GAF, "");
             // 
             // txt_dividendos
@@ -480,7 +653,10 @@
             this.txt_dividendos.TabIndex = 7;
             this.txt_dividendos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tool_operativo.SetToolTip(this.txt_dividendos, "");
+            this.bunifuToolTip1.SetToolTip(this.txt_dividendos, "");
             this.tool_operativo.SetToolTipIcon(this.txt_dividendos, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_dividendos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_dividendos, "");
             this.tool_operativo.SetToolTipTitle(this.txt_dividendos, "");
             // 
             // bunifuLabel9
@@ -498,7 +674,10 @@
             this.bunifuLabel9.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel9.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel9, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel9, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel9, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel9, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel9, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel9, "");
             // 
             // btn_financiero
@@ -538,7 +717,10 @@
             this.btn_financiero.Textcolor = System.Drawing.Color.White;
             this.btn_financiero.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tool_operativo.SetToolTip(this.btn_financiero, "");
+            this.bunifuToolTip1.SetToolTip(this.btn_financiero, "");
             this.tool_operativo.SetToolTipIcon(this.btn_financiero, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.btn_financiero, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btn_financiero, "");
             this.tool_operativo.SetToolTipTitle(this.btn_financiero, "");
             this.btn_financiero.Click += new System.EventHandler(this.btn_financiero_Click);
             // 
@@ -557,7 +739,10 @@
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel10, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel10, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel10, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel10, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel10, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel10, "");
             // 
             // txt_impuesto
@@ -583,7 +768,10 @@
             this.txt_impuesto.TabIndex = 2;
             this.txt_impuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tool_operativo.SetToolTip(this.txt_impuesto, "");
+            this.bunifuToolTip1.SetToolTip(this.txt_impuesto, "");
             this.tool_operativo.SetToolTipIcon(this.txt_impuesto, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_impuesto, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_impuesto, "");
             this.tool_operativo.SetToolTipTitle(this.txt_impuesto, "");
             // 
             // lbl_UAI
@@ -601,7 +789,10 @@
             this.lbl_UAI.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_UAI.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.lbl_UAI, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_UAI, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_UAI, null);
             this.tool_operativo.SetToolTipIcon(this.lbl_UAI, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_UAI, "");
             this.tool_operativo.SetToolTipTitle(this.lbl_UAI, "");
             // 
             // bunifuLabel12
@@ -619,7 +810,10 @@
             this.bunifuLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel12.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel12, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel12, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel12, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel12, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel12, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel12, "");
             // 
             // txt_interes
@@ -645,7 +839,10 @@
             this.txt_interes.TabIndex = 5;
             this.txt_interes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tool_operativo.SetToolTip(this.txt_interes, "");
+            this.bunifuToolTip1.SetToolTip(this.txt_interes, "");
             this.tool_operativo.SetToolTipIcon(this.txt_interes, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_interes, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_interes, "");
             this.tool_operativo.SetToolTipTitle(this.txt_interes, "");
             // 
             // group_operativo
@@ -673,8 +870,11 @@
             this.group_operativo.TabStop = false;
             this.group_operativo.Text = "Apalancamiento";
             this.tool_operativo.SetToolTip(this.group_operativo, "");
+            this.bunifuToolTip1.SetToolTip(this.group_operativo, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.group_operativo, null);
             this.tool_operativo.SetToolTipIcon(this.group_operativo, null);
             this.tool_operativo.SetToolTipTitle(this.group_operativo, "");
+            this.bunifuToolTip1.SetToolTipTitle(this.group_operativo, "");
             // 
             // txt_cantidad
             // 
@@ -689,7 +889,10 @@
             this.txt_cantidad.Size = new System.Drawing.Size(105, 25);
             this.txt_cantidad.TabIndex = 13;
             this.tool_operativo.SetToolTip(this.txt_cantidad, "");
+            this.bunifuToolTip1.SetToolTip(this.txt_cantidad, "");
             this.tool_operativo.SetToolTipIcon(this.txt_cantidad, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_cantidad, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_cantidad, "");
             this.tool_operativo.SetToolTipTitle(this.txt_cantidad, "");
             // 
             // bunifuLabel3
@@ -707,7 +910,10 @@
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel3, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel3, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel3, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel3, "");
             // 
             // btn_calcular
@@ -734,8 +940,11 @@
             this.btn_calcular.Size = new System.Drawing.Size(140, 41);
             this.btn_calcular.TabIndex = 12;
             this.btn_calcular.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuToolTip1.SetToolTip(this.btn_calcular, "");
             this.tool_operativo.SetToolTip(this.btn_calcular, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btn_calcular, null);
             this.tool_operativo.SetToolTipIcon(this.btn_calcular, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btn_calcular, "");
             this.tool_operativo.SetToolTipTitle(this.btn_calcular, "");
             this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
@@ -762,7 +971,10 @@
             this.txt_GastosOp.TabIndex = 10;
             this.txt_GastosOp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tool_operativo.SetToolTip(this.txt_GastosOp, "");
+            this.bunifuToolTip1.SetToolTip(this.txt_GastosOp, "");
             this.tool_operativo.SetToolTipIcon(this.txt_GastosOp, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_GastosOp, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_GastosOp, "");
             this.tool_operativo.SetToolTipTitle(this.txt_GastosOp, "");
             // 
             // bunifuLabel6
@@ -780,7 +992,10 @@
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel6, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel6, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel6, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel6, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel6, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel6, "");
             // 
             // lbl_GAO
@@ -797,7 +1012,10 @@
             this.lbl_GAO.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_GAO.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.lbl_GAO, "");
+            this.bunifuToolTip1.SetToolTip(this.lbl_GAO, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_GAO, null);
             this.tool_operativo.SetToolTipIcon(this.lbl_GAO, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_GAO, "");
             this.tool_operativo.SetToolTipTitle(this.lbl_GAO, "");
             // 
             // txt_CostosF
@@ -823,7 +1041,10 @@
             this.txt_CostosF.TabIndex = 7;
             this.txt_CostosF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tool_operativo.SetToolTip(this.txt_CostosF, "");
+            this.bunifuToolTip1.SetToolTip(this.txt_CostosF, "");
             this.tool_operativo.SetToolTipIcon(this.txt_CostosF, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_CostosF, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_CostosF, "");
             this.tool_operativo.SetToolTipTitle(this.txt_CostosF, "");
             // 
             // bunifuLabel5
@@ -841,7 +1062,10 @@
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel5, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel5, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel5, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel5, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel5, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel5, "");
             // 
             // btn_VistaOperativa
@@ -881,7 +1105,10 @@
             this.btn_VistaOperativa.Textcolor = System.Drawing.Color.White;
             this.btn_VistaOperativa.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tool_operativo.SetToolTip(this.btn_VistaOperativa, "");
+            this.bunifuToolTip1.SetToolTip(this.btn_VistaOperativa, "");
             this.tool_operativo.SetToolTipIcon(this.btn_VistaOperativa, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.btn_VistaOperativa, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btn_VistaOperativa, "");
             this.tool_operativo.SetToolTipTitle(this.btn_VistaOperativa, "");
             this.btn_VistaOperativa.Click += new System.EventHandler(this.btn_VistaOperativa_Click);
             // 
@@ -900,7 +1127,10 @@
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel1, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel1, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel1, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel1, "");
             // 
             // txt_costos
@@ -926,7 +1156,10 @@
             this.txt_costos.TabIndex = 2;
             this.txt_costos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tool_operativo.SetToolTip(this.txt_costos, "");
+            this.bunifuToolTip1.SetToolTip(this.txt_costos, "");
             this.tool_operativo.SetToolTipIcon(this.txt_costos, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_costos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_costos, "");
             this.tool_operativo.SetToolTipTitle(this.txt_costos, "");
             // 
             // bunifuLabel2
@@ -944,7 +1177,10 @@
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.tool_operativo.SetToolTip(this.bunifuLabel2, "");
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel2, null);
             this.tool_operativo.SetToolTipIcon(this.bunifuLabel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel2, "");
             this.tool_operativo.SetToolTipTitle(this.bunifuLabel2, "");
             // 
             // txt_ventas
@@ -970,7 +1206,10 @@
             this.txt_ventas.TabIndex = 5;
             this.txt_ventas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tool_operativo.SetToolTip(this.txt_ventas, "");
+            this.bunifuToolTip1.SetToolTip(this.txt_ventas, "");
             this.tool_operativo.SetToolTipIcon(this.txt_ventas, null);
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_ventas, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_ventas, "");
             this.tool_operativo.SetToolTipTitle(this.txt_ventas, "");
             // 
             // tool_operativo
@@ -1007,6 +1246,41 @@
             this.tool_operativo.TitleForeColor = System.Drawing.Color.Black;
             this.tool_operativo.ToolTipPosition = new System.Drawing.Point(0, 0);
             this.tool_operativo.ToolTipTitle = "GAF";
+            // 
+            // bunifuToolTip1
+            // 
+            this.bunifuToolTip1.Active = true;
+            this.bunifuToolTip1.AlignTextWithTitle = false;
+            this.bunifuToolTip1.AllowAutoClose = false;
+            this.bunifuToolTip1.AllowFading = true;
+            this.bunifuToolTip1.AutoCloseDuration = 5000;
+            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.bunifuToolTip1.ClickToShowDisplayControl = false;
+            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
+            this.bunifuToolTip1.DisplayControl = null;
+            this.bunifuToolTip1.EntryAnimationSpeed = 350;
+            this.bunifuToolTip1.ExitAnimationSpeed = 200;
+            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
+            this.bunifuToolTip1.IconMargin = 6;
+            this.bunifuToolTip1.InitialDelay = 0;
+            this.bunifuToolTip1.Name = "bunifuToolTip1";
+            this.bunifuToolTip1.Opacity = 1D;
+            this.bunifuToolTip1.OverrideToolTipTitles = false;
+            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
+            this.bunifuToolTip1.ReshowDelay = 100;
+            this.bunifuToolTip1.ShowAlways = true;
+            this.bunifuToolTip1.ShowBorders = false;
+            this.bunifuToolTip1.ShowIcons = true;
+            this.bunifuToolTip1.ShowShadows = true;
+            this.bunifuToolTip1.Tag = null;
+            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuToolTip1.TextMargin = 2;
+            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
+            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.bunifuToolTip1.ToolTipTitle = null;
             // 
             // Apalancamiento
             // 
@@ -1079,10 +1353,17 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_ventas;
         private Bunifu.UI.WinForms.BunifuToolTip tool_operativo;
         private System.Windows.Forms.GroupBox group_reporte;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_info1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_reporte;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
         private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_report;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_report3;
+        private System.Windows.Forms.Label label3;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_info3;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_report2;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_info2;
     }
 }

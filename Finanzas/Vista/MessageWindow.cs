@@ -14,32 +14,21 @@ namespace Finanzas.Vista
     {
         public string nombre;
         public string comentario;
+        public string formula;
 
 
         public string Nombre { get; set; }
 
         public string Comentario { get; set; }
 
-        public void MostrarBotones (bool flag)
-        {
-            if (flag)
-            {
-                btn_derecha.Visible = true;
-                btn_izquierda.Visible = true;
-            }
-            else
-            {
-                btn_derecha.Visible = false;
-                btn_izquierda.Visible = false;
-            }
-        }
+        public string Formula { get; set; }
 
-        public MessageWindow (string nombre, string comentario)
+        public MessageWindow (string nombre, string comentario, string formula)
         {
             InitializeComponent();
             this.nombre = nombre;
             this.comentario = comentario;
-            MostrarBotones(false);
+            this.formula = formula;
         }
 
         private void MessageWindow_Load (object sender, EventArgs e)
@@ -51,6 +40,11 @@ namespace Finanzas.Vista
         private void btn_aceptar_Click_1 (object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void lbl_nombre_MouseEnter (object sender, EventArgs e)
+        {
+            tool_formula.SetToolTip(lbl_nombre, formula);
         }
     }
 }

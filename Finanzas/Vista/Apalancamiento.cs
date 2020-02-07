@@ -14,14 +14,17 @@ namespace Finanzas.Vista
 {
     public partial class Apalancamiento: Form
     {
-        int contador = 0, contador2 = 0;
+        int contador = 0, contador2 = 0, contador3 = 0;
         private double UO = 0;
+        UInt32 cantidad = 0;
+        double GAO = 0;
 
         public Apalancamiento ()
         {
             InitializeComponent();
             this.group_operativo.Size = new System.Drawing.Size(445, 78);
             this.group_financiero.Size = new System.Drawing.Size(445, 78);
+            this.group_reporte.Size = new System.Drawing.Size(445, 78);
             validar_text();
         }
 
@@ -69,7 +72,7 @@ namespace Finanzas.Vista
 
                 double costos_fijos = double.Parse(txt_CostosF.Text);
 
-                UInt32 cantidad = UInt32.Parse(txt_cantidad.Value.ToString());
+                cantidad = UInt32.Parse(txt_cantidad.Value.ToString());
 
                 double gastos = double.Parse(txt_GastosOp.Text);
 
@@ -77,7 +80,13 @@ namespace Finanzas.Vista
 
                 this.UO = margen - gastos;
 
-                lbl_GAO.Text = "Grado de apalancamiento operativo :   " + (margen / UO);
+                this.GAO = (margen / UO);
+
+                lbl_GAO.Text = "Grado de apalancamiento operativo :   " + GAO;
+
+                lbl_report.Text = "Por cada punto de incremento en el margen de contribución a partir <br> "+
+                                  "de " + cantidad + "de producción, utilidad operacional antes de intereses e <br> "+
+                                  "impuestos(UAII) se incrementara en " + GAO;
             }
             else
             {
@@ -87,7 +96,7 @@ namespace Finanzas.Vista
 
         private void btn_calcularGAF_Click (object sender, EventArgs e)
         {
-            if (Toolkit.validar_camposTextbox(txt_interes.Text) && Toolkit.validar_camposTextbox(txt_impuesto.Text) && Toolkit.validar_camposTextbox(txt_dividendos.Text) && UO !=0)
+            if (Toolkit.validar_camposTextbox(txt_interes.Text) && Toolkit.validar_camposTextbox(txt_impuesto.Text) && Toolkit.validar_camposTextbox(txt_dividendos.Text) && UO != 0)
             {
                 double UAI = UO - double.Parse(txt_interes.Text);
 
@@ -101,8 +110,20 @@ namespace Finanzas.Vista
 
                 lbl_UPA.Text = "Utilidad por acción(UPA) :" + dividendos;
 
-                lbl_GAF.Text = "Grado de apalancamiento financiero :" + (UAII / UAI);     
+                double GAF = (UAII / UAI);
 
+                lbl_GAF.Text = "Grado de apalancamiento financiero :" + GAF;
+
+                lbl_report2.Text = "Por cada punto de incremento en la utilidad operativa antes de intereses e impuestos (uAII) <br> " +
+                                   "a partir de " + cantidad + " de producción, la utilidad antes de impuestos se incrementará " +
+                                   "en " + GAF +" puntos.";
+
+
+                double GAT = GAO * GAF;
+
+                lbl_report3.Text = "Por cada punto de incremento en la utilidad operativa antes de intereses e impuestos (UAII) en la <br> " +
+                                   "utilidad operativa antes de impuestos e intereses (UAII) a partir de " + cantidad + " unidades de <br> "+
+                                   "producción la utilidad por acción UPA sera " + GAT;
             }
             else
             {
@@ -110,9 +131,43 @@ namespace Finanzas.Vista
             }
         }
 
-        private void bunifuLabel11_MouseEnter (object sender, EventArgs e)
+        private void lbl_info1_MouseEnter (object sender, EventArgs e)
         {
-            string informe = "";
+            string informe = "Fórmula <br>" +
+                             "GAO = Margen de contrubución / UAII";
+                            
+            tool_operativo.SetToolTip(lbl_info1, informe);
+        }
+
+        private void lbl_info2_MouseEnter (object sender, EventArgs e)
+        {
+            string informe = "Fórmula <br>" +
+                             "GAF = UAII / UAI";
+
+            tool_operativo.SetToolTip(lbl_info2, informe);
+        }
+
+        private void lbl_info3_MouseEnter (object sender, EventArgs e)
+        {
+            string informe = "Fórmula <br>" +
+                             "GAF = GAO * GAF";
+
+            tool_operativo.SetToolTip(lbl_info3, informe);
+        }
+
+        private void btn_reporte_Click (object sender, EventArgs e)
+        {
+            if (contador3 == 0)
+            {
+                //933; 643
+                this.group_reporte.Size = new System.Drawing.Size(445, 643);
+                contador3 = 1;
+            }
+            else
+            {
+                this.group_reporte.Size = new System.Drawing.Size(445, 78);
+                contador3 = 0;
+            }
         }
 
         private void btn_financiero_Click (object sender, EventArgs e)
