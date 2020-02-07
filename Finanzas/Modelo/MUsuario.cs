@@ -86,7 +86,39 @@ namespace Finazas.Modelo
             throw new NotImplementedException();
         }
 
-        public DataTable editar (MUsuario musuario, int id)
+        public DataTable Mostrar ()
+        {
+            SqlConnection SqlCon = new SqlConnection();
+            DataTable dt = new DataTable();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexion.cadena;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Modificar_usuario";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                //Ejecutamos nuestro comando
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dt = null;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
+            return dt;
+        }
+
+        public DataTable Editar (MUsuario musuario, int id)
         {
             SqlConnection SqlCon = new SqlConnection();
             DataTable dt = new DataTable();
@@ -147,9 +179,7 @@ namespace Finazas.Modelo
             return dt;
         }
 
-
-
-        public bool eliminar (int id)
+        public bool Eliminar (int id)
         {
             bool stat;
             SqlConnection SqlCon = new SqlConnection();

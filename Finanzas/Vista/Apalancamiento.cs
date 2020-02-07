@@ -110,6 +110,11 @@ namespace Finanzas.Vista
             }
         }
 
+        private void bunifuLabel11_MouseEnter (object sender, EventArgs e)
+        {
+            string informe = "";
+        }
+
         private void btn_financiero_Click (object sender, EventArgs e)
         {
             if (contador2 == 0)

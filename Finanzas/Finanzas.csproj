@@ -131,7 +131,6 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Controlador\Herramientas\Toolkit.cs" />
-    <Compile Include="Modelo\MCategoría.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\MCuenta.cs" />
     <Compile Include="Modelo\MUsuario.cs" />

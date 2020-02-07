@@ -17,14 +17,31 @@ namespace Finanzas.Vista
             InitializeComponent();
         }
 
-        private void btn_agregar_Click (object sender, EventArgs e)
+        private const int cGrip = 16;
+        private const int cCaption = 32;
+
+
+        /*
+         * Metodo para poder mover la ventana
+         */
+        protected override void WndProc (ref Message m)
         {
-
-        }
-
-        private void bunifuCustomDataGrid1_CellContentClick (object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (m.Msg == 0x84)
+            {
+                Point pos = new Point(m.LParam.ToInt32());
+                pos = this.panel1.PointToClient(pos);
+                if (pos.Y < cCaption)
+                {
+                    m.Result = (IntPtr) 2;
+                    return;
+                }
+                if (pos.X >= this.panel1.ClientSize.Width - cGrip && pos.Y >= this.panel1.ClientSize.Height - cGrip)
+                {
+                    m.Result = (IntPtr) 17;
+                    return;
+                }
+            }
+            base.WndProc(ref m);
         }
     }
 }

@@ -15,11 +15,27 @@ namespace Finazas.Controlador
             return new Modelo.MUsuario().consulta(usuario, contraseña, rol);
         }
 
+        public static DataTable Mostrar ()
+        {
+            return new MUsuario().Mostrar();
+        }
+
         public static bool Insertar_usuario (string usuario, string contraseña, string rol)
         {
             MUsuario musuario = new MUsuario(usuario, contraseña, rol);
             bool flag = musuario.Insertar(musuario);
             return flag;
+        }
+
+        public static DataTable Editar (int id, string usuario, string contraseña, string rol)
+        {
+            MUsuario musuario = new MUsuario(usuario, contraseña, rol);
+            return musuario.Editar(musuario, id);
+        }
+
+        public static bool Eliminar (int id)
+        {
+            return new MUsuario().Eliminar(id);
         }
 
     }
