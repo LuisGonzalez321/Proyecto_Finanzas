@@ -139,6 +139,19 @@ namespace Finanzas.Vista
 
         }
 
+        public double suma_celda (int n, int m) {
+            double monto = 0;
+            for (int i = 0 ;i < tabla_er.RowCount ;i++)
+            {
+                if (tabla_er.Rows [i].Cells [0].Value != null)
+                {
+                    monto += double.Parse(tabla_er.Rows [i].Cells [0].Value.ToString());
+                }
+            }
+            return monto;
+        }
+        
+
         private void btn_minimizar_Click (object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

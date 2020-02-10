@@ -1,13 +1,9 @@
 ﻿using Finanzas.Controlador;
 using Finanzas.Vista;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace Finazas.Vista
@@ -86,7 +82,8 @@ namespace Finazas.Vista
 
         private void btn_af_Click (object sender, EventArgs e)
         {
-           
+            
+            af.show();
         }
 
         private void btn_rf_Click (object sender, EventArgs e)

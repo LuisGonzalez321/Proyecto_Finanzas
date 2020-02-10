@@ -36,8 +36,7 @@ namespace Finanzas.Vista
             lbl_UN.Text = "Utilidad Neta: " + CCuenta.Mostrar_utilidad("dbo.Mostrar_UtilidadNeta", año);
 
 
-            tabla_activo.col
-
+            
 
             double montoPC = (suma_monto_datagrid(tabla_pasivo) + suma_monto_datagrid(tabla_capital));
             label_activo.Text = "TOTAL ACTIVO :" + suma_monto_datagrid(tabla_activo);
@@ -61,8 +60,7 @@ namespace Finanzas.Vista
                 this.Dispose();
             }
             else
-                MessageBox.Show("control existente");
-           
+                MessageBox.Show("control existente");    
         }
 
         private void btn_nuevo_Click (object sender, EventArgs e)
