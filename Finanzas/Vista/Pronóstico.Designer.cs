@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pronóstico));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_calcular = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabla_caja = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,8 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.label5 = new System.Windows.Forms.Label();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_caja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_egresos)).BeginInit();
@@ -63,7 +63,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.bunifuThinButton21);
+            this.panel1.Controls.Add(this.btn_calcular);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.tabla_caja);
@@ -77,6 +77,43 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(980, 545);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_calcular
+            // 
+            this.btn_calcular.ActiveBorderThickness = 1;
+            this.btn_calcular.ActiveCornerRadius = 20;
+            this.btn_calcular.ActiveFillColor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcular.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_calcular.ActiveLineColor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcular.BackColor = System.Drawing.Color.White;
+            this.btn_calcular.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_calcular.BackgroundImage")));
+            this.btn_calcular.ButtonText = "Realizar presupuesto";
+            this.btn_calcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_calcular.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_calcular.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcular.IdleBorderThickness = 1;
+            this.btn_calcular.IdleCornerRadius = 20;
+            this.btn_calcular.IdleFillColor = System.Drawing.Color.White;
+            this.btn_calcular.IdleForecolor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcular.IdleLineColor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcular.Location = new System.Drawing.Point(709, 482);
+            this.btn_calcular.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_calcular.Name = "btn_calcular";
+            this.btn_calcular.Size = new System.Drawing.Size(212, 49);
+            this.btn_calcular.TabIndex = 21;
+            this.btn_calcular.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5.Location = new System.Drawing.Point(46, 313);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(253, 37);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Presupuesto de caja";
             // 
             // label4
             // 
@@ -100,7 +137,6 @@
             this.tabla_caja.Size = new System.Drawing.Size(503, 171);
             this.tabla_caja.TabIndex = 18;
             this.tabla_caja.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Tabla_EditingControlShowing);
-
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -135,7 +171,6 @@
             this.tabla_egresos.Size = new System.Drawing.Size(367, 183);
             this.tabla_egresos.TabIndex = 3;
             this.tabla_egresos.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Tabla_EditingControlShowing);
-
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -191,7 +226,6 @@
             this.tabla_ingresos.Size = new System.Drawing.Size(367, 183);
             this.tabla_ingresos.TabIndex = 0;
             this.tabla_ingresos.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Tabla_EditingControlShowing);
-
             // 
             // Concepto
             // 
@@ -258,42 +292,6 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(46, 313);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(253, 37);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Presupuesto de caja";
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Realizar presupuesto";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(709, 482);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(212, 49);
-            this.bunifuThinButton21.TabIndex = 21;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Pronóstico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,6 +341,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_calcular;
     }
 }

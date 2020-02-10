@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Finanzas.Controlador.Herramientas;
+using System;
 using System.Windows.Forms;
 
 namespace Finanzas.Vista
@@ -14,6 +15,8 @@ namespace Finanzas.Vista
         public void cargar_elementos ()
         {
             string [] datos = { "Ventas al contado(0.3)", "Cobro de cuentas pendientes", "plazo(0.5)", "plazo(0.3)", "Otras entradas de efectivo", "Entradas de efectivos totales" };
+            tabla_ingresos.Rows [0].Cells [0].ReadOnly = true;
+       
             foreach (string i in datos)
             {
                 tabla_ingresos.Rows.Add(i);
@@ -36,6 +39,22 @@ namespace Finanzas.Vista
             }
         }
 
+        private void btn_calcular_Click (object sender, EventArgs e)
+        {
+            if (Toolkit.ValidarCampos(tabla_ingresos) && Toolkit.ValidarCampos(tabla_egresos))
+            {
+                double entradas = suma_monto_datagrid(tabla_ingresos);
+                double salidas = suma_monto_datagrid(tabla_egresos);
+
+                tabla_caja.Rows [0].Cells [0].Value = "" + entradas;
+            }
+            else
+            {
+                MessageBox.Show("Revise los campos");
+            }
+
+        }
+
         private void Tabla_EditingControlShowing (object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             DataGridViewTextBoxEditingControl dText = (DataGridViewTextBoxEditingControl) e.Control;
@@ -43,7 +62,19 @@ namespace Finanzas.Vista
             dText.KeyPress -= new KeyPressEventHandler(Finanzas.Controlador.Herramientas.Toolkit.ValidarNumeros_KeyPress);
             dText.KeyPress += new KeyPressEventHandler(Finanzas.Controlador.Herramientas.Toolkit.ValidarNumeros_KeyPress);
         }
-        
+
+        public double suma_monto_datagrid (DataGridView datagrid)
+        {
+            double monto = 0;
+            for (int i = 0 ;i < datagrid.RowCount ;i++)
+            {
+                if (datagrid.Rows [i].Cells [0].Value != null)
+                {
+                    monto += double.Parse(datagrid.Rows [i].Cells [0].Value.ToString());
+                }
+            }
+            return monto;
+        }
 
         private void btn_salir_Click (object sender, EventArgs e)
         {
