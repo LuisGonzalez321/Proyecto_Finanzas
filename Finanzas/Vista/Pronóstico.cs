@@ -16,5 +16,21 @@ namespace Finanzas.Vista
         {
             InitializeComponent();
         }
+
+        public void cargar_elementos ()
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            string datos = 
+        }
+
+        private void btn_salir_Click (object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btn_minimizar_Click (object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

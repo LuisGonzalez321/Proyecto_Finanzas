@@ -77,13 +77,14 @@ namespace Finanzas.Vista
             this.label_activo = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tabpage_ER = new System.Windows.Forms.TabPage();
+            this.btn_calcular = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tabla_er = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_opera = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_UDI = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_utilidadB = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_utilidad = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -91,7 +92,6 @@ namespace Finanzas.Vista
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btn_cancelar2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_bg = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.scroll_er = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.datepicker_BG = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.nombreCuentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -121,10 +121,10 @@ namespace Finanzas.Vista
             this.page_EF.Location = new System.Drawing.Point(0, 45);
             this.page_EF.Multiline = true;
             this.page_EF.Name = "page_EF";
-            this.page_EF.Page = this.tabpage_BG;
-            this.page_EF.PageIndex = 0;
-            this.page_EF.PageName = "tabpage_BG";
-            this.page_EF.PageTitle = "tabpage_BG";
+            this.page_EF.Page = this.tabpage_ER;
+            this.page_EF.PageIndex = 1;
+            this.page_EF.PageName = "tabpage_ER";
+            this.page_EF.PageTitle = "tabpage_ER";
             this.page_EF.SelectedIndex = 0;
             this.page_EF.Size = new System.Drawing.Size(980, 565);
             this.page_EF.TabIndex = 27;
@@ -777,6 +777,7 @@ namespace Finanzas.Vista
             // 
             // tabpage_ER
             // 
+            this.tabpage_ER.Controls.Add(this.btn_calcular);
             this.tabpage_ER.Controls.Add(this.tabla_er);
             this.tabpage_ER.Controls.Add(this.bunifuLabel4);
             this.tabpage_ER.Controls.Add(this.groupBox1);
@@ -786,7 +787,6 @@ namespace Finanzas.Vista
             this.tabpage_ER.Controls.Add(this.bunifuSeparator1);
             this.tabpage_ER.Controls.Add(this.btn_cancelar2);
             this.tabpage_ER.Controls.Add(this.btn_bg);
-            this.tabpage_ER.Controls.Add(this.scroll_er);
             this.tabpage_ER.Location = new System.Drawing.Point(4, 4);
             this.tabpage_ER.Name = "tabpage_ER";
             this.tabpage_ER.Padding = new System.Windows.Forms.Padding(3);
@@ -794,6 +794,42 @@ namespace Finanzas.Vista
             this.tabpage_ER.TabIndex = 1;
             this.tabpage_ER.Text = "tabpage_ER";
             this.tabpage_ER.UseVisualStyleBackColor = true;
+            // 
+            // btn_calcular
+            // 
+            this.btn_calcular.Active = false;
+            this.btn_calcular.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcular.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_calcular.BorderRadius = 7;
+            this.btn_calcular.ButtonText = "Calcular";
+            this.btn_calcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_calcular.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_calcular.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_calcular.Iconimage = null;
+            this.btn_calcular.Iconimage_right = null;
+            this.btn_calcular.Iconimage_right_Selected = null;
+            this.btn_calcular.Iconimage_Selected = null;
+            this.btn_calcular.IconMarginLeft = 0;
+            this.btn_calcular.IconMarginRight = 0;
+            this.btn_calcular.IconRightVisible = false;
+            this.btn_calcular.IconRightZoom = 0D;
+            this.btn_calcular.IconVisible = false;
+            this.btn_calcular.IconZoom = 90D;
+            this.btn_calcular.IsTab = false;
+            this.btn_calcular.Location = new System.Drawing.Point(616, 475);
+            this.btn_calcular.Name = "btn_calcular";
+            this.btn_calcular.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btn_calcular.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btn_calcular.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_calcular.selected = false;
+            this.btn_calcular.Size = new System.Drawing.Size(99, 45);
+            this.btn_calcular.TabIndex = 72;
+            this.btn_calcular.Text = "Calcular";
+            this.btn_calcular.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_calcular.Textcolor = System.Drawing.Color.White;
+            this.btn_calcular.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
             // tabla_er
             // 
@@ -857,13 +893,13 @@ namespace Finanzas.Vista
             dataGridViewCellStyle20.NullValue = "0.00";
             this.tabla_er.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.tabla_er.RowTemplate.Height = 40;
-            this.tabla_er.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tabla_er.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tabla_er.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tabla_er.Size = new System.Drawing.Size(543, 418);
+            this.tabla_er.Size = new System.Drawing.Size(527, 418);
             this.tabla_er.StandardTab = true;
             this.tabla_er.TabIndex = 71;
             this.tabla_er.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.tabla_er.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_er_CellValueChanged);
+            this.tabla_er.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Tabla_EditingControlShowing);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -894,63 +930,63 @@ namespace Finanzas.Vista
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bunifuLabel8);
-            this.groupBox1.Controls.Add(this.bunifuLabel7);
-            this.groupBox1.Controls.Add(this.bunifuLabel5);
+            this.groupBox1.Controls.Add(this.lbl_opera);
+            this.groupBox1.Controls.Add(this.lbl_UDI);
+            this.groupBox1.Controls.Add(this.lbl_utilidadB);
             this.groupBox1.Controls.Add(this.lbl_utilidad);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(616, 50);
+            this.groupBox1.Location = new System.Drawing.Point(569, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(337, 419);
+            this.groupBox1.Size = new System.Drawing.Size(384, 419);
             this.groupBox1.TabIndex = 69;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Utilidades";
             // 
-            // bunifuLabel8
+            // lbl_opera
             // 
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.CursorType = null;
-            this.bunifuLabel8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel8.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuLabel8.Location = new System.Drawing.Point(18, 128);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(235, 33);
-            this.bunifuLabel8.TabIndex = 55;
-            this.bunifuLabel8.Text = "Utilidad Operativa :";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_opera.AutoEllipsis = false;
+            this.lbl_opera.CursorType = null;
+            this.lbl_opera.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_opera.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbl_opera.Location = new System.Drawing.Point(18, 128);
+            this.lbl_opera.Name = "lbl_opera";
+            this.lbl_opera.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_opera.Size = new System.Drawing.Size(235, 33);
+            this.lbl_opera.TabIndex = 55;
+            this.lbl_opera.Text = "Utilidad Operativa :";
+            this.lbl_opera.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_opera.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel7
+            // lbl_UDI
             // 
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuLabel7.Location = new System.Drawing.Point(18, 224);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(280, 33);
-            this.bunifuLabel7.TabIndex = 54;
-            this.bunifuLabel7.Text = "Utilidad despues de IR :";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_UDI.AutoEllipsis = false;
+            this.lbl_UDI.CursorType = null;
+            this.lbl_UDI.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UDI.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbl_UDI.Location = new System.Drawing.Point(18, 224);
+            this.lbl_UDI.Name = "lbl_UDI";
+            this.lbl_UDI.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_UDI.Size = new System.Drawing.Size(280, 33);
+            this.lbl_UDI.TabIndex = 54;
+            this.lbl_UDI.Text = "Utilidad despues de IR :";
+            this.lbl_UDI.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_UDI.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel5
+            // lbl_utilidadB
             // 
-            this.bunifuLabel5.AutoEllipsis = false;
-            this.bunifuLabel5.CursorType = null;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuLabel5.Location = new System.Drawing.Point(18, 32);
-            this.bunifuLabel5.Name = "bunifuLabel5";
-            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(167, 33);
-            this.bunifuLabel5.TabIndex = 53;
-            this.bunifuLabel5.Text = "Utilidad Bruta:";
-            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_utilidadB.AutoEllipsis = false;
+            this.lbl_utilidadB.CursorType = null;
+            this.lbl_utilidadB.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_utilidadB.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbl_utilidadB.Location = new System.Drawing.Point(18, 32);
+            this.lbl_utilidadB.Name = "lbl_utilidadB";
+            this.lbl_utilidadB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_utilidadB.Size = new System.Drawing.Size(167, 33);
+            this.lbl_utilidadB.TabIndex = 53;
+            this.lbl_utilidadB.Text = "Utilidad Bruta:";
+            this.lbl_utilidadB.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_utilidadB.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbl_utilidad
             // 
@@ -1041,7 +1077,7 @@ namespace Finanzas.Vista
             this.btn_cancelar2.IconVisible = false;
             this.btn_cancelar2.IconZoom = 90D;
             this.btn_cancelar2.IsTab = false;
-            this.btn_cancelar2.Location = new System.Drawing.Point(807, 475);
+            this.btn_cancelar2.Location = new System.Drawing.Point(854, 475);
             this.btn_cancelar2.Name = "btn_cancelar2";
             this.btn_cancelar2.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btn_cancelar2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -1077,7 +1113,7 @@ namespace Finanzas.Vista
             this.btn_bg.IconVisible = false;
             this.btn_bg.IconZoom = 90D;
             this.btn_bg.IsTab = false;
-            this.btn_bg.Location = new System.Drawing.Point(674, 475);
+            this.btn_bg.Location = new System.Drawing.Point(721, 475);
             this.btn_bg.Name = "btn_bg";
             this.btn_bg.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btn_bg.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -1090,45 +1126,6 @@ namespace Finanzas.Vista
             this.btn_bg.Textcolor = System.Drawing.Color.White;
             this.btn_bg.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_bg.Click += new System.EventHandler(this.btn_bg_Click);
-            // 
-            // scroll_er
-            // 
-            this.scroll_er.AllowCursorChanges = true;
-            this.scroll_er.AllowHomeEndKeysDetection = false;
-            this.scroll_er.AllowIncrementalClickMoves = true;
-            this.scroll_er.AllowMouseDownEffects = true;
-            this.scroll_er.AllowMouseHoverEffects = true;
-            this.scroll_er.AllowScrollingAnimations = true;
-            this.scroll_er.AllowScrollKeysDetection = true;
-            this.scroll_er.AllowScrollOptionsMenu = true;
-            this.scroll_er.AllowShrinkingOnFocusLost = false;
-            this.scroll_er.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.scroll_er.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scroll_er.BackgroundImage")));
-            this.scroll_er.BindingContainer = null;
-            this.scroll_er.BorderColor = System.Drawing.SystemColors.Control;
-            this.scroll_er.BorderRadius = 14;
-            this.scroll_er.BorderThickness = 1;
-            this.scroll_er.DurationBeforeShrink = 2000;
-            this.scroll_er.LargeChange = 10;
-            this.scroll_er.Location = new System.Drawing.Point(585, 51);
-            this.scroll_er.Maximum = 100;
-            this.scroll_er.Minimum = 0;
-            this.scroll_er.MinimumThumbLength = 18;
-            this.scroll_er.Name = "scroll_er";
-            this.scroll_er.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.scroll_er.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.scroll_er.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.scroll_er.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
-            this.scroll_er.ScrollBarColor = System.Drawing.SystemColors.Control;
-            this.scroll_er.ShrinkSizeLimit = 3;
-            this.scroll_er.Size = new System.Drawing.Size(15, 418);
-            this.scroll_er.SmallChange = 1;
-            this.scroll_er.TabIndex = 53;
-            this.scroll_er.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.scroll_er.ThumbLength = 41;
-            this.scroll_er.ThumbMargin = 1;
-            this.scroll_er.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
-            this.scroll_er.Value = 0;
             // 
             // datepicker_BG
             // 
@@ -1292,7 +1289,6 @@ namespace Finanzas.Vista
         private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar2;
         private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
         private Bunifu.UI.WinForms.BunifuVScrollBar Scrollbar_A;
-        private Bunifu.UI.WinForms.BunifuVScrollBar scroll_er;
         private Bunifu.Framework.UI.BunifuFlatButton btn_cancelar2;
         private Bunifu.Framework.UI.BunifuFlatButton btn_bg;
         private Bunifu.Framework.UI.BunifuFlatButton btn_cancelar;
@@ -1318,11 +1314,12 @@ namespace Finanzas.Vista
         private Bunifu.UI.WinForms.BunifuLabel lbl_texto;
         private Bunifu.Framework.UI.BunifuImageButton btn_salir;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_opera;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_UDI;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_utilidadB;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuDataGridView tabla_er;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_calcular;
     }
 }

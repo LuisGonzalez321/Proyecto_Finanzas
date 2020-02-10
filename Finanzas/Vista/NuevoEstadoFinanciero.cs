@@ -134,23 +134,53 @@ namespace Finanzas.Vista
             return monto;
         }
 
-        private void tabla_er_CellValueChanged (object sender, DataGridViewCellEventArgs e)
+        public void metodo_cochino () {
+            double ventas = double.Parse(tabla_er.Rows [0].Cells [0].Value.ToString()),
+                   dev_venta = double.Parse(tabla_er.Rows [1].Cells [0].Value.ToString()),
+                   des_venta = double.Parse(tabla_er.Rows [2].Cells [0].Value.ToString()),
+                   ventas_netasC = double.Parse(tabla_er.Rows [3].Cells [0].Value.ToString()),
+                   otros_ingresos = double.Parse(tabla_er.Rows [4].Cells [0].Value.ToString()),
+
+            costo_venta = double.Parse(tabla_er.Rows [5].Cells [0].Value.ToString()),
+            sueldo_gerente = double.Parse(tabla_er.Rows [6].Cells [0].Value.ToString()),
+            publicidad = double.Parse(tabla_er.Rows [7].Cells [0].Value.ToString()),
+            consumo_luz = double.Parse(tabla_er.Rows [8].Cells [0].Value.ToString()),
+            sueldo_empleado = double.Parse(tabla_er.Rows [9].Cells [0].Value.ToString()),
+            papeleria = double.Parse(tabla_er.Rows [10].Cells [0].Value.ToString()),
+            impuesto = double.Parse(tabla_er.Rows [11].Cells [0].Value.ToString()),
+            intereses = papeleria = double.Parse(tabla_er.Rows [12].Cells [0].Value.ToString()),
+            producto_financiero = double.Parse(tabla_er.Rows [13].Cells [0].Value.ToString()),
+            Operacion = double.Parse(tabla_er.Rows [14].Cells [0].Value.ToString()),
+            perdida_acti = double.Parse(tabla_er.Rows [15].Cells [0].Value.ToString()),
+            rentas_pagadas = double.Parse(tabla_er.Rows [16].Cells [0].Value.ToString()),
+            dividendos = double.Parse(tabla_er.Rows [17].Cells [0].Value.ToString()),
+            gastos_dep = double.Parse(tabla_er.Rows [18].Cells [0].Value.ToString()),
+            gastos_dep2 = double.Parse(tabla_er.Rows [19].Cells [0].Value.ToString()),
+            amortiz = double.Parse(tabla_er.Rows [20].Cells [0].Value.ToString()),
+            impuestoSR = double.Parse(tabla_er.Rows [21].Cells [0].Value.ToString()),
+
+            UB = ventas - dev_venta - des_venta - ventas_netasC + otros_ingresos - costo_venta,
+            UO = UB - Operacion,
+            UDI = UO - impuesto - intereses - producto_financiero - perdida_acti - gastos_dep - gastos_dep2 - dividendos - rentas_pagadas - amortiz,
+            UN = UDI - impuestoSR;
+
+            lbl_utilidadB.Text = "Utilidad Bruta: " + UB;
+            lbl_opera.Text = "Utilidad Operativa : " + UO;
+            lbl_UDI.Text = "Utilidad despues de IR : " +UDI;
+            lbl_utilidad.Text = "Utilidad Neta :" + UN;
+        }
+
+        private void btn_calcular_Click (object sender, EventArgs e)
         {
-
-        }
-
-        public double suma_celda (int n, int m) {
-            double monto = 0;
-            for (int i = 0 ;i < tabla_er.RowCount ;i++)
+            if (Toolkit.ValidarCampos(tabla_er))
             {
-                if (tabla_er.Rows [i].Cells [0].Value != null)
-                {
-                    monto += double.Parse(tabla_er.Rows [i].Cells [0].Value.ToString());
-                }
+                metodo_cochino();
             }
-            return monto;
+            else
+            {
+                MessageBox.Show("Verifique los campos");
+            }
         }
-        
 
         private void btn_minimizar_Click (object sender, EventArgs e)
         {

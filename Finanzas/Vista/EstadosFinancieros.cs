@@ -55,12 +55,7 @@ namespace Finanzas.Vista
 
         private void btn_salir_Click (object sender, EventArgs e)
         {
-            if (this.IsDisposed != true)
-            {
-                this.Dispose();
-            }
-            else
-                MessageBox.Show("control existente");    
+            this.Hide();
         }
 
         private void btn_nuevo_Click (object sender, EventArgs e)

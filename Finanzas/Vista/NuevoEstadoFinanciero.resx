@@ -180,30 +180,17 @@
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="bunifuLabel8.BaseStylesheet" xml:space="preserve">
+  <data name="lbl_opera.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; margin: auto; padding-top: 2px;font-family: 'Century Gothic'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: DodgerBlue; text-align: center; }</value>
   </data>
-  <data name="bunifuLabel7.BaseStylesheet" xml:space="preserve">
+  <data name="lbl_UDI.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; margin: auto; padding-top: 2px;font-family: 'Century Gothic'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: DodgerBlue; text-align: center; }</value>
   </data>
-  <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
+  <data name="lbl_utilidadB.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; margin: auto; padding-top: 2px;font-family: 'Century Gothic'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: DodgerBlue; text-align: center; }</value>
   </data>
   <data name="lbl_utilidad.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; margin: auto; padding-top: 2px;font-family: 'Segoe UI'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: DodgerBlue; text-align: center; }</value>
-  </data>
-  <data name="scroll_er.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAGiCAYAAAA4I5zOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVHhe7d2xTttQHEbxjIyMjB15BMaOPEaXSizsjAwd
-        O3XgJSplY81aMeUNmOhUFMdJAKkdzHeNKyWOlfrQ9VzpJ/C9/2Nk8QB30l+bzeZkuVxexW3MY1ZV1fVq
-        tTrtRoZXhj5n+DH+RLOtzlosFl+70d2VgVmUtRNty8vXecdd0zRHXdaGl9lc9YeH5AUv+YRvbZiHD9ms
-        +kOH5A9VcVbiL7H3jSN8//utQ4f/cl/i597maCUePBjDGDKGjCFjyBgyhowhY8gYMoaMIWPIGDKGjCFj
-        yBgyhowhY8gYMoaMIWPIGDKGjCFjyBgyhowhY8gYMoaMIWPIGDKGjCFjyBgyhowhY8gYMoaMIWPIGDKG
-        jCFjyBgyhowhY8gYMoaMIWPIGDKGjCFjyBgyhowhY8gYMoaMIWPIGDKGjCFjyBgyhowhY+i/4/dcPtAq
-        cbnSYfDwkKqqfk3qur4ZOhxhVu5N+Jhf0KULsU73qb21IQ/TPPzuDRwyb8OyysUR2fg58gUP5RqMLn1b
-        CY9zMC33QPSGW9l/ys/5Xri9MnAeP6IuUZQbHcp/5KIb6dZk8gqBUrTVfad2jgAAAABJRU5ErkJggg==
-</value>
   </data>
   <data name="animation1.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>

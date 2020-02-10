@@ -91,7 +91,7 @@ namespace Finanzas.Vista
         {
             if (MessageBox.Show("¡Desea salir!", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Dispose();
+                this.Hide();
             }
         }
 
@@ -99,7 +99,7 @@ namespace Finanzas.Vista
         {
             if (MessageBox.Show("¡Desea salir!", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Dispose();
+                this.Hide();
             }
         }
 

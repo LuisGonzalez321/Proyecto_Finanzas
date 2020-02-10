@@ -61,11 +61,12 @@
             this.lbl_UB = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_UN = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_bg = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.scroll_er = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
@@ -170,7 +171,7 @@
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            this.bunifuLabel4.Location = new System.Drawing.Point(403, 8);
+            this.bunifuLabel4.Location = new System.Drawing.Point(331, 3);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(174, 34);
@@ -216,6 +217,7 @@
             // 
             // page_BG
             // 
+            this.page_BG.Controls.Add(this.bunifuLabel7);
             this.page_BG.Controls.Add(this.tabla_capital);
             this.page_BG.Controls.Add(this.tabla_pasivo);
             this.page_BG.Controls.Add(this.tabla_activo);
@@ -472,11 +474,11 @@
             // 
             // page_ER
             // 
+            this.page_ER.Controls.Add(this.bunifuLabel5);
             this.page_ER.Controls.Add(this.bunifuLabel6);
             this.page_ER.Controls.Add(this.tabla_er);
             this.page_ER.Controls.Add(this.groupBox1);
             this.page_ER.Controls.Add(this.btn_bg);
-            this.page_ER.Controls.Add(this.scroll_er);
             this.page_ER.Controls.Add(this.bunifuSeparator1);
             this.page_ER.Controls.Add(this.bunifuSeparator2);
             this.page_ER.Controls.Add(this.bunifuSeparator3);
@@ -626,45 +628,6 @@
             this.btn_bg.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_bg.Click += new System.EventHandler(this.btn_bg_Click);
             // 
-            // scroll_er
-            // 
-            this.scroll_er.AllowCursorChanges = true;
-            this.scroll_er.AllowHomeEndKeysDetection = false;
-            this.scroll_er.AllowIncrementalClickMoves = true;
-            this.scroll_er.AllowMouseDownEffects = true;
-            this.scroll_er.AllowMouseHoverEffects = true;
-            this.scroll_er.AllowScrollingAnimations = true;
-            this.scroll_er.AllowScrollKeysDetection = true;
-            this.scroll_er.AllowScrollOptionsMenu = true;
-            this.scroll_er.AllowShrinkingOnFocusLost = false;
-            this.scroll_er.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.scroll_er.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scroll_er.BackgroundImage")));
-            this.scroll_er.BindingContainer = null;
-            this.scroll_er.BorderColor = System.Drawing.SystemColors.Control;
-            this.scroll_er.BorderRadius = 14;
-            this.scroll_er.BorderThickness = 1;
-            this.scroll_er.DurationBeforeShrink = 2000;
-            this.scroll_er.LargeChange = 10;
-            this.scroll_er.Location = new System.Drawing.Point(579, 62);
-            this.scroll_er.Maximum = 100;
-            this.scroll_er.Minimum = 0;
-            this.scroll_er.MinimumThumbLength = 18;
-            this.scroll_er.Name = "scroll_er";
-            this.scroll_er.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.scroll_er.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.scroll_er.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.scroll_er.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
-            this.scroll_er.ScrollBarColor = System.Drawing.SystemColors.Control;
-            this.scroll_er.ShrinkSizeLimit = 3;
-            this.scroll_er.Size = new System.Drawing.Size(17, 400);
-            this.scroll_er.SmallChange = 1;
-            this.scroll_er.TabIndex = 81;
-            this.scroll_er.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.scroll_er.ThumbLength = 39;
-            this.scroll_er.ThumbMargin = 1;
-            this.scroll_er.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
-            this.scroll_er.Value = 0;
-            // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
@@ -716,6 +679,36 @@
             this.bunifuSeparator4.TabIndex = 73;
             this.bunifuSeparator4.Transparency = 255;
             this.bunifuSeparator4.Vertical = true;
+            // 
+            // bunifuLabel5
+            // 
+            this.bunifuLabel5.AutoEllipsis = false;
+            this.bunifuLabel5.CursorType = null;
+            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.bunifuLabel5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuLabel5.Location = new System.Drawing.Point(399, 19);
+            this.bunifuLabel5.Name = "bunifuLabel5";
+            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel5.Size = new System.Drawing.Size(190, 34);
+            this.bunifuLabel5.TabIndex = 60;
+            this.bunifuLabel5.Text = "Empresa FERRISIS";
+            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel7
+            // 
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.CursorType = null;
+            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.bunifuLabel7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuLabel7.Location = new System.Drawing.Point(311, -4);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(190, 34);
+            this.bunifuLabel7.TabIndex = 80;
+            this.bunifuLabel7.Text = "Empresa FERRISIS";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // EstadosFinancieros
             // 
@@ -774,7 +767,6 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
         private Bunifu.Framework.UI.BunifuFlatButton btn_bg;
-        private Bunifu.UI.WinForms.BunifuVScrollBar scroll_er;
         private Bunifu.UI.WinForms.BunifuDatePicker datepicker_BG;
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.UI.WinForms.BunifuLabel lbl_UO;
@@ -788,5 +780,7 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private System.Windows.Forms.DataGridView tabla_er;
         private Bunifu.Framework.UI.BunifuImageButton btn_minimizar;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
     }
 }

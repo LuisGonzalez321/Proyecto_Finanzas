@@ -73,11 +73,8 @@ namespace Finazas.Vista
         private void btn_ef_Click (object sender, EventArgs e)
         {
             EstadosFinancieros ef = new EstadosFinancieros(); 
-            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(ef.Name);
-            if (!flag)
-            {
-                ef.Show();
-            }
+            ef.Show();
+            
         }
 
         private void btn_af_Click (object sender, EventArgs e)
@@ -89,11 +86,7 @@ namespace Finazas.Vista
         private void btn_rf_Click (object sender, EventArgs e)
         {
             RazonesFinancieras rf = new RazonesFinancieras();
-            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(rf.Name);
-            if (!flag)
-            {
-                rf.Show();
-            }
+            rf.Show();
         }
 
         private void btn_minimizar_Click (object sender, EventArgs e)
@@ -114,21 +107,13 @@ namespace Finazas.Vista
         private void btn_palanca_Click (object sender, EventArgs e)
         {
             Apalancamiento palanca = new Apalancamiento();
-            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(palanca.Name);
-            if (!flag)
-            {
-                palanca.Show();
-            }
+            palanca.Show();
         }
 
         private void btn_verEFE_Click (object sender, EventArgs e)
         {
             Entrada_Salida entrada_salida = new Entrada_Salida();
-            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(entrada_salida.Name);
-            if (!flag)
-            {
-                entrada_salida.Show();
-            }
+            entrada_salida.Show();
         }
 
         private void btn_inicio_Click (object sender, EventArgs e)
@@ -144,11 +129,7 @@ namespace Finazas.Vista
         private void btn_usuario_Click (object sender, EventArgs e)
         {
             AgregarUsuario agregar = new AgregarUsuario();
-            bool flag = Finanzas.Controlador.Herramientas.Toolkit.validar_existencia_formulario(agregar.Name);
-            if (!flag)
-            {
-                agregar.Show();
-            }
+            agregar.Show();
         }
 
         private void btn_presupuesto_Click (object sender, EventArgs e)
