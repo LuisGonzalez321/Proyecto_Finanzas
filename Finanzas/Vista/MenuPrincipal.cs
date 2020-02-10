@@ -85,7 +85,7 @@ namespace Finazas.Vista
 
         private void btn_af_Click (object sender, EventArgs e)
         {
-            Análisis_Financiero analisis = new Análisis_Financiero();
+            OA analisis = new OA();
             analisis.Show();
         }
 
@@ -96,6 +96,12 @@ namespace Finazas.Vista
         private void btn_minimizar_Click (object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_OA_Click(object sender, EventArgs e)
+        {
+            OrigenAplicaci oa = new OrigenAplicaci();
+            oa.Show();
         }
     }
 }

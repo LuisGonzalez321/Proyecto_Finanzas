@@ -16,7 +16,7 @@ namespace Finanzas.Vista
         public OA ()
         {
             InitializeComponent();
-            lista_años.DisplayMember = "fecha";
+            lista_añosOA.DisplayMember = "fecha";
             toolTip1.SetToolTip(lb_AV,"Fórmula= Monto cada Cuenta/Total Activo");
             ToolTip toolTip2 = new ToolTip();
             toolTip1.ShowAlways = true;
@@ -25,7 +25,7 @@ namespace Finanzas.Vista
             // lista_años.da = CConsulta.Consultas_query();
             foreach (string i in CConsulta.Consultas_query())
             {
-                lista_años.Items.Add(i);
+                lista_añosOA.Items.Add(i);
             }
         }
 
@@ -43,33 +43,33 @@ namespace Finanzas.Vista
 
         private void btn_derecha_Click (object sender, EventArgs e)
         {
-            if (lista_años.SelectedIndex > -1 && lista_añosSelect.Items.Count < 2)
+            if (lista_añosOA.SelectedIndex > -1 && lista_añosSelectOA.Items.Count < 2)
             {
-                string año = lista_años.Text;
-                lista_añosSelect.Items.Add(año);
+                string año = lista_añosOA.Text;
+                lista_añosSelectOA.Items.Add(año);
                 int años = int.Parse(año);
-                lista_años.Items.Remove(lista_años.SelectedItem);
+                lista_añosOA.Items.Remove(lista_añosOA.SelectedItem);
                 DataTable dtemp = new DataTable();
                 dtemp.Merge(Controlador.CConsulta.ConsultaAV(años, "ACTIVO"));
                 dtemp.Merge(Controlador.CConsulta.ConsultaAV(años, "PASIVO"));
                 dtemp.Merge(Controlador.CConsulta.ConsultaAV(años, "CAPITAL"));
                 tabla_av.DataSource = dtemp;
-                if (lista_añosSelect.Items.Count == 1)
+                if (lista_añosSelectOA.Items.Count == 1)
                 {
-                    lb_añoAV.Text = "" + lista_añosSelect.Items[0];
+                    lb_añoAV.Text = "" + lista_añosSelectOA.Items[0];
                 }
-                if (lista_añosSelect.Items.Count == 2)
+                if (lista_añosSelectOA.Items.Count == 2)
                 {
-                    lb_añoAV.Text = "" + lista_añosSelect.Items[1];
+                    lb_añoAV.Text = "" + lista_añosSelectOA.Items[1];
                 }               
             }
-            if (lista_añosSelect.Items.Count==2)
+            if (lista_añosSelectOA.Items.Count==2)
             {
-                int añoA = Convert.ToInt32(lista_añosSelect.Items[0]);
-                int añoB = Convert.ToInt32(lista_añosSelect.Items[1]);
-                lb_añoA.Text = "" + lista_añosSelect.Items[0];
-                lb_añoB.Text = "" + lista_añosSelect.Items[1];
-                lista_años.Items.Remove(lista_años.SelectedItem);
+                int añoA = Convert.ToInt32(lista_añosSelectOA.Items[0]);
+                int añoB = Convert.ToInt32(lista_añosSelectOA.Items[1]);
+                lb_añoA.Text = "" + lista_añosSelectOA.Items[0];
+                lb_añoB.Text = "" + lista_añosSelectOA.Items[1];
+                lista_añosOA.Items.Remove(lista_añosOA.SelectedItem);
                 DataTable dtemp2 = new DataTable();
                 
                 dtemp2.Merge(Controlador.CConsulta.ConsultaAH(añoA, añoB, "ACTIVO"));
@@ -100,18 +100,18 @@ namespace Finanzas.Vista
 
         private void btn_izquierda_Click (object sender, EventArgs e)
         {
-            if (lista_añosSelect.SelectedIndex > -1)
+            if (lista_añosSelectOA.SelectedIndex > -1)
             {
-                string año = lista_añosSelect.Text;
-                lista_años.Items.Add(año);
-                int index = lista_añosSelect.SelectedIndex;
-                lista_añosSelect.Items.Remove(lista_añosSelect.SelectedItem);
+                string año = lista_añosSelectOA.Text;
+                lista_añosOA.Items.Add(año);
+                int index = lista_añosSelectOA.SelectedIndex;
+                lista_añosSelectOA.Items.Remove(lista_añosSelectOA.SelectedItem);
             }
-            if (lista_añosSelect.Items.Count == 0)
+            if (lista_añosSelectOA.Items.Count == 0)
             {
                 tabla_av.DataSource = null;
             }
-            if (lista_añosSelect.Items.Count == 1)
+            if (lista_añosSelectOA.Items.Count == 1)
             {
                 tabla_ah.Columns.RemoveAt(6);
                 tabla_ah.DataSource = null;

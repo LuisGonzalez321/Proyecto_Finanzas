@@ -592,18 +592,17 @@ as
 	select ((@Activo_Circulante - @Inventario) / @Pasivo_Circulante ) as Rotación_Inventario
 go
 
-
 create procedure MostrarUtilidades
 @fecha int
 	as
-	declare @monto money = (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where t.fecha = @fecha and c.IdCuenta = 36)
+	declare @monto money = (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = @fecha and c.IdCuenta = 36)
 	select 
-		((select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2019 and c.IdCuenta = 36) -
-		 (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = 2019 and c.IdCuenta = 37)) as Utilidad_Bruta
+		((select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = @fecha and c.IdCuenta = 36) -
+		 (select t.Monto from transacción t inner join Cuenta c on c.IdCuenta = t.IdCuenta where year(t.fecha) = @fecha and c.IdCuenta = 37)) as Utilidad_Bruta
 	from transacción t 
 	inner join Cuenta c on c.IdCuenta = t.IdCuenta 
-	where t.fecha = @fecha
-	go
+	where year(t.fecha) = @fecha
+go
 
 select distinct year(fecha) as fecha from transacción
 
@@ -614,7 +613,7 @@ AV 2020, 'PASIVO'
 go
 AV 2020, 'CAPITAL'
 go
-create procedure AV
+alter procedure AV
 @año int,
 @tipo varchar(10)
 	as
@@ -625,7 +624,7 @@ create procedure AV
 	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
 	where year(t.fecha) = @año and cc.Nombre = @tipo)
 
-	select c.NombreCuenta, (t.Monto/@cambio)*100 as 'VARIACIÓN %' from transacción t
+	select c.NombreCuenta, t.Monto, (t.Monto/@cambio)*100 as 'VARIACIÓN %' from transacción t
 	inner join Cuenta c on c.IdCuenta = t.IdCuenta
 	inner join SubCategoríaCuenta sc on sc.IdSubCategoríaCuenta = c.IdSubCategoríaCuenta
 	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
@@ -676,7 +675,7 @@ as
 	inner join CategoríaCuenta cc on cc.IdCategoríaCuenta = sc.IdCategoríaCuenta
 	where Year(t.fecha) = @fechaB and cc.Nombre = @tipo
 
-	select distinct a.IdCuenta, a.NombreCuenta, a.Monto, b.Monto, a.Monto-b.Monto as [Variacion Absoluta],
+	select distinct a.IdCuenta, a.NombreCuenta, a.Monto as [Año Análisis], b.Monto as [Año Base], a.Monto-b.Monto as [Variacion Absoluta],
 	((a.Monto-b.Monto)/b.Monto)*100 as [Variacion Relativa]
 	 from @BalanceA a, @BalanceB b
 	 where a.IdCuenta = b.IdCuenta
