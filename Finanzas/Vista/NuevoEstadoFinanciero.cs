@@ -39,7 +39,7 @@ namespace Finanzas.Vista
         {
             if (MessageBox.Show("Desea Salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                this.Dispose();
+                this.Hide();
             }
         }
 
@@ -90,12 +90,7 @@ namespace Finanzas.Vista
         {
             if (MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
-                if (this.IsDisposed != true)
-                {
-                    this.Dispose();
-                }
-                else
-                    MessageBox.Show("control existente");
+                this.Hide();
             }
         }
 
@@ -103,7 +98,7 @@ namespace Finanzas.Vista
         {
             if (MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                this.Dispose();
+                this.Hide();
             }
         }
 
