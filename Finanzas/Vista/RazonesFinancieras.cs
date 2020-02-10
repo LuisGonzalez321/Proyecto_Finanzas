@@ -20,7 +20,7 @@ namespace Finanzas.Vista
 
         private void btn_salir_Click (object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
 
         private void btn_is_Click (object sender, EventArgs e)
@@ -264,7 +264,7 @@ namespace Finanzas.Vista
         {
             Razones_años razones_años = new Razones_años();
             razones_años.Show();
-            this.Hide();
+            this.Dispose();
         }
     }
 }

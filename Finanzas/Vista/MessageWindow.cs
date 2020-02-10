@@ -35,11 +35,12 @@ namespace Finanzas.Vista
         {
             lbl_nombre.Text = nombre;
             lbl_comentario.Text = comentario;
+            
         }
 
         private void btn_aceptar_Click_1 (object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
 
         private void lbl_nombre_MouseEnter (object sender, EventArgs e)

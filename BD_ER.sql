@@ -708,7 +708,7 @@ Mostrar_Todo 2020
 select t.Monto from transacción t where year(t.fecha) = 2020
 
 
-
+go
 create procedure Actividades_Operación
 @fecha1 int,
 @fecha2 int

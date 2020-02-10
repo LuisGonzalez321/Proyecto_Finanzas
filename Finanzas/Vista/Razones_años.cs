@@ -23,7 +23,7 @@ namespace Finanzas.Vista
 
         private void btn_salir_Click (object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
 
         private void btn_minimizar_Click (object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace Finanzas.Vista
 
         private void btn_salir_Click_1 (object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
 
 

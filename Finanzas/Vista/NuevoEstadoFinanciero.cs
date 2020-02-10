@@ -39,7 +39,7 @@ namespace Finanzas.Vista
         {
             if (MessageBox.Show("Desea Salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                this.Hide();
+                this.Dispose();
             }
         }
 
@@ -90,15 +90,20 @@ namespace Finanzas.Vista
         {
             if (MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
-                this.Hide();
+                if (this.IsDisposed != true)
+                {
+                    this.Dispose();
+                }
+                else
+                    MessageBox.Show("control existente");
             }
         }
 
         private void btn_cancelar_Click (object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            if (MessageBox.Show("Desea Salir?", "Estado", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                this.Hide();
+                this.Dispose();
             }
         }
 
@@ -127,6 +132,11 @@ namespace Finanzas.Vista
                 }
             }
             return monto;
+        }
+
+        private void tabla_er_CellValueChanged (object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void btn_minimizar_Click (object sender, EventArgs e)

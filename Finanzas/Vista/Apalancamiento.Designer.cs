@@ -175,11 +175,12 @@
             // 
             this.groupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.groupBox2.Controls.Add(this.panel_palanca);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox2.Location = new System.Drawing.Point(12, 74);
+            this.groupBox2.Location = new System.Drawing.Point(0, 74);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(956, 524);
+            this.groupBox2.Size = new System.Drawing.Size(980, 536);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Apalancamiento Total";
@@ -199,7 +200,7 @@
             this.panel_palanca.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_palanca.Location = new System.Drawing.Point(3, 21);
             this.panel_palanca.Name = "panel_palanca";
-            this.panel_palanca.Size = new System.Drawing.Size(950, 500);
+            this.panel_palanca.Size = new System.Drawing.Size(974, 512);
             this.panel_palanca.TabIndex = 0;
             this.tool_operativo.SetToolTip(this.panel_palanca, "");
             this.bunifuToolTip1.SetToolTip(this.panel_palanca, "");
@@ -226,7 +227,7 @@
             this.group_reporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.group_reporte.Location = new System.Drawing.Point(0, 541);
             this.group_reporte.Name = "group_reporte";
-            this.group_reporte.Size = new System.Drawing.Size(933, 643);
+            this.group_reporte.Size = new System.Drawing.Size(957, 643);
             this.group_reporte.TabIndex = 18;
             this.group_reporte.TabStop = false;
             this.group_reporte.Text = "Reporte";
@@ -440,7 +441,7 @@
             this.btn_reporte.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_reporte.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_reporte.selected = false;
-            this.btn_reporte.Size = new System.Drawing.Size(927, 42);
+            this.btn_reporte.Size = new System.Drawing.Size(951, 42);
             this.btn_reporte.TabIndex = 0;
             this.btn_reporte.Text = "INFORME";
             this.btn_reporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -495,7 +496,7 @@
             this.group_financiero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.group_financiero.Location = new System.Drawing.Point(0, 66);
             this.group_financiero.Name = "group_financiero";
-            this.group_financiero.Size = new System.Drawing.Size(933, 475);
+            this.group_financiero.Size = new System.Drawing.Size(957, 475);
             this.group_financiero.TabIndex = 17;
             this.group_financiero.TabStop = false;
             this.group_financiero.Text = "Apalancamiento";
@@ -710,7 +711,7 @@
             this.btn_financiero.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_financiero.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_financiero.selected = false;
-            this.btn_financiero.Size = new System.Drawing.Size(927, 42);
+            this.btn_financiero.Size = new System.Drawing.Size(951, 42);
             this.btn_financiero.TabIndex = 0;
             this.btn_financiero.Text = "FINANCIERO";
             this.btn_financiero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -865,7 +866,7 @@
             this.group_operativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.group_operativo.Location = new System.Drawing.Point(0, 0);
             this.group_operativo.Name = "group_operativo";
-            this.group_operativo.Size = new System.Drawing.Size(933, 66);
+            this.group_operativo.Size = new System.Drawing.Size(957, 66);
             this.group_operativo.TabIndex = 16;
             this.group_operativo.TabStop = false;
             this.group_operativo.Text = "Apalancamiento";
@@ -1098,7 +1099,7 @@
             this.btn_VistaOperativa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_VistaOperativa.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_VistaOperativa.selected = false;
-            this.btn_VistaOperativa.Size = new System.Drawing.Size(927, 42);
+            this.btn_VistaOperativa.Size = new System.Drawing.Size(951, 42);
             this.btn_VistaOperativa.TabIndex = 0;
             this.btn_VistaOperativa.Text = "OPERATIVO";
             this.btn_VistaOperativa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

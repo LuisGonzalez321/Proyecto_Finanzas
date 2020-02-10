@@ -153,5 +153,11 @@ namespace Finazas.Vista
                 agregar.Show();
             }
         }
+
+        private void btn_presupuesto_Click (object sender, EventArgs e)
+        {
+            Pronóstico pronostico = new Pronóstico();
+            pronostico.Show();
+        }
     }
 }

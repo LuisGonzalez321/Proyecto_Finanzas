@@ -185,6 +185,12 @@
     <Compile Include="Vista\NuevoEstadoFinanciero.Designer.cs">
       <DependentUpon>NuevoEstadoFinanciero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Pronóstico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Pronóstico.Designer.cs">
+      <DependentUpon>Pronóstico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\RazonesFinancieras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\NuevoEstadoFinanciero.resx">
       <DependentUpon>NuevoEstadoFinanciero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Pronóstico.resx">
+      <DependentUpon>Pronóstico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\RazonesFinancieras.resx">
       <DependentUpon>RazonesFinancieras.cs</DependentUpon>
