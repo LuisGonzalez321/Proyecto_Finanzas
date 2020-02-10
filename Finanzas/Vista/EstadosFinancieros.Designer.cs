@@ -32,6 +32,7 @@
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             this.btn_salir = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_buscar = new Bunifu.Framework.UI.BunifuImageButton();
             this.datepicker_BG = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -44,13 +45,10 @@
             this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator7 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator8 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuVScrollBar2 = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.label_pc = new Bunifu.UI.WinForms.BunifuLabel();
             this.label_activo = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_nuevo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_er = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Scrollbar_A = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -68,9 +66,9 @@
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.btn_minimizar = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).BeginInit();
             this.pages_EF.SuspendLayout();
             this.page_BG.SuspendLayout();
@@ -80,7 +78,6 @@
             this.page_ER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_er)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_salir
@@ -116,6 +113,20 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(980, 50);
             this.bunifuGradientPanel1.TabIndex = 13;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.ImageActive = null;
+            this.btn_minimizar.Location = new System.Drawing.Point(902, 0);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(36, 35);
+            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_minimizar.TabIndex = 54;
+            this.btn_minimizar.TabStop = false;
+            this.btn_minimizar.Zoom = 10;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // btn_buscar
             // 
@@ -212,13 +223,10 @@
             this.page_BG.Controls.Add(this.bunifuSeparator6);
             this.page_BG.Controls.Add(this.bunifuSeparator7);
             this.page_BG.Controls.Add(this.bunifuSeparator8);
-            this.page_BG.Controls.Add(this.bunifuVScrollBar2);
-            this.page_BG.Controls.Add(this.bunifuVScrollBar1);
             this.page_BG.Controls.Add(this.label_pc);
             this.page_BG.Controls.Add(this.label_activo);
             this.page_BG.Controls.Add(this.btn_nuevo);
             this.page_BG.Controls.Add(this.btn_er);
-            this.page_BG.Controls.Add(this.Scrollbar_A);
             this.page_BG.Controls.Add(this.bunifuLabel3);
             this.page_BG.Controls.Add(this.bunifuLabel2);
             this.page_BG.Controls.Add(this.bunifuLabel1);
@@ -314,84 +322,6 @@
             this.bunifuSeparator8.TabIndex = 73;
             this.bunifuSeparator8.Transparency = 255;
             this.bunifuSeparator8.Vertical = true;
-            // 
-            // bunifuVScrollBar2
-            // 
-            this.bunifuVScrollBar2.AllowCursorChanges = true;
-            this.bunifuVScrollBar2.AllowHomeEndKeysDetection = false;
-            this.bunifuVScrollBar2.AllowIncrementalClickMoves = true;
-            this.bunifuVScrollBar2.AllowMouseDownEffects = true;
-            this.bunifuVScrollBar2.AllowMouseHoverEffects = true;
-            this.bunifuVScrollBar2.AllowScrollingAnimations = true;
-            this.bunifuVScrollBar2.AllowScrollKeysDetection = true;
-            this.bunifuVScrollBar2.AllowScrollOptionsMenu = true;
-            this.bunifuVScrollBar2.AllowShrinkingOnFocusLost = false;
-            this.bunifuVScrollBar2.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.bunifuVScrollBar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar2.BackgroundImage")));
-            this.bunifuVScrollBar2.BindingContainer = null;
-            this.bunifuVScrollBar2.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuVScrollBar2.BorderRadius = 14;
-            this.bunifuVScrollBar2.BorderThickness = 1;
-            this.bunifuVScrollBar2.DurationBeforeShrink = 2000;
-            this.bunifuVScrollBar2.LargeChange = 10;
-            this.bunifuVScrollBar2.Location = new System.Drawing.Point(911, 297);
-            this.bunifuVScrollBar2.Maximum = 100;
-            this.bunifuVScrollBar2.Minimum = 0;
-            this.bunifuVScrollBar2.MinimumThumbLength = 18;
-            this.bunifuVScrollBar2.Name = "bunifuVScrollBar2";
-            this.bunifuVScrollBar2.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar2.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuVScrollBar2.ScrollBarColor = System.Drawing.SystemColors.Control;
-            this.bunifuVScrollBar2.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar2.Size = new System.Drawing.Size(15, 146);
-            this.bunifuVScrollBar2.SmallChange = 1;
-            this.bunifuVScrollBar2.TabIndex = 66;
-            this.bunifuVScrollBar2.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuVScrollBar2.ThumbLength = 18;
-            this.bunifuVScrollBar2.ThumbMargin = 1;
-            this.bunifuVScrollBar2.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
-            this.bunifuVScrollBar2.Value = 0;
-            // 
-            // bunifuVScrollBar1
-            // 
-            this.bunifuVScrollBar1.AllowCursorChanges = true;
-            this.bunifuVScrollBar1.AllowHomeEndKeysDetection = false;
-            this.bunifuVScrollBar1.AllowIncrementalClickMoves = true;
-            this.bunifuVScrollBar1.AllowMouseDownEffects = true;
-            this.bunifuVScrollBar1.AllowMouseHoverEffects = true;
-            this.bunifuVScrollBar1.AllowScrollingAnimations = true;
-            this.bunifuVScrollBar1.AllowScrollKeysDetection = true;
-            this.bunifuVScrollBar1.AllowScrollOptionsMenu = true;
-            this.bunifuVScrollBar1.AllowShrinkingOnFocusLost = false;
-            this.bunifuVScrollBar1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.bunifuVScrollBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar1.BackgroundImage")));
-            this.bunifuVScrollBar1.BindingContainer = null;
-            this.bunifuVScrollBar1.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuVScrollBar1.BorderRadius = 14;
-            this.bunifuVScrollBar1.BorderThickness = 1;
-            this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
-            this.bunifuVScrollBar1.LargeChange = 10;
-            this.bunifuVScrollBar1.Location = new System.Drawing.Point(911, 62);
-            this.bunifuVScrollBar1.Maximum = 100;
-            this.bunifuVScrollBar1.Minimum = 0;
-            this.bunifuVScrollBar1.MinimumThumbLength = 18;
-            this.bunifuVScrollBar1.Name = "bunifuVScrollBar1";
-            this.bunifuVScrollBar1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.SystemColors.Control;
-            this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar1.Size = new System.Drawing.Size(15, 198);
-            this.bunifuVScrollBar1.SmallChange = 1;
-            this.bunifuVScrollBar1.TabIndex = 65;
-            this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuVScrollBar1.ThumbLength = 19;
-            this.bunifuVScrollBar1.ThumbMargin = 1;
-            this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
-            this.bunifuVScrollBar1.Value = 0;
             // 
             // label_pc
             // 
@@ -494,45 +424,6 @@
             this.btn_er.Textcolor = System.Drawing.Color.White;
             this.btn_er.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_er.Click += new System.EventHandler(this.btn_er_Click);
-            // 
-            // Scrollbar_A
-            // 
-            this.Scrollbar_A.AllowCursorChanges = true;
-            this.Scrollbar_A.AllowHomeEndKeysDetection = false;
-            this.Scrollbar_A.AllowIncrementalClickMoves = true;
-            this.Scrollbar_A.AllowMouseDownEffects = true;
-            this.Scrollbar_A.AllowMouseHoverEffects = true;
-            this.Scrollbar_A.AllowScrollingAnimations = true;
-            this.Scrollbar_A.AllowScrollKeysDetection = true;
-            this.Scrollbar_A.AllowScrollOptionsMenu = true;
-            this.Scrollbar_A.AllowShrinkingOnFocusLost = false;
-            this.Scrollbar_A.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.Scrollbar_A.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Scrollbar_A.BackgroundImage")));
-            this.Scrollbar_A.BindingContainer = null;
-            this.Scrollbar_A.BorderColor = System.Drawing.SystemColors.Control;
-            this.Scrollbar_A.BorderRadius = 14;
-            this.Scrollbar_A.BorderThickness = 1;
-            this.Scrollbar_A.DurationBeforeShrink = 2000;
-            this.Scrollbar_A.LargeChange = 10;
-            this.Scrollbar_A.Location = new System.Drawing.Point(457, 62);
-            this.Scrollbar_A.Maximum = 100;
-            this.Scrollbar_A.Minimum = 0;
-            this.Scrollbar_A.MinimumThumbLength = 18;
-            this.Scrollbar_A.Name = "Scrollbar_A";
-            this.Scrollbar_A.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.Scrollbar_A.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.Scrollbar_A.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.Scrollbar_A.ScrollBarBorderColor = System.Drawing.SystemColors.Control;
-            this.Scrollbar_A.ScrollBarColor = System.Drawing.SystemColors.Control;
-            this.Scrollbar_A.ShrinkSizeLimit = 3;
-            this.Scrollbar_A.Size = new System.Drawing.Size(15, 440);
-            this.Scrollbar_A.SmallChange = 1;
-            this.Scrollbar_A.TabIndex = 56;
-            this.Scrollbar_A.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.Scrollbar_A.ThumbLength = 43;
-            this.Scrollbar_A.ThumbMargin = 1;
-            this.Scrollbar_A.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
-            this.Scrollbar_A.Value = 0;
             // 
             // bunifuLabel3
             // 
@@ -826,20 +717,6 @@
             this.bunifuSeparator4.Transparency = 255;
             this.bunifuSeparator4.Vertical = true;
             // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.ImageActive = null;
-            this.btn_minimizar.Location = new System.Drawing.Point(902, 0);
-            this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(36, 35);
-            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_minimizar.TabIndex = 54;
-            this.btn_minimizar.TabStop = false;
-            this.btn_minimizar.Zoom = 10;
-            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
-            // 
             // EstadosFinancieros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -857,6 +734,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_buscar)).EndInit();
             this.pages_EF.ResumeLayout(false);
             this.page_BG.ResumeLayout(false);
@@ -869,7 +747,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_er)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -880,13 +757,10 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuPages pages_EF;
         private System.Windows.Forms.TabPage page_BG;
-        private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar2;
-        private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
         private Bunifu.UI.WinForms.BunifuLabel label_pc;
         private Bunifu.UI.WinForms.BunifuLabel label_activo;
         private Bunifu.Framework.UI.BunifuFlatButton btn_nuevo;
         private Bunifu.Framework.UI.BunifuFlatButton btn_er;
-        private Bunifu.UI.WinForms.BunifuVScrollBar Scrollbar_A;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;

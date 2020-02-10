@@ -82,8 +82,8 @@ namespace Finazas.Vista
 
         private void btn_af_Click (object sender, EventArgs e)
         {
-            
-            af.show();
+            OA oa = new OA();
+            oa.Show();
         }
 
         private void btn_rf_Click (object sender, EventArgs e)
