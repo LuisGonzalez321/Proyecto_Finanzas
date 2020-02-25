@@ -47,6 +47,7 @@ namespace Finanzas.Vista
             {
                 string año = lista_años.Text;
                 lista_añosSelect.Items.Add(año);
+                lb_TOTAL_ACT.Text = "TOTAL ACTIVO:\n" + Convert.ToInt32(CRazónCuenta.Razon_cuenta("Total_Activo", datepicker.Value.Date));
                 int años = int.Parse(año);
                 lista_años.Items.Remove(lista_años.SelectedItem);
                 DataTable dtemp = new DataTable();
@@ -76,25 +77,25 @@ namespace Finanzas.Vista
                 dtemp2.Merge(Controlador.CConsulta.ConsultaAH(añoA, añoB, "PASIVO"));
                 dtemp2.Merge(Controlador.CConsulta.ConsultaAH(añoA, añoB, "CAPITAL"));
                 tabla_ah.DataSource = dtemp2;
-                DataGridViewColumn col = new DataGridViewColumn();
-                col.Name = "Clasificación";
-                col.HeaderText = "Clasicación";
-                col.CellTemplate = new DataGridViewTextBoxCell();
-                tabla_ah.Columns.Add(col);
+                //DataGridViewColumn col = new DataGridViewColumn();
+                //col.Name = "Clasificación";
+                //col.HeaderText = "Clasicación";
+                //col.CellTemplate = new DataGridViewTextBoxCell();
+                //tabla_ah.Columns.Add(col);
                 
-                for (int i = 0; i < tabla_ah.Rows.Count; i++)
-                {
-                    //MessageBox.Show("" + tabla_ah.Rows[i].Cells[0].Value.ToString());
-                    if (double.Parse(tabla_ah.Rows[i].Cells[4].Value.ToString()) > 0
-                        && int.Parse(tabla_ah.Rows[i].Cells[0].Value.ToString()) < int.Parse(tabla_ah.Rows[16].Cells[0].Value.ToString()))
-                        tabla_ah.Rows[i].Cells[6].Value = "Aplicación";
-                    else
-                        tabla_ah.Rows[i].Cells[6].Value = "Origen";
-                    if (double.Parse(tabla_ah.Rows[i].Cells[4].Value.ToString()) > 0 && int.Parse(tabla_ah.Rows[i].Cells[0].Value.ToString()) >= int.Parse(tabla_ah.Rows[16].Cells[0].Value.ToString()))
-                        tabla_ah.Rows[i].Cells[6].Value = "Origen";
-                    else
-                        tabla_ah.Rows[i].Cells[6].Value = "Aplicación";
-                }
+                //for (int i = 0; i < tabla_ah.Rows.Count; i++)
+                //{
+                //    //MessageBox.Show("" + tabla_ah.Rows[i].Cells[0].Value.ToString());
+                //    if (double.Parse(tabla_ah.Rows[i].Cells[4].Value.ToString()) > 0
+                //        && int.Parse(tabla_ah.Rows[i].Cells[0].Value.ToString()) < int.Parse(tabla_ah.Rows[16].Cells[0].Value.ToString()))
+                //        tabla_ah.Rows[i].Cells[6].Value = "Aplicación";
+                //    else
+                //        tabla_ah.Rows[i].Cells[6].Value = "Origen";
+                //    if (double.Parse(tabla_ah.Rows[i].Cells[4].Value.ToString()) > 0 && int.Parse(tabla_ah.Rows[i].Cells[0].Value.ToString()) >= int.Parse(tabla_ah.Rows[16].Cells[0].Value.ToString()))
+                //        tabla_ah.Rows[i].Cells[6].Value = "Origen";
+                //    else
+                //        tabla_ah.Rows[i].Cells[6].Value = "Aplicación";
+                //}
             }
         }
 

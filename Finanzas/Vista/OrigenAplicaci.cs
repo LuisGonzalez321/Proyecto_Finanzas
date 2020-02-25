@@ -19,7 +19,7 @@ namespace Finanzas.Vista
 
             ToolTip toolTip1 = new ToolTip();
             toolTip1.ShowAlways = true;
-            toolTip1.SetToolTip(lb_OA, "Valor Absoluto / Monto de la Cuenta del Año Base\n ACTIVO PASIVO CAPITAL\n   +       -        -       Aplicacion \n   +       -        -       Origen");
+            toolTip1.SetToolTip(lb_OA, "Valor Absoluto / Monto de la Cuenta del Año Base\n ACTIVO PASIVO CAPITAL\n      +          -           -          Aplicacion \n      +          -           -         Origen");
 
             // lista_años.da = CConsulta.Consultas_query();
             foreach (string i in CConsulta.Consultas_query())
